@@ -35,24 +35,27 @@ The invaluable few who tirelessly find bugs, provide feedback, and drive the dev
 
 Evil Trinity requires the following :
 
+Visit https://u-232.dev/forum/index.php/topic,3789.0.html for more detailed help on installing U-232.
+
+
 - Memcached
-- PHP7.2
-- PHP7.2-CURL
-- PHP7.2-IGBINARY
-- PHP7.2-JSON
-- PHP7.2-MEMCACHED
-- PHP7.2-MSGPACK
-- PHP7.2-MCRYPT
-- PHP7.2-MYSQL/MYSQLI
-- PHP7.2-MBSTRING
-- PHP7.2-GD
-- PHP7.2-GEOIP
-- PHP7.2-OPCACHE
-- PHP7.2-XML
+- PHP7.2(3,4)
+- PHP7.2(3,4)-CURL
+- PHP7.2(3,4)-IGBINARY
+- PHP7.2(3,4)-JSON
+- PHP7.2(3,4)-MEMCACHED
+- PHP7.2(3,4)-MSGPACK
+- PHP7.2(3,4)-MCRYPT
+- PHP7.2(3,4)-MYSQL/MYSQLI
+- PHP7.2(3,4)-MBSTRING
+- PHP7.2(3,4)-GD
+- PHP7.2(3,4)-GEOIP
+- PHP7.2(3,4)-OPCACHE
+- PHP7.2(3,4)-XML
 - PHP7-ZIP
-- LIBAPACHE2-MOD-PHP7.2
+- LIBAPACHE2-MOD-PHP7.2(3,4)
 - Apache/2.4.10
-- Mysql 5.5.50-0
+- MariaDB 10.1
 - Nodejs
 - Npm
 ### Set Up Instructions:

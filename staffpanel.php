@@ -172,7 +172,8 @@ $staff_tools = array(
     'comments' => 'comments',
     'comment_check' => 'comment_check',
     'class_promo' => 'class_promo',
-    'addpre' => 'addpre'
+    'addpre' => 'addpre',
+    'api_keys' => 'api_keys'
 );
 if (in_array($tool, $staff_tools) and file_exists(ADMIN_DIR . $staff_tools[$tool] . '.php')) {
     require_once ADMIN_DIR . $staff_tools[$tool] . '.php';

@@ -63,8 +63,8 @@ $HTMLOUT.= "<h3>{$lang['apikeys_sitehead']}</h3>
 <table class='table table-bordered'>";
 if ($CURUSER['id'] === 1)
     $HTMLOUT.= "
-<tr><td width='50%'>OMDB API Key</td><td><input type='text' class='form-control' name='omdb_key' size='3' value='" . htmlsafechars($api_keys['omdb']) . "' /></td></tr>
-<tr><td width='50%'>TMBD API Key</td><td><input type='text' class='form-control' name='tmdb_key' size='3' value='" . htmlsafechars($api_keys['tmdb']) . "' /></td></tr>
+    <tr><td width='50%'>OMDB API Key</td><td><input type='text' class='form-control' name='omdb_key' size='10' value='" . htmlsafechars($api_keys['omdb_key']) . "' /></td><td>Active: <input class='table' type='radio' name='omdb_on' value='1' " . ($api_keys['omdb_on'] ? 'checked=\'checked\'' : '') . " />" . $lang['sitesettings_no'] . "<input class='table' type='radio' name='omdb_on' value='0' " . (!$api_keys['omdb_on'] ? 'checked=\'checked\'' : '') . " /></td></tr>
+<tr><td width='50%'>TMBD API Key</td><td><input type='text' class='form-control' name='tmdb_key' size='10' value='" . htmlsafechars($api_keys['tmdb_key']) . "' /></td><td>Active: <input class='table' type='radio' name='tmdb_on' value='1' " . ($api_keys['tmdb_on'] ? 'checked=\'checked\'' : '') . " />" . $lang['sitesettings_no'] . "<input class='table' type='radio' name='tmdb_on' value='0' " . (!$api_keys['tmdb_on'] ? 'checked=\'checked\'' : '') . " /></td></tr>
 <tr><td colspan='2' class='table' align='center'><input class='btn btn-default' type='submit' value='{$lang['apikeys_apply']}' /></td></tr>
 </table></form>";
 $HTMLOUT.= "</div></div>";

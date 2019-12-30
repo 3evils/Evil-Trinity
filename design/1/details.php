@@ -1049,14 +1049,14 @@ if (in_array($torrents['category'], $torrents['tvcats'])) {
 }
 if ((in_array($torrents['category'], $INSTALLER09['movie_cats'])) && $torrents['url'] != '') {
 
-    $INSTALLER09['omdb_key'] = '60ac17f0';
+/*    $INSTALLER09['omdb_key'] = '60ac17f0';
     $INSTALLER09['tmdb_key'] = '6e7090479fbbec08eea8d9571e253b38';
     $INSTALLER09['lastfm_key'] = '63692beaaf8ba794a541bca291234cd3';
     $INSTALLER09['omdb_on'] = '1';
     $INSTALLER09['tmdb_on'] = '1';
-
+*/
     if (empty($url)) {
-        class IMDBSearch1                                                                                                                                                                                                                            {
+        class IMDBSearch                                                                                                                                                                                                                            {
             public static function _movieRedirect($movie, $year)                                                                                                                                                                                         {
                 $movieName = str_replace(' ', '+', $movie);
                 $page = @file_get_contents('https://www.imdb.com/find?s=all&q=' . $movieName . ' (' . $year . ')');

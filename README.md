@@ -47,7 +47,8 @@ Visit https://u-232.dev/forum/index.php/topic,3789.0.html for more detailed help
 
 
 
-This releasde comes without an installer. You MUST edit /include/ann_config.php /include/config.php
+This release comes without an installer. You MUST edit /include/ann_config.php /include/config.php
+Blank database file found in /include/backup/
 This is still beta. 
 
 
@@ -75,7 +76,7 @@ Finally, run npm start to run the Sass compiler. It will re-run every time you s
 
 ### UPDATES ###
 
-Passwords hashed via BCRYPT.
-Bootstrap engine removed for Foundation.
-Modified Arrowchat installed
-Added OMDB & TMDB api mods. Imdb only used for initial searching
+- Passwords hashed via BCRYPT.
+- Bootstrap engine removed for Foundation.
+- Modified Arrowchat installed
+- Added OMDB & TMDB api mods. Imdb only used for initial searching

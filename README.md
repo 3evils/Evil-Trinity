@@ -60,6 +60,14 @@ Visit https://u-232.dev/forum/index.php/topic,3789.0.html for more detailed help
 - Npm
 ### Set Up Instructions:
 
+
+
+This releasde comes without an installer. You MUST edit /include/ann_config.php /include/config.php
+This is still beta. 
+
+
+
+
 Foundation for Sites Template
 Please open all issues with this template on the main Foundation for Sites repo.
 
@@ -79,3 +87,9 @@ Then open the folder in your command line, and install the needed dependencies:
 cd projectname
 npm install
 Finally, run npm start to run the Sass compiler. It will re-run every time you save a Sass file.
+
+###UPDATES###
+
+Passwords hashed via BCRYPT.
+Bootstrap engine removed for Foundation.
+Modified Arrowchat installed

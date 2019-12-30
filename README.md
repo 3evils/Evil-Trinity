@@ -1,7 +1,7 @@
-# Evil Trinity
+# U-232 Evil Trinity Edition #
 
 
-Evil Trinity -> High performance Bittorrent tracker
+U-232 V6 Evil Trinity Edition -> High performance Bittorrent tracker
 
 ## Credits
 

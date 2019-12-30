@@ -73,8 +73,9 @@ cd projectname
 npm install
 Finally, run npm start to run the Sass compiler. It will re-run every time you save a Sass file.
 
-###UPDATES###
+### UPDATES ###
 
 Passwords hashed via BCRYPT.
 Bootstrap engine removed for Foundation.
 Modified Arrowchat installed
+Added OMDB & TMDB api mods. Imdb only used for initial searching

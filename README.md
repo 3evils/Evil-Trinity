@@ -16,22 +16,7 @@ The coders of gazelle for the `class.cache`, *sctbdev* for various replacement c
 All other snippets, mods and contributions for this version from *CoLdFuSiOn*, *putyn, *pdq*, *djGrrr*, *Retro*, *elephant*, *ezero*, *Alex2005*, *system*, *sir_Snugglebunny*, *laffin*, *Wilba*, *Traffic*, *dokty*, *djlee*, *neptune*, *scars*, *Raw*, *soft*, *jaits*, *Melvinmeow*, *RogueSurfer*, *stoner*, *Stillapunk*, *swizzles*, *autotron*, *stonebreath*, *whocares*, *Tundracanine*, *AntiMidas*.. 
 
 
-## The Team
-
-### Lead Coders
-
-- *Mindless*
-- *Antimidas*
-### Support coders & Beta tests
-
-- *Swizzles*
-
-### Designers Support
-
-### Beta Testers
-
-The invaluable few who tirelessly find bugs, provide feedback, and drive the developers crazier.
-
+###Requirements###
 
 Evil Trinity requires the following :
 

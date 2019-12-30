@@ -93,7 +93,6 @@ if ($CURUSER) {
 					<a class='menu-text' href='" . $INSTALLER09['baseurl'] . "/index.php'>{$INSTALLER09['site_name']}</a>
 				</div>
 				<div class='title-bar-center'>
-				<iframe src='{$INSTALLER09['baseurl']}/auto_shout_scroll.php' class='menu-text' width='100%' height='20px' frameborder='0' name='auto_shoutbox' marginwidth='0' marginheight='0'></iframe>
 				</div>
 				<div class='title-bar-right'>
 				<p class='small label success'>Test links</p>

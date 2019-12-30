@@ -102,7 +102,7 @@ $user_frees = (OCELOT_TRACKER == true ? 0 : TIME_NOW + 14 * 86400);
 check_banned_emails($email);
 $psecret = $editsecret;
 //$emails = encrypt_email($email);
-$style = '3';
+$style = 3;
 $ret = sql_query("INSERT INTO users (username, passhash, secret, editsecret, birthday, country, gender, pin_code, stylesheet, passhint, hintanswer, email, status, " . (!$arr[0] ? "class, " : "") . "added, last_access, time_offset, dst_in_use, free_switch) VALUES (" . implode(",", array_map("sqlesc", array(
     $wantusername,
     $wantpasshash,
@@ -112,7 +112,7 @@ $ret = sql_query("INSERT INTO users (username, passhash, secret, editsecret, bir
     $country,
     $gender,
     $pincode,
-    $style,
+    '3',
     $passhint,
     $wanthintanswer,
     $email,
@@ -158,7 +158,7 @@ write_log("User account " . (int)$id . " (" . htmlsafechars($wantusername) . ") 
 
 if ($INSTALLER09['autoshout_on'] == 1) {
     autoshout($message);
-    $mc1->delete_value('shoutbox_');
+    $mc1->delete_value('bot_shoutbox_');
 }
 
 $body = str_replace(array(

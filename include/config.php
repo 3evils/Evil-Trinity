@@ -264,7 +264,7 @@ $INSTALLER09['uploadapp_alert'] = 1; // saves a query when off
 $INSTALLER09['bug_alert'] = 1; // saves a query when off
 $INSTALLER09['pic_base_url'] = "./pic/";
 $INSTALLER09['logo'] = ".templates/1/pic/banner.png";
-$INSTALLER09['stylesheet'] = 30;
+$INSTALLER09['stylesheet'] = 1;
 $INSTALLER09['categorie_icon'] = 1;
 $INSTALLER09['comment_min_class'] = 4; //minim class to be checked when posting comments
 $INSTALLER09['comment_check'] = 1; //set it to 0 if you wanna allow commenting with out staff checking 
@@ -275,6 +275,7 @@ $INSTALLER09['expiry']['trialdelete'] = 7 * 86400; // 7 days until the account w
 $INSTALLER09['movie_cats'] = array(
 3,
 4,
+8,
 70,
 71,
 72,

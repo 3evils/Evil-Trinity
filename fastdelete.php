@@ -47,29 +47,29 @@ $lang = array_merge( load_language('global'), load_language('fastdelete') );
                                  LEFT JOIN thumbsup ON thumbsup.torrentid = torrents.id
 				 LEFT JOIN snatched ON snatched.torrentid = torrents.id
 				 WHERE torrents.id =" . sqlesc($id)) or sqlerr(__FILE__, __LINE__);
-    @unlink("{$INSTALLER09['torrent_dir']}/$id.torrent");
+    unlink("{$INSTALLER09['torrent_dir']}/$id.torrent");
     $mc1->delete_value('MyPeers_' . $CURUSER['id']);
 }
-function deletetorrent_xbt($id)
+function deletetorrent_ocelot($id)
 {
    global $INSTALLER09, $mc1, $CURUSER, $lang;
-   sql_query("UPDATE torrents SET flags = 1 WHERE id = ".sqlesc($id)) or sqlerr(__FILE__, __LINE__);
    $res = sql_query('SELECT info_hash FROM torrents WHERE id = ' . sqlesc($id)) or sqlerr(__FILE__, __LINE__);
    $row = mysqli_fetch_assoc($res);
-sql_query("DELETE files.*, comments.*, thankyou.*, thanks.*, thumbsup.*, bookmarks.*, coins.*, rating.*, xbt_files_users.*, torrents.* FROM torrents
-                                     LEFT JOIN files ON files.torrent = torrents.id
-                                     LEFT JOIN comments ON comments.torrent = torrents.id
-                                     LEFT JOIN thankyou ON thankyou.torid = torrents.id
-                                     LEFT JOIN thanks ON thanks.torrentid = torrents.id
-                                     LEFT JOIN bookmarks ON bookmarks.torrentid = torrents.id
-                                     LEFT JOIN coins ON coins.torrentid = torrents.id
-                                     LEFT JOIN rating ON rating.torrent = torrents.id
-                                     LEFT JOIN thumbsup ON thumbsup.torrentid = torrents.id
-                                     LEFT JOIN xbt_files_users ON xbt_files_users.fid = torrents.id
-                                     WHERE torrents.id =" . sqlesc($arr['id'])) or sqlerr(__FILE__, __LINE__);
-        @unlink("{$INSTALLER09['torrent_dir']}/{$arr['id']}.torrent");
-        require_once(CLASS_DIR . 'tracker.class.php');
-        Tracker::update_tracker('delete_torrent', array('info_hash' => rawurlencode($arr['info_hash']), 'reason' => -1, 'id' => $arr['id']));
+   sql_query("DELETE files.*, comments.*, thankyou.*, thanks.*, thumbsup.*, bookmarks.*, coins.*, rating.*, xbt_files_users.*, torrents.* FROM torrents
+                                    LEFT JOIN files ON files.torrent = torrents.id
+                                    LEFT JOIN comments ON comments.torrent = torrents.id
+                                    LEFT JOIN thankyou ON thankyou.torid = torrents.id
+                                    LEFT JOIN thanks ON thanks.torrentid = torrents.id
+                                    LEFT JOIN bookmarks ON bookmarks.torrentid = torrents.id
+                                    LEFT JOIN coins ON coins.torrentid = torrents.id
+                                    LEFT JOIN rating ON rating.torrent = torrents.id
+                                    LEFT JOIN thumbsup ON thumbsup.torrentid = torrents.id
+                                    LEFT JOIN xbt_files_users ON torrents.id = xbt_files_users.fid
+                                    WHERE torrents.id = " . sqlesc($id)) or sqlerr(__FILE__, __LINE__);
+    unlink("{$INSTALLER09['torrent_dir']}/$id.torrent");
+    $mc1->delete_value('MyPeers_OCELOT_' . $CURUSER['id']);
+    require_once(CLASS_DIR . 'tracker.class.php');
+    Tracker::update_tracker('delete_torrent', array('info_hash' => rawurlencode($row['info_hash']), 'reason' => -1, 'id' => $id));
     }
      
    
@@ -82,7 +82,7 @@ sql_query("DELETE files.*, comments.*, thankyou.*, thanks.*, thumbsup.*, bookmar
             stderr("{$lang['fastdelete_sure']}", "{$lang['fastdelete_sure_msg']}");
           
     if (OCELOT_TRACKER == true) {
-    deletetorrent_xbt($id);
+    deletetorrent_ocelot($id);
     } else {
     deletetorrent($id);
     remove_torrent_peers($id);

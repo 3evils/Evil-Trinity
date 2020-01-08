@@ -4,7 +4,7 @@ AntiMidas. We are looking for coders to help with this project.
 
 ## Credits
 
-Thank you to the original coders of U-232. Especially BigJoose
+Thank you to the original coders of U-232. Especially BigJoos
 
 All Credit goes to the original code creators, and especially to any author for the modifications I selected for Evil-Trinity.
 

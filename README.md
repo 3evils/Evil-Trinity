@@ -1,11 +1,12 @@
-# U-232 Evil Trinity Edition #
 
-
-U-232 V6 Evil Trinity Edition -> High performance Bittorrent tracker
+Evil-Trinity source is based from unfinished and unreleased U-232 v6 code. Fixes and upgrades have been done by 
+AntiMidas. We are looking for coders to help with this project.
 
 ## Credits
 
-All Credit goes to the original code creators, and especially to any author for the modifications I selected for U-232.
+Thank you to the original coders of U-232. Especially BigJoose
+
+All Credit goes to the original code creators, and especially to any author for the modifications I selected for Evil-Trinity.
 
 The original coders of torrentbits and especially to CoLdFuSiOn for carrying on the legacy with Tbdev.
 
@@ -20,7 +21,7 @@ All other snippets, mods and contributions for this version from *CoLdFuSiOn*, *
 
 Evil Trinity requires the following :
 
-Visit https://u-232.dev/forum/index.php/topic,3789.0.html for more detailed help on installing U-232.
+Visit https://evil-trinity.com for more detailed help on installing U-232.
 
 
 - Memcached

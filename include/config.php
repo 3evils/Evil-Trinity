@@ -240,14 +240,13 @@ $INSTALLER09['sql_error_log'] = ROOT_DIR . 'sqlerr_logs' . DIRECTORY_SEPARATOR .
 //$INSTALLER09['tpl_cache_time'] = 30;
 //== PHP or Ocelot announce
 if (OCELOT_TRACKER == true) {
-$INSTALLER09['ocelot_prefix'] = 'http://fataltracker.cc:'.TRACKER_PORT.'/';  
+$INSTALLER09['ocelot_prefix'] = '';
 $INSTALLER09['ocelot_suffix'] = '/announce';
-$INSTALLER09['announce_urls'][] = 'http://fataltracker.cc:'.TRACKER_PORT.'/announce';
+$INSTALLER09['announce_urls'][] = '';
 } else {
 $INSTALLER09['announce_urls'] = array();
-$INSTALLER09['announce_urls'][] = 'http://fataltracker.cc/announce.php"';
-$INSTALLER09['announce_urls'][] = 'https://fataltracker.cc/announce.php"';
-}
+$INSTALLER09['announce_urls'][] = '';
+$INSTALLER09['announce_urls'][] = '';
 
 if (isset($_SERVER["HTTP_HOST"]) &&  $_SERVER["HTTP_HOST"] == "") $_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
 $INSTALLER09['baseurl'] = 'http' . (isset($_SERVER['HTTPS']) && (bool)$_SERVER['HTTPS'] == true ? 's' : '') . '://' . $_SERVER['HTTP_HOST'];
@@ -341,6 +340,6 @@ $INSTALLER09['staff_forums'] = array(
     1,
     6
 ); // these forum ID's' should exist and be a staff forum's to stop autoshouts
-$INSTALLER09['variant'] = 'U-232 Evil Trinity';
+$INSTALLER09['variant'] = 'Evil Trinity';
 define('TBVERSION', $INSTALLER09['variant']);
 ?>

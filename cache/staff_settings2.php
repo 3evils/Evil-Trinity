@@ -3,5 +3,5 @@
 This file created on Dec 30 2019 01:08:51.
 Site Config staff mod.
 **/
-$INSTALLER09['staff']['allowed'] = array('AntiMidas' => 1,'Burnsy' => 1);
+$INSTALLER09['staff']['allowed'] = array();
 ?>

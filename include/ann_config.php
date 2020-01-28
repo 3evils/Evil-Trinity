@@ -51,11 +51,11 @@ $INSTALLER09['ann_sql_log'] = 'sqlerr_logs/ann_sql_query_' . date('M_D_Y') . '.l
 $INSTALLER09['crazy_hour'] = false; //== Off for XBT
 $INSTALLER09['happy_hour'] = false; //== Off for XBT
 // DB setup
-$INSTALLER09['baseurl'] = 'https://fataltracker.cc';
+$INSTALLER09['baseurl'] = '';
 $INSTALLER09['mysql_host'] = '127.0.0.1';
-$INSTALLER09['mysql_user'] = 'root';
-$INSTALLER09['mysql_pass'] = 'a0701b822';
-$INSTALLER09['mysql_db'] = 'trinity';
+$INSTALLER09['mysql_user'] = '';
+$INSTALLER09['mysql_pass'] = '';
+$INSTALLER09['mysql_db'] = '';
 $INSTALLER09['expires']['max_slots'] = 300; // 300 = 5 minutes
 $INSTALLER09['expires']['user_passkey'] = 3600 * 8; // 8 hours
 $INSTALLER09['expires']['contribution'] = 3 * 86400; // 3 * 86400 3 days

@@ -66,7 +66,7 @@ CREATE TABLE `api_keys` (
 
 LOCK TABLES `api_keys` WRITE;
 /*!40000 ALTER TABLE `api_keys` DISABLE KEYS */;
-INSERT INTO `api_keys` VALUES ('omdb_key',''),('tmdb_key',''),('omdb_on','1'),('tmdb_on','1');
+INSERT INTO `api_keys` VALUES ('omdb_key',''),('tmdb_key',''),('omdb_on','0'),('tmdb_on','0');
 /*!40000 ALTER TABLE `api_keys` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -98,11 +98,7 @@ CREATE TABLE `arrowchat` (
 -- Dumping data for table `arrowchat`
 --
 
-LOCK TABLES `arrowchat` WRITE;
-/*!40000 ALTER TABLE `arrowchat` DISABLE KEYS */;
-INSERT INTO `arrowchat` VALUES (1,'3','1','boo',1577656316,1,1,0),(2,'1','3','cool working',1577656428,1,1,0);
-/*!40000 ALTER TABLE `arrowchat` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `arrowchat_admin`
@@ -124,11 +120,7 @@ CREATE TABLE `arrowchat_admin` (
 -- Dumping data for table `arrowchat_admin`
 --
 
-LOCK TABLES `arrowchat_admin` WRITE;
-/*!40000 ALTER TABLE `arrowchat_admin` DISABLE KEYS */;
-INSERT INTO `arrowchat_admin` VALUES (1,'antimidas','692fbeb68b64850aae43a9e95d88513c','antimidas@3evils.com');
-/*!40000 ALTER TABLE `arrowchat_admin` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `arrowchat_applications`
@@ -161,11 +153,6 @@ CREATE TABLE `arrowchat_applications` (
 -- Dumping data for table `arrowchat_applications`
 --
 
-LOCK TABLES `arrowchat_applications` WRITE;
-/*!40000 ALTER TABLE `arrowchat_applications` DISABLE KEYS */;
-INSERT INTO `arrowchat_applications` VALUES (6,'3 Evils Radio','streaming_radio','icon.png',340,47,NULL,NULL,1,1,1,'','http://www.arrowchat.com/updatecheck.php?id=32','1.0',1),(8,'3 Evils AutoDJ','streaming_radio2','icon.png',340,47,NULL,NULL,1,1,1,'','http://www.arrowchat.com/updatecheck.php?id=32','1.0',1),(9,'3 Evils Dragon Radio','streaming_radio3','icon.png',340,47,NULL,NULL,1,1,1,'','http://www.arrowchat.com/updatecheck.php?id=32','1.0',1);
-/*!40000 ALTER TABLE `arrowchat_applications` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `arrowchat_banlist`
@@ -188,11 +175,6 @@ CREATE TABLE `arrowchat_banlist` (
 -- Dumping data for table `arrowchat_banlist`
 --
 
-LOCK TABLES `arrowchat_banlist` WRITE;
-/*!40000 ALTER TABLE `arrowchat_banlist` DISABLE KEYS */;
-INSERT INTO `arrowchat_banlist` VALUES (2,'119',NULL,'0',1547155882),(3,NULL,'178.62.92.29','0',1547155955),(4,'',NULL,'1',1547209009);
-/*!40000 ALTER TABLE `arrowchat_banlist` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `arrowchat_chatroom_banlist`
@@ -217,12 +199,6 @@ CREATE TABLE `arrowchat_chatroom_banlist` (
 --
 -- Dumping data for table `arrowchat_chatroom_banlist`
 --
-
-LOCK TABLES `arrowchat_chatroom_banlist` WRITE;
-/*!40000 ALTER TABLE `arrowchat_chatroom_banlist` DISABLE KEYS */;
-INSERT INTO `arrowchat_chatroom_banlist` VALUES (13,'',4,1,1547241249,''),(17,'',1,0,1556609921,''),(18,'18',7,0,1562646076,'99.228.9.143');
-/*!40000 ALTER TABLE `arrowchat_chatroom_banlist` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `arrowchat_chatroom_messages`
@@ -392,10 +368,6 @@ CREATE TABLE `arrowchat_notifications` (
 -- Dumping data for table `arrowchat_notifications`
 --
 
-LOCK TABLES `arrowchat_notifications` WRITE;
-/*!40000 ALTER TABLE `arrowchat_notifications` DISABLE KEYS */;
-/*!40000 ALTER TABLE `arrowchat_notifications` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `arrowchat_notifications_markup`
@@ -417,10 +389,7 @@ CREATE TABLE `arrowchat_notifications_markup` (
 -- Dumping data for table `arrowchat_notifications_markup`
 --
 
-LOCK TABLES `arrowchat_notifications_markup` WRITE;
-/*!40000 ALTER TABLE `arrowchat_notifications_markup` DISABLE KEYS */;
-INSERT INTO `arrowchat_notifications_markup` VALUES (1,'Private Messages',1,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_message_icon.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has sent you a new message.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(2,'Friend Requests',2,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_friend_icon.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has sent you a friend request.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(3,'Wall Post',3,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_wall_post.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has wrote on your wall.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(4,'Event Invite',4,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_event.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has invited you to an event.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(5,'Group Invite',5,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_group.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has invited you to a group.<br />	<div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(6,'Birthday',6,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_birthday.png\" class=\"arrowchat_notification_icon\" />It is <a href=\"#\">{author_name}</a>s birthday!<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(7,'Comment',7,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_comment.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has left you a comment.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(8,'Reply',8,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_reply.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has replied to you.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(9,'Like Post',9,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_like.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has liked your post.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(10,'Like Comment',10,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_like.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has liked your comment.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(11,'Like Photo',11,'<div class=\"arrowchat_notification_box arrowchat_blue_link\"><img src=\"/arrowchat/themes/new_facebook_full/images/icons/notification_like.png\" class=\"arrowchat_notification_icon\" /><a href=\"#\">{author_name}</a> has liked your photo.<br /><div class=\"arrowchat_received\">Received {longago}</div></div><div class=\"arrowchat_notifications_divider\"></div>'),(12,'New Source Code',12,'Welcome to the new source code. Also please welcome our newest staff member Sandra');
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `arrowchat_reports`
@@ -467,11 +436,7 @@ CREATE TABLE `arrowchat_smilies` (
 -- Dumping data for table `arrowchat_smilies`
 --
 
-LOCK TABLES `arrowchat_smilies` WRITE;
-/*!40000 ALTER TABLE `arrowchat_smilies` DISABLE KEYS */;
-INSERT INTO `arrowchat_smilies` VALUES (32,'3rd.gif',':3rd:');
-/*!40000 ALTER TABLE `arrowchat_smilies` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 --
 -- Table structure for table `arrowchat_status`
@@ -546,11 +511,6 @@ CREATE TABLE `arrowchat_themes` (
 -- Dumping data for table `arrowchat_themes`
 --
 
-LOCK TABLES `arrowchat_themes` WRITE;
-/*!40000 ALTER TABLE `arrowchat_themes` DISABLE KEYS */;
-INSERT INTO `arrowchat_themes` VALUES (1,'new_facebook_full','New Facebook Full',1,'http://www.arrowchat.com/updatecheck.php?id=8','6.1',1),(3,'leaf','leaf',0,'http://www.arrowchat.com/updatecheck.php?id=36','4.1',0),(4,'fresh','fresh',0,'http://www.arrowchat.com/updatecheck.php?id=46','1.1',0),(5,'facebook_no_bar','FB no bar',0,'http://www.arrowchat.com/updatecheck.php?id=7','6.1',0),(6,'fresh_no_bar','fresh_no_bar',0,'http://www.arrowchat.com/updatecheck.php?id=47','1.1',0);
-/*!40000 ALTER TABLE `arrowchat_themes` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `arrowchat_trayicons`
@@ -602,10 +562,7 @@ CREATE TABLE `arrowchat_warnings` (
 -- Dumping data for table `arrowchat_warnings`
 --
 
-LOCK TABLES `arrowchat_warnings` WRITE;
-/*!40000 ALTER TABLE `arrowchat_warnings` DISABLE KEYS */;
-/*!40000 ALTER TABLE `arrowchat_warnings` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 CREATE TABLE IF NOT EXISTS `achievementist` (
   `id` int(5) NOT NULL,
@@ -652,7 +609,7 @@ INSERT INTO `achievementist` (`id`, `achievname`, `notes`, `clienticon`) VALUES
 (33, 'Stick Em Up LVL3', 'Uploading at least 10 sticky torrents.', 'sticky3.png'),
 (34, 'Stick EM Up LVL4', 'Uploading at least 25 sticky torrents.', 'sticky4.png'),
 (35, 'Stick EM Up LVL5', 'Uploading at least 50 sticky torrents.', 'sticky5.png'),
-(36, 'Gag Da B1tch', 'Getting gagged like he\'s Adams Man!', 'gagged.png'),
+(36, 'Gag Da B1tch', 'Getting gagged like he\''s Adams Man!', 'gagged.png'),
 (37, 'Signature Setter', 'User has successfully set a signature on profile settings.', 'signature.png'),
 (38, 'Corruption Counts', 'Transferred at least 1 byte of corrupt data incoming.', 'corrupt.png'),
 (40, '7 Day Seeder', 'Seeded a snatched torrent for a total of at least 7 days.', '7dayseed.png'),
@@ -1713,7 +1670,7 @@ INSERT INTO `faq_cat` (`id`, `name`, `shortcut`, `min_view`) VALUES
 (6, 'Improve Download Speed', 'speed', 0),
 (7, 'ISP Proxy Issue', 'isp', 0),
 (8, 'Connection Problems', 'connect', 0),
-(9, 'Can\'t Find Answer?', 'answer', 0);
+(9, 'Can\t Find Answer?', 'answer', 0);
 
 -- --------------------------------------------------------
 
@@ -3240,192 +3197,172 @@ CREATE TABLE IF NOT EXISTS `userhits` (
 -- Table structure for table `users`
 --
 
-
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
-  `passhash` varchar(80) CHARACTER SET utf8 DEFAULT NULL,
-  `loginhash` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `passhash` varchar(64) CHARACTER SET utf8 DEFAULT NULL,
   `secret` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
   `passkey` varchar(32) CHARACTER SET utf8 DEFAULT NULL,
   `email` varchar(180) CHARACTER SET utf8 DEFAULT NULL,
-  `status` enum(''pending'',''confirmed'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''pending'',
-  `added` int(11) NOT NULL,
-  `last_login` int(11) NOT NULL,
-  `last_access` int(11) NOT NULL,
-  `curr_ann_last_check` int(10) unsigned NOT NULL DEFAULT ''0'',
-  `curr_ann_id` int(10) unsigned NOT NULL DEFAULT ''0'',
-  `editsecret` varchar(80) CHARACTER SET utf8 DEFAULT NULL,
-  `privacy` enum(''strong'',''normal'',''low'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''normal'',
-  `stylesheet` int(10) NOT NULL DEFAULT ''1'',
-  `info` text CHARACTER SET utf8,
-  `acceptpms` enum(''yes'',''friends'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
+  `status` enum('pending','confirmed') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'pending',
+  `added` int(11) NOT NULL DEFAULT 0,
+  `last_login` int(11) NOT NULL DEFAULT 0,
+  `last_access` int(11) NOT NULL DEFAULT 0,
+  `curr_ann_last_check` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `curr_ann_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `editsecret` varchar(32) CHARACTER SET utf8 DEFAULT NULL,
+  `privacy` enum('strong','normal','low') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'normal',
+  `stylesheet` int(10) NOT NULL DEFAULT 1,
+  `info` text CHARACTER SET utf8 DEFAULT NULL,
+  `acceptpms` enum('yes','friends','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
   `ip` varchar(15) CHARACTER SET utf8 DEFAULT NULL,
-  `class` tinyint(3) unsigned NOT NULL DEFAULT ''0'',
-  `override_class` tinyint(3) unsigned NOT NULL DEFAULT ''255'',
-  `language` int(11) NOT NULL DEFAULT ''1'',
+  `class` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `override_class` tinyint(3) UNSIGNED NOT NULL DEFAULT 255,
+  `language` int(11) NOT NULL DEFAULT 1,
   `avatar` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
-  `av_w` smallint(3) unsigned NOT NULL DEFAULT ''0'',
-  `av_h` smallint(3) unsigned NOT NULL DEFAULT ''0'',
-  `uploaded` bigint(20) unsigned NOT NULL DEFAULT ''0'',
-  `downloaded` bigint(20) unsigned NOT NULL DEFAULT ''0'',
+  `av_w` smallint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `av_h` smallint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `uploaded` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+  `downloaded` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
   `title` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
-  `country` int(10) unsigned NOT NULL DEFAULT ''0'',
+  `country` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `notifs` varchar(300) CHARACTER SET utf8 DEFAULT NULL,
-  `modcomment` text CHARACTER SET utf8,
-  `enabled` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `donor` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `warned` int(11) NOT NULL DEFAULT ''0'',
-  `torrentsperpage` int(3) unsigned NOT NULL DEFAULT ''0'',
-  `topicsperpage` int(3) unsigned NOT NULL DEFAULT ''0'',
-  `postsperpage` int(3) unsigned NOT NULL DEFAULT ''0'',
-  `deletepms` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `savepms` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `reputation` int(10) NOT NULL DEFAULT ''10'',
+  `modcomment` text CHARACTER SET utf8 DEFAULT NULL,
+  `enabled` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `donor` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `warned` int(11) NOT NULL DEFAULT 0,
+  `torrentsperpage` int(3) UNSIGNED NOT NULL DEFAULT 0,
+  `topicsperpage` int(3) UNSIGNED NOT NULL DEFAULT 0,
+  `postsperpage` int(3) UNSIGNED NOT NULL DEFAULT 0,
+  `deletepms` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `savepms` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `reputation` int(10) NOT NULL DEFAULT 10,
   `time_offset` varchar(5) CHARACTER SET utf8 DEFAULT NULL,
-  `dst_in_use` tinyint(1) NOT NULL DEFAULT ''0'',
-  `auto_correct_dst` tinyint(1) NOT NULL DEFAULT ''1'',
-  `show_shout` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''yes'',
-  `shoutboxbg` enum(''1'',''2'',''3'',''4'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''1'',
-  `chatpost` int(11) NOT NULL DEFAULT ''1'',
-  `smile_until` int(10) NOT NULL DEFAULT ''0'',
-  `seedbonus` decimal(10,1) NOT NULL DEFAULT ''200.0'',
-  `bonuscomment` text CHARACTER SET utf8,
-  `vip_added` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `vip_until` int(10) NOT NULL DEFAULT ''0'',
-  `freeslots` int(11) unsigned NOT NULL DEFAULT ''5'',
-  `free_switch` int(11) unsigned NOT NULL DEFAULT ''0'',
-  `invites` int(10) unsigned NOT NULL DEFAULT ''1'',
-  `invitedby` int(10) unsigned NOT NULL DEFAULT ''0'',
-  `invite_rights` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `anonymous` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `uploadpos` int(11) NOT NULL DEFAULT ''1'',
-  `forumpost` int(11) NOT NULL DEFAULT ''1'',
-  `downloadpos` int(11) NOT NULL DEFAULT ''1'',
-  `immunity` int(11) NOT NULL DEFAULT ''0'',
-  `leechwarn` int(11) NOT NULL DEFAULT ''0'',
-  `disable_reason` text CHARACTER SET utf8,
-  `clear_new_tag_manually` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `last_browse` int(11) NOT NULL DEFAULT ''0'',
-  `sig_w` smallint(3) unsigned NOT NULL DEFAULT ''0'',
-  `sig_h` smallint(3) unsigned NOT NULL DEFAULT ''0'',
-  `signatures` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
+  `dst_in_use` tinyint(1) NOT NULL DEFAULT 0,
+  `auto_correct_dst` tinyint(1) NOT NULL DEFAULT 1,
+  `show_shout` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'yes',
+  `shoutboxbg` enum('1','2','3','4') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '1',
+  `chatpost` int(11) NOT NULL DEFAULT 1,
+  `smile_until` int(10) NOT NULL DEFAULT 0,
+  `seedbonus` decimal(10,1) NOT NULL DEFAULT 200.0,
+  `bonuscomment` text CHARACTER SET utf8 DEFAULT NULL,
+  `vip_added` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `vip_until` int(10) NOT NULL DEFAULT 0,
+  `freeslots` int(11) UNSIGNED NOT NULL DEFAULT 5,
+  `free_switch` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `invites` int(10) UNSIGNED NOT NULL DEFAULT 1,
+  `invitedby` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `invite_rights` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `anonymous` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `uploadpos` int(11) NOT NULL DEFAULT 1,
+  `forumpost` int(11) NOT NULL DEFAULT 1,
+  `downloadpos` int(11) NOT NULL DEFAULT 1,
+  `immunity` int(11) NOT NULL DEFAULT 0,
+  `leechwarn` int(11) NOT NULL DEFAULT 0,
+  `disable_reason` text CHARACTER SET utf8 DEFAULT NULL,
+  `clear_new_tag_manually` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `last_browse` int(11) NOT NULL DEFAULT 0,
+  `sig_w` smallint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `sig_h` smallint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `signatures` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
   `signature` varchar(225) CHARACTER SET utf8 DEFAULT NULL,
-  `forum_access` int(11) NOT NULL DEFAULT ''0'',
-  `highspeed` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `hnrwarn` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `hit_and_run_total` int(9) DEFAULT ''0'',
-  `donoruntil` int(11) unsigned NOT NULL DEFAULT ''0'',
-  `donated` int(3) NOT NULL DEFAULT ''0'',
-  `total_donated` decimal(8,2) NOT NULL DEFAULT ''0.00'',
-  `vipclass_before` int(10) NOT NULL DEFAULT ''0'',
-  `parked` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `passhint` int(10) unsigned NOT NULL,
+  `forum_access` int(11) NOT NULL DEFAULT 0,
+  `highspeed` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `hnrwarn` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `hit_and_run_total` int(9) DEFAULT 0,
+  `donoruntil` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `donated` int(3) NOT NULL DEFAULT 0,
+  `total_donated` decimal(8,2) NOT NULL DEFAULT 0.00,
+  `vipclass_before` int(10) NOT NULL DEFAULT 0,
+  `parked` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `passhint` int(10) UNSIGNED NOT NULL,
   `hintanswer` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
-  `avatarpos` int(11) NOT NULL DEFAULT ''1'',
-  `support` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `supportfor` text CHARACTER SET utf8,
-  `language_new` int(11) NOT NULL DEFAULT ''1'',
-  `sendpmpos` int(11) NOT NULL DEFAULT ''1'',
-  `invitedate` int(11) NOT NULL DEFAULT ''0'',
+  `avatarpos` int(11) NOT NULL DEFAULT 1,
+  `support` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `supportfor` text CHARACTER SET utf8 DEFAULT NULL,
+  `language_new` int(11) NOT NULL DEFAULT 1,
+  `sendpmpos` int(11) NOT NULL DEFAULT 1,
+  `invitedate` int(11) NOT NULL DEFAULT 0,
   `invitees` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
-  `invite_on` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''yes'',
-  `subscription_pm` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''no'',
-  `gender` enum(''Male'',''Female'',''NA'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''NA'',
-  `anonymous_until` int(10) NOT NULL DEFAULT ''0'',
-  `viewscloud` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''yes'',
-  `tenpercent` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `avatars` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `offavatar` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `pirate` int(11) unsigned NOT NULL DEFAULT ''0'',
-  `king` int(11) unsigned NOT NULL DEFAULT ''0'',
-  `hidecur` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `ssluse` int(1) NOT NULL DEFAULT ''1'',
-  `signature_post` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `forum_post` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `avatar_rights` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `offensive_avatar` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `view_offensive_avatar` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `paranoia` tinyint(3) unsigned NOT NULL DEFAULT ''0'',
+  `invite_on` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'yes',
+  `subscription_pm` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'no',
+  `gender` enum('Male','Female','NA') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'NA',
+  `anonymous_until` int(10) NOT NULL DEFAULT 0,
+  `viewscloud` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'yes',
+  `tenpercent` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `avatars` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `offavatar` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `pirate` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `king` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `hidecur` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `ssluse` int(1) NOT NULL DEFAULT 1,
+  `signature_post` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `forum_post` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `avatar_rights` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `offensive_avatar` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `view_offensive_avatar` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `paranoia` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
   `google_talk` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `msn` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `aim` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `yahoo` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `website` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `icq` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `show_email` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `parked_until` int(10) NOT NULL DEFAULT ''0'',
-  `gotgift` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
+  `show_email` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `parked_until` int(10) NOT NULL DEFAULT 0,
+  `gotgift` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `hash1` varchar(96) CHARACTER SET utf8 DEFAULT NULL,
-  `suspended` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `bjwins` int(10) NOT NULL DEFAULT ''0'',
-  `bjlosses` int(10) NOT NULL DEFAULT ''0'',
-  `warn_reason` text CHARACTER SET utf8,
-  `onirc` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `irctotal` bigint(20) unsigned NOT NULL DEFAULT ''0'',
-  `birthday` date DEFAULT ''0000-00-00'',
-  `got_blocks` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''yes'',
-  `last_access_numb` bigint(30) NOT NULL DEFAULT ''0'',
-  `onlinetime` bigint(30) NOT NULL DEFAULT ''0'',
-  `pm_on_delete` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''no'',
-  `commentpm` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''no'',
-  `split` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `browser` text CHARACTER SET utf8,
-  `hits` int(10) NOT NULL DEFAULT ''0'',
-  `comments` int(10) unsigned NOT NULL DEFAULT ''0'',
-  `categorie_icon` int(10) DEFAULT ''1'',
-  `perms` int(11) NOT NULL DEFAULT ''0'',
-  `mood` int(10) NOT NULL DEFAULT ''1'',
-  `got_moods` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `pms_per_page` tinyint(3) unsigned DEFAULT ''20'',
-  `show_pm_avatar` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `watched_user` int(11) NOT NULL DEFAULT ''0'',
-  `watched_user_reason` text CHARACTER SET utf8,
-  `staff_notes` text CHARACTER SET utf8,
-  `game_access` int(11) NOT NULL DEFAULT ''1'',
-  `where_is` text CHARACTER SET utf8,
-  `show_staffshout` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''yes'',
+  `suspended` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `bjwins` int(10) NOT NULL DEFAULT 0,
+  `bjlosses` int(10) NOT NULL DEFAULT 0,
+  `warn_reason` text CHARACTER SET utf8 DEFAULT NULL,
+  `onirc` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `irctotal` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+  `birthday` date DEFAULT '1801-01-01',
+  `got_blocks` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
+  `last_access_numb` bigint(30) NOT NULL DEFAULT 0,
+  `onlinetime` bigint(30) NOT NULL DEFAULT 0,
+  `pm_on_delete` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'no',
+  `commentpm` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'no',
+  `split` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `browser` text CHARACTER SET utf8 DEFAULT NULL,
+  `hits` int(10) NOT NULL DEFAULT 0,
+  `comments` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `categorie_icon` int(10) DEFAULT 1,
+  `perms` int(11) NOT NULL DEFAULT 0,
+  `mood` int(10) NOT NULL DEFAULT 1,
+  `got_moods` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `pms_per_page` tinyint(3) UNSIGNED DEFAULT 20,
+  `show_pm_avatar` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `watched_user` int(11) NOT NULL DEFAULT 0,
+  `watched_user_reason` text CHARACTER SET utf8 DEFAULT NULL,
+  `staff_notes` text CHARACTER SET utf8 DEFAULT NULL,
+  `game_access` int(11) NOT NULL DEFAULT 1,
+  `where_is` text CHARACTER SET utf8 DEFAULT NULL,
+  `show_staffshout` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'yes',
   `request_uri` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
-  `logout` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `browse_icons` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `numuploads` int(10) NOT NULL DEFAULT ''0'',
-  `corrupt` int(10) NOT NULL DEFAULT ''0'',
-  `ignore_list` text CHARACTER SET utf8,
-  `opt1` int(11) NOT NULL DEFAULT ''182927957'',
-  `opt2` int(11) NOT NULL DEFAULT ''224'',
-  `sidebar` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''no'',
-  `torrent_pass_version` int(11) NOT NULL,
+  `logout` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `browse_icons` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
+  `numuploads` int(10) NOT NULL DEFAULT 0,
+  `corrupt` int(10) NOT NULL DEFAULT 0,
+  `ignore_list` text CHARACTER SET utf8 DEFAULT NULL,
+  `opt1` int(11) NOT NULL DEFAULT 182927957,
+  `opt2` int(11) NOT NULL DEFAULT 224,
+  `sidebar` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'no',
+  `torrent_pass_version` int(11) NOT NULL DEFAULT 0,
   `torrent_pass` varchar(32) CHARACTER SET utf8 DEFAULT NULL,
-  `can_leech` tinyint(4) NOT NULL DEFAULT ''1'',
-  `wait_time` int(11) NOT NULL,
-  `peers_limit` int(11) DEFAULT ''1000'',
-  `torrents_limit` int(11) DEFAULT ''1000'',
-  `forum_mod` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
+  `can_leech` tinyint(4) NOT NULL DEFAULT 1,
+  `wait_time` int(11) NOT NULL DEFAULT 0,
+  `peers_limit` int(11) DEFAULT 1000,
+  `torrents_limit` int(11) DEFAULT 1000,
+  `forum_mod` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `forums_mod` varchar(320) CHARACTER SET utf8 DEFAULT NULL,
   `altnick` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `forum_sort` enum(''ASC'',''DESC'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''DESC'',
-  `pm_forced` enum(''yes'',''no'') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT ''no'',
-  `lastactivity` int(11) DEFAULT ''0'',
-  `trial` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `pin_code` int(4) NOT NULL,
-  `snow` enum(''yes'',''no'') COLLATE utf8_unicode_ci NOT NULL DEFAULT ''no'',
-  `design` int(25) NOT NULL DEFAULT ''1'',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`),
-  KEY `ip` (`ip`),
-  KEY `uploaded` (`uploaded`),
-  KEY `downloaded` (`downloaded`),
-  KEY `country` (`country`),
-  KEY `last_access` (`last_access`),
-  KEY `enabled` (`enabled`),
-  KEY `warned` (`warned`),
-  KEY `free_switch` (`free_switch`),
-  KEY `T_Pass` (`torrent_pass`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `forum_sort` enum('ASC','DESC') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'DESC',
+  `pm_forced` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'yes',
+  `pin_code` int(4) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 
 
 -- --------------------------------------------------------

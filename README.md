@@ -41,7 +41,7 @@ Visit https://evil-trinity.com for more detailed help on installing U-232.
 - PHP7-ZIP
 - LIBAPACHE2-MOD-PHP7.2(3,4)
 - Apache/2.4.10
-- MariaDB 10.1
+- MariaDB 10.0-10.1
 - Nodejs
 - Npm
 ### Set Up Instructions:

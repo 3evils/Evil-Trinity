@@ -45,11 +45,8 @@ function permissioncheck()
         $root . 'include/' => 0
     );
     $files =array(
-        $root . 'include/config.php' => 0,
-        $root . 'include/ann_config.php' => 0;
+
     )
-
-
     checkdir($dirs);
     $continue = true;
     $out = '<fieldset><legend>Directory check</legend>';

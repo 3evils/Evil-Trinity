@@ -36,6 +36,8 @@ function permissioncheck()
     $dirs = array(
         $root . 'imdb/' => 0,
         $root . 'arrowchat/cache/' => 0,
+        $root . 'include/config.php' => 0,
+        $root . 'include/ann_config.php' => 0,
         $root . 'cache/' => 0,
         $root . 'torrents/' => 0,
         $root . 'include/backup/' => 0,

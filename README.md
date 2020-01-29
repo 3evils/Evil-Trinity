@@ -164,19 +164,22 @@ $ apt install nodejs npm -y
 ---
 **Get Source and prepare for web installer**
 
-*Get the source*
-```
-rm -r /var/www/html
-$ git clone https://github.com/3evils/Evil-Trinity.git /var/www/html
-$ chmod 0777 /var/www/html/dir_list/ /var/www/html/imdb/ /var/www/html/torrents/ /var/www/html/uploads/ /var/www/html/include/backup/ /var/www/html/sqlerr_logs/ /var/www/html/install/ /var/www/html/install/extra/ /var/www/html/include/
-```
 *Make Bucket dir*
 ```
 $ mkdir /var/bucket
 $ chmod -R 777 /var/bucket
 ```
+*Get the source*
+```
+rm -r /var/www/html
+$ git clone https://github.com/3evils/Evil-Trinity.git /var/www/html
+```
 
-
+*Install NodeJS requirements*
+```
+$ cd /var/www/html
+$ npm install
+```
 *Install and run Certbot to obtain SSL certificates for free.*
 ```
 $ sudo apt-get update
@@ -184,6 +187,7 @@ $ sudo apt-get install software-properties-common
 $ sudo add-apt-repository universe
 $ sudo add-apt-repository ppa:certbot/certbot
 $ sudo apt-get update
+$ sudo apt-get install certbot python-certbot-apache
 ```
 *Obtain certificates*
 ```

@@ -44,17 +44,14 @@ function permissioncheck()
         $root . 'install/extra/' => 0,
         $root . 'include/' => 0
     );
-    $files =array(
-
-    )
     checkdir($dirs);
     $continue = true;
     $out = '<fieldset><legend>Directory check</legend>';
-    $cmd = 'chmod 777';
+    $cmd = 'chmod 0777';
     foreach ($dirs as $dir => $state) {
         if (!$state) {
             $continue = false;
-            $cmd .= ' ' . $dir  ;
+            $cmd .= ' ' . $dir;
         }
         $out .= '<div class="' . ($state ? 'readable' : 'notreadable') . '">' . $dir . '</div>';
     }

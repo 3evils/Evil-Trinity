@@ -36,8 +36,6 @@ function permissioncheck()
     $dirs = array(
         $root . 'imdb/' => 0,
         $root . 'arrowchat/cache/' => 0,
-        $root . 'include/config.php' => 0,
-        $root . 'include/ann_config.php' => 0,
         $root . 'cache/' => 0,
         $root . 'torrents/' => 0,
         $root . 'include/backup/' => 0,
@@ -46,14 +44,20 @@ function permissioncheck()
         $root . 'install/extra/' => 0,
         $root . 'include/' => 0
     );
+    $files =array(
+        $root . 'include/config.php' => 0,
+        $root . 'include/ann_config.php' => 0;
+    )
+
+
     checkdir($dirs);
     $continue = true;
     $out = '<fieldset><legend>Directory check</legend>';
-    $cmd = 'chmod 0777';
+    $cmd = 'chmod 777';
     foreach ($dirs as $dir => $state) {
         if (!$state) {
             $continue = false;
-            $cmd .= ' ' . $dir;
+            $cmd .= ' ' . $dir  ;
         }
         $out .= '<div class="' . ($state ? 'readable' : 'notreadable') . '">' . $dir . '</div>';
     }

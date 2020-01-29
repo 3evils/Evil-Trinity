@@ -293,6 +293,6 @@ $INSTALLER09['staff_forums'] = array(
     1,
     2
 ); // these forum ID's' should exist and be a staff forum's to stop autoshouts
-$INSTALLER09['variant'] = 'U-232 V5';
+$INSTALLER09['variant'] = 'Evil-Trinity';
 define('TBVERSION', $INSTALLER09['variant']);
 ?>

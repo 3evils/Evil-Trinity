@@ -127,6 +127,33 @@ root@server1:~# netstat -tap | grep mysql
 tcp6 0 0 [::]:mysql [::]:* LISTEN 30591/mysqld
 root@server1:~#
 ```
+
+
+***FOR UBUNTU 17/18/19***
+
+**For Ubuntu 17+ you will need to create an extra database user. Follow instructions below.**
+
+Now that our MySQL server allows remote connections, we still need to have a mysql user that is allowed to access the
+ server from outside the localhost. To create a mysql user that is allowed to connect from any host.
+ 
+ First login to mysql
+ ```
+$ mysql -uroot -p<mysql root password> 
+```
+At the Mysql prompt run:
+```
+CREATE USER 'username'@'%' IDENTIFIED BY 'new-password';
+FLUSH PRIVILEGES;
+```
+Then you can grant access to databases using the GRANT ALL command:
+```
+GRANT ALL PRIVILEGES ON dbname.* TO 'username'@'%';
+```
+If you want to grant access to all databases on the server, run:
+```
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'%';
+```
+
 ----------------------------------------------------------
 
 

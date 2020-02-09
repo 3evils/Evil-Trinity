@@ -22,7 +22,7 @@ $HTMLOUT.= "<div class='card'>
 	<div class='card-divider portlet-header'>{$lang['index_advertise_t']}</div>";
 $HTMLOUT.= "
 <div class='content container-fluid portlet-content card-section'>
-<a href='https://github.com/Bigjoos'><img class='img-thumbnail float-center' src='pic/logo.png' alt='{$lang['index_advertise_t']}' title='{$lang['index_advertise_t']}'></a></div>";
+<a href='https://github.com/3evils'><img class='img-thumbnail float-center' src='pic/logo.png' alt='{$lang['index_advertise_t']}' title='{$lang['index_advertise_t']}'></a></div>";
 $HTMLOUT .= "</div>";
 //==End
 // End Class

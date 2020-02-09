@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/design/1/achievementbonus.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/achievementbonus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/achievementhistory.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/achievementhistory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/achievementlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/achievementlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/bitbucket.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/bitbucket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/bjstats.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/bjstats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/blackjack.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/blackjack.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/bookmarks.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/bookmarks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/browse.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/browse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/browse_catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/browse_catalogue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/bugs.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/bugs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/casino.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/casino.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/catalogue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/contactstaff.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/contactstaff.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/credits.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/credits.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/details.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/donate.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/donate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/faq.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/faq.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/filelist.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/filelist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/delete_poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/delete_poll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/delete_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/delete_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/delete_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/delete_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/edit_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/edit_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/forum_attachment.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/forum_attachment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/forum_whodownloaded.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/forum_whodownloaded.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/get_daily.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/get_daily.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/make_poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/make_poll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/mod_panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/mod_panel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/new_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/new_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/parent_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/parent_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/poll_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/poll_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/post_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/post_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/preview.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/preview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/quote_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/quote_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/reply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/update_forum.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/update_forum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/update_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/update_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/view_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/view_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/view_unread.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/view_unread.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/html_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/html_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/torrenttable.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/torrenttable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/torrenttable_catalogue.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/torrenttable_catalogue.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/imdb/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Xa3qm4l44AsF70oLEi7Z9d6tSG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="" />
+      <created>1581270571019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581270571019</updated>
+      <workItem from="1581270575758" duration="1789000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="229" y="42" key="SettingsEditor" timestamp="1581271005821">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="42" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1581271005821" />
+    <state x="229" y="60" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1581270863656" />
+    <state x="399" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1581270580051">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="399" y="254" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1581270580051" />
+    <state x="305" y="67" width="816" height="825" key="find.popup" timestamp="1581272635927">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="305" y="67" width="816" height="825" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1581272635927" />
+  </component>
+</project>

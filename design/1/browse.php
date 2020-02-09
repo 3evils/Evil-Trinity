@@ -1,20 +1,20 @@
 <?php
 /**
- |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
- |--------------------------------------------------------------------------|
- |   Licence Info: WTFPL                                                    |
- |--------------------------------------------------------------------------|
- |   Copyright (C) 2018 U-232 CodeName Trinity                              |
- |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
- |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
- |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
+|--------------------------------------------------------------------------|
+|   https://github.com/3evils/                                            |
+|--------------------------------------------------------------------------|
+|   Licence Info: WTFPL                                                    |
+|--------------------------------------------------------------------------|
+|   Copyright (C) 2019 Evil-Trinity                             |
+|--------------------------------------------------------------------------|
+|   A bittorrent tracker source based on an unreleased U-232.   |
+|--------------------------------------------------------------------------|
+|   Project Leaders: AntiMidas               |
+|--------------------------------------------------------------------------|
+_   _   _   _   ___Based on____     _   _   _   _
+/ \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
 ( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
+\_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
  */
  if (isset($_GET['clear_new']) && $_GET['clear_new'] == 1) {
     sql_query("UPDATE users SET last_browse=" . TIME_NOW . " WHERE id=" . sqlesc($CURUSER['id'])) or sqlerr(__FILE__, __LINE__);
@@ -32,14 +32,7 @@
 }
 if (function_exists('parked')) parked();
 $HTMLOUT = $searchin = $select_searchin = $where = $addparam = $new_button = $searchstr = $search_help_boolean = '';
-/*$HTMLOUT .='<script type="text/javascript">
- <!--
-  if (screen.width <= 700) {
-  window.location = "' . $INSTALLER09["baseurl"] .'/browse_catalogue.php";
-  }
- //-->
-</script>';
-*/
+
 $search_help_boolean = '<h1>The boolean search supports the following operators:</h1>
 <p><span style="font-weight: bold;">+</span> A leading plus sign indicates that this word must be present.<br /><br />
     <span style="font-weight: bold;">-</span> A leading minus sign indicates that this word must not be present.<br /><br />

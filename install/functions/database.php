@@ -39,7 +39,7 @@ function db_insert()
     global $root, $INSTALLER09;
     $out = '<fieldset><legend>Database</legend>';
     require_once ($root.'include/config.php');
-    if($_POST['ocelot'] == 1) $file = "trinity.install.sql";
+    if($_POST['ocelot'] == 1) $file = "trinity.install.ocelot.sql";
     elseif($_POST['ocelot'] == 0) $file = "trinity.install.php.sql";
     $q = sprintf('/usr/bin/mysql -h %s -u %s -p%s %s < %sinstall/extra/'.$file, $INSTALLER09['mysql_host'], $INSTALLER09['mysql_user'], $INSTALLER09['mysql_pass'], $INSTALLER09['mysql_db'], $root); //== Linux
     //$q = sprintf('c:\AppServ\MySQL\bin\mysql -h %s -u %s -p%s %s < %sinstall/extra/'.$file,$INSTALLER09['mysql_host'],$INSTALLER09['mysql_user'],$INSTALLER09['mysql_pass'],$INSTALLER09['mysql_db'],$root);  //== Win - remember to set your path up correctly - atm its set for appserv

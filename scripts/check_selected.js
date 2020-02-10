@@ -1,1 +1,0 @@
-var form="checkme";function SetChecked(e,m){dml=document.forms[form],len=dml.elements.length;var l=0;for(l=0;l<len;l++)dml.elements[l].name==m&&(dml.elements[l].checked=e)}

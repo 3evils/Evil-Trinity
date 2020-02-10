@@ -128,6 +128,45 @@ tcp6 0 0 [::]:mysql [::]:* LISTEN 30591/mysqld
 root@server1:~#
 ```
 
+*Install NodeJS and npm*
+```
+curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+---
+**Get Source and prepare for web installer**
+
+*Make Bucket dir*
+```
+ mkdir /var/bucket
+ chmod -R 777 /var/bucket
+```
+*Get the source*
+```
+rm -r /var/www/html
+ git clone https://github.com/3evils/Evil-Trinity.git /var/www/html
+```
+
+*Install NodeJS requirements*
+```
+ cd /var/www/html
+npm install
+```
+*Install and run Certbot to obtain SSL certificates for free.*
+```
+ sudo apt-get update
+ sudo apt-get install software-properties-common
+ sudo add-apt-repository universe
+ sudo add-apt-repository ppa:certbot/certbot
+ sudo apt-get update
+ sudo apt-get install certbot python-certbot-apache
+```
+*Obtain certificates*
+```
+certbot --apache --agree-tos --email=<email Address> -d <FQDN>
+```
+---
+
 
 ***FOR UBUNTU 17/18/19***
 

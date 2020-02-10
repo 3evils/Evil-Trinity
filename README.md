@@ -8,6 +8,7 @@
 All Credit goes to the original code creators, and especially to any author for the modifications I selected for Evil-Trinity.
 
 Thank you to BigJoos and U-232 devs for all their hard work.
+
 PimpMyLog - <http://pimpmylog.com/> - <https://github.com/potsky/PimpMyLog>
 
 The coders of gazelle for the `class.cache`, *sctbdev* for various replacement code.

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-inspections-ea-ultimate.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/extra/install.php.sql" beforeDir="false" afterPath="$PROJECT_DIR$/install/extra/install.php.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/extra/install.ocelot.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/extra/install.php copy.sql" beforeDir="false" afterPath="$PROJECT_DIR$/install/extra/install.php copy.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/extra/install.php.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/functions/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/install/functions/database.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581270571019</updated>
       <workItem from="1581270575758" duration="4513000" />
-      <workItem from="1581301404572" duration="191000" />
+      <workItem from="1581301404572" duration="281000" />
     </task>
     <servers />
   </component>

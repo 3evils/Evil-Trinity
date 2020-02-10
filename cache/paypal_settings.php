@@ -1,9 +1,9 @@
 <?php
 /**
-This file created on Dec 30 2019 00:59:47.
+This file created on Dec 30 2019 09:18:01.
 Site paypal shits /U-232v4.
 **/
-$INSTALLER09['paypal_config']['email'] = '';
+$INSTALLER09['paypal_config']['email'] = 'mikey@burnstaxi.co.uk';
 $INSTALLER09['paypal_config']['gb'] = 3;
 $INSTALLER09['paypal_config']['weeks'] = 4;
 $INSTALLER09['paypal_config']['invites'] = 1;
@@ -14,9 +14,9 @@ $INSTALLER09['paypal_config']['immunity'] = 1;
 $INSTALLER09['paypal_config']['seedbonus'] = 100;
 $INSTALLER09['paypal_config']['reputation'] = 100;
 $INSTALLER09['paypal_config']['multiplier'] = 5;
-$INSTALLER09['paypal_config']['currency'] = 'USD';
-$INSTALLER09['paypal_config']['staff'] = 1;
-$INSTALLER09['paypal_config']['sandbox'] = ''sandbox'';
+$INSTALLER09['paypal_config']['currency'] = 'GBP';
+$INSTALLER09['paypal_config']['staff'] = 3;
+$INSTALLER09['paypal_config']['sandbox'] = '';
 $INSTALLER09['paypal_config']['gb_donated_1'] = 2;
 $INSTALLER09['paypal_config']['gb_donated_2'] = 4;
 $INSTALLER09['paypal_config']['gb_donated_3'] = 7;

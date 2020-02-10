@@ -107,7 +107,7 @@ class imdb extends movie_base {
    * @return string url full URL to the current movies main page
    */
   public function main_url(){
-   return "http://".$this->imdbsite."/title/tt".$this->imdbid()."/";
+   return "https://".$this->imdbsite."/title/tt".$this->imdbid()."/";
   }
 
  #======================================================[ Title page infos ]===
@@ -349,8 +349,8 @@ class imdb extends movie_base {
     if ($this->main_comment == "") {
       if ($this->page["Title"]=="") $this->openpage ("Title");
       if (@preg_match('!<div class\="user-comments">\s*(.*?)\s*<hr\s*/>\s*<div class\="yn"!ms',$this->page["Title"],$match))
-        $this->main_comment = preg_replace("/a href\=\"\//i","a href=\"http://".$this->imdbsite."/",$match[1]);
-        $this->main_comment = str_replace("http://i.media-imdb.com/images/showtimes",$this->imdb_img_url."/showtimes",$this->main_comment);
+        $this->main_comment = preg_replace("/a href\=\"\//i","a href=\"https://".$this->imdbsite."/",$match[1]);
+        $this->main_comment = str_replace("https://i.media-imdb.com/images/showtimes",$this->imdb_img_url."/showtimes",$this->main_comment);
     }
     return $this->main_comment;
   }
@@ -775,7 +775,7 @@ class imdb extends movie_base {
       if (@preg_match_all('!<a .*?href="(?<href>.*?)".*?<img.*?src="(.*?)".*?loadlate="(?<imgsrc>.*?)"!ims',$match[1],$matches)) {
         for ($i=0;$i<count($matches[0]);++$i) {
           $this->main_pictures[$i]["imgsrc"] = $matches['imgsrc'][$i];
-          if (substr($matches['href'][$i],0,4)!="http") $matches['href'][$i] = "http://".$this->imdbsite.$matches[1][$i];
+          if (substr($matches['href'][$i],0,4)!="http") $matches['href'][$i] = "https://".$this->imdbsite.$matches[1][$i];
           $this->main_pictures[$i]["imglink"] = $matches['href'][$i];
           preg_match('|(.*\._V1).*|iUs',$matches['imgsrc'][$i],$big);
           $ext = substr($matches[2][$i],-3);
@@ -941,7 +941,7 @@ class imdb extends movie_base {
     else $update = array();
     if ( preg_match('!<b>More Info:\s*</b>\s*(.*)!ims',$match[1],$tmp) ) {
         $more = preg_replace('!\s*onclick=".*?"!ims','',trim($tmp[1]));
-        $more = preg_replace('!href="/!ims','href="http://'.$this->imdbsite.'/',$more);
+        $more = preg_replace('!href="/!ims','href="https://'.$this->imdbsite.'/',$more);
     } else $more = '';
     if ( preg_match('!<b>Note:\s*</b>\s*(.*?)</!ims',$match[1],$tmp) ) $note = trim($tmp[1]);
     else $note = '';
@@ -984,7 +984,7 @@ class imdb extends movie_base {
     if (preg_match('!<div class="desc"[^>]*>(.+?)<h4!ims',$this->page["Plot"],$block)) {
       if (preg_match_all('!<li\s+class="(odd|even)[^"]*"\s*>(.+?)</li>!ims',$block[0],$matches)) {
         for ($i=0;$i<count($matches[0]);++$i) {
-          $this->plot_plot[$i] = preg_replace('!<a href="/search/title!i','<a href="http://'.$this->imdbsite.'/search/title',$matches[2][$i]);
+          $this->plot_plot[$i] = preg_replace('!<a href="/search/title!i','<a href="https://'.$this->imdbsite.'/search/title',$matches[2][$i]);
         }
       }
     }
@@ -1368,7 +1368,7 @@ class imdb extends movie_base {
           if ($matches[1][$i]=='Spoilers') continue; // no spoilers, moreover they are differently formatted
           preg_match_all('!<div id="gf.+?>(.+?)<div!ims',$matches[3][$i],$goofy);
           $ic = count($goofy[0]);
-          for ($k=0;$k<$ic;++$k) $this->goofs[] = array("type"=>$matches[1][$i],"content"=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$goofy[1][$k]));
+          for ($k=0;$k<$ic;++$k) $this->goofs[] = array("type"=>$matches[1][$i],"content"=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$goofy[1][$k]));
         }
       }
     }
@@ -1389,7 +1389,7 @@ class imdb extends movie_base {
       if ( $this->page["Quotes"] == "cannot open page" ) return array(); // no such page
       if (preg_match_all('!class="quote soda (odd|even)"\s*><p>\s*(.*?)\s*</p>\s*<div class=!ims',str_replace("\n"," ",$this->page["Quotes"]),$matches))
         foreach ($matches[2] as $match) {
-          $this->moviequotes[] = "<p>".str_replace('href="/name/','href="http://'.$this->imdbsite.'/name/',preg_replace('!<span class="linksoda".+?</span>!ims','',$match))."</p>";
+          $this->moviequotes[] = "<p>".str_replace('href="/name/','href="https://'.$this->imdbsite.'/name/',preg_replace('!<span class="linksoda".+?</span>!ims','',$match))."</p>";
         }
     }
     return $this->moviequotes;
@@ -1426,7 +1426,7 @@ class imdb extends movie_base {
             if (preg_match_all($regex, $html_trailer, $matches)) {
                 //print_r($matches);
                 for ($i=0;$i<count($matches[0]);++$i) {
-                    $trailer = "http://".$this->imdbsite.$matches[1][$i];
+                    $trailer = "https://".$this->imdbsite.$matches[1][$i];
                     $res = (strpos($matches[3][$i], 'HDIcon') !== FALSE )? 'HD' : 'SD';
                     if ( $full ) $this->trailers[] = array("lang"=>'',"title"=>html_entity_decode($matches[2][$i],ENT_QUOTES, 'UTF-8'),"url"=>$trailer,"restful_url"=>'',"resolution"=>$res);
                     else $this->trailers[] = $trailer;
@@ -1447,7 +1447,7 @@ class imdb extends movie_base {
   */
  protected function convertIMDBtoRealURL($url) {
    if (preg_match('/^http:\/\//', $url)) return $url;
-   $req = new MDB_Request("http://".$this->imdbsite.$url, $this);
+   $req = new MDB_Request("https://".$this->imdbsite.$url, $this);
    if ($req->sendRequest()!==FALSE) {
      $head = $req->getLastResponseHeaders();
      foreach ($head as $header) {
@@ -1560,7 +1560,7 @@ class imdb extends movie_base {
       }
       if ( preg_match_all('!<div class="sodatext">\s*(.*?)\s*</div>\s*<div!ims',$block[1],$matches) ) {
         $gc = count($matches[1]);
-        for ($i=0;$i<$gc;++$i) $this->trivia[] = str_replace('href="/','href="http://'.$this->imdbsite."/",$matches[1][$i]);
+        for ($i=0;$i<$gc;++$i) $this->trivia[] = str_replace('href="/','href="https://'.$this->imdbsite."/",$matches[1][$i]);
       }
     }
     return $this->trivia;
@@ -1586,19 +1586,19 @@ class imdb extends movie_base {
           if ( preg_match_all('|^\s*(.*?)\s+by\s+(<a href[^>]+>.+?</a>)|i',$matches['desc'][$i],$match1) ) {
             for ($k=0;$k<count($match1[0]);++$k) {
               switch ($match1[1][$k]) {
-                case "Arranged" : $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'arrangement'); break;
-                case "Composed" : $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'composer'); break;
-                case "Performed": $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'performer'); break;
-                case "Written"  : $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'writer'); break;
+                case "Arranged" : $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'arrangement'); break;
+                case "Composed" : $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'composer'); break;
+                case "Performed": $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'performer'); break;
+                case "Written"  : $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'writer'); break;
                 case "Written and Produced": {
-                  $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'writer');
-                  $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'producer');
+                  $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'writer');
+                  $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'producer');
                 } break;
                 case "Written and Performed": {
-                  $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'writer');
-                  $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'performer');
+                  $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'writer');
+                  $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'performer');
                 } break;
-                default: $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'**'.$match1[1][$k].'**');
+                default: $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'**'.$match1[1][$k].'**');
               }
             }
           } elseif ( preg_match_all('|\s*([^>]*)\s+by\s+([^<]+)|i',$matches['desc'][$i],$match1) ) { // creditors without link
@@ -1606,21 +1606,21 @@ class imdb extends movie_base {
               if ( preg_match('!(.+)\s+and\s+(.+)!',$match1[2][$k],$cr) ) $creds = array($cr[1],$cr[2]);
               else $creds = array($match1[2][$k]);
               switch ($match1[1][$k]) {
-                case "Arranged" : foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'arrangement'); break;
-                case "Composed" : foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'composer'); break;
-                case "Performed": foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'performer'); break;
-                case "Written"  : foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'writer'); break;
+                case "Arranged" : foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'arrangement'); break;
+                case "Composed" : foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'composer'); break;
+                case "Performed": foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'performer'); break;
+                case "Written"  : foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'writer'); break;
                 case "Written and Produced": foreach ($creds as $cred) {
-                     $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'writer');
-                     $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'producer');
+                     $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'writer');
+                     $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'producer');
                    }
                    break;
                 case "Written and Performed": foreach ($creds as $cred) {
-                     $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'writer');
-                     $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'performer');
+                     $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'writer');
+                     $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'performer');
                    }
                    break;
-                default: foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="http://'.$this->imdbsite.'/',$cred), 'desc'=>'**'.$match1[1][$k].'**'); break;
+                default: foreach ($creds as $cred) $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$cred), 'desc'=>'**'.$match1[1][$k].'**'); break;
               }
             }
           }
@@ -1783,7 +1783,7 @@ class imdb extends movie_base {
     preg_match_all('|<li>\s*<a href="(.*)"\s*>(.*)</a>(.*)</li>|iUms',$text,$matches);
     $mc = count($matches[0]);
     for ($i=0;$i<$mc;++$i) {
-      $target[] = array("name"=>$matches[2][$i], "url"=>'http://'.$this->imdbsite.$matches[1][$i], "notes"=>trim($matches[3][$i]));
+      $target[] = array("name"=>$matches[2][$i], "url"=>'https://'.$this->imdbsite.$matches[1][$i], "notes"=>trim($matches[3][$i]));
     }
   }
 

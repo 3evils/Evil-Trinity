@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/install/functions/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/install/functions/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/extra/trinity.install copy.sql" beforeDir="false" afterPath="$PROJECT_DIR$/install/extra/trinity.install copy.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,8 @@
       <option name="presentableId" value="Default" />
       <updated>1581270571019</updated>
       <workItem from="1581270575758" duration="4513000" />
-      <workItem from="1581301404572" duration="336000" />
+      <workItem from="1581301404572" duration="688000" />
+      <workItem from="1581305787494" duration="1180000" />
     </task>
     <servers />
   </component>

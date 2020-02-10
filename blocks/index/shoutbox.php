@@ -1,24 +1,23 @@
 <?php
 /**
- /**
-|--------------------------------------------------------------------------|
-|   https://github.com/3evils/                                            |
-|--------------------------------------------------------------------------|
-|   Licence Info: WTFPL                                                    |
-|--------------------------------------------------------------------------|
-|   Copyright (C) 2019 Evil-Trinity                             |
-|--------------------------------------------------------------------------|
-|   A bittorrent tracker source based on an unreleased U-232.   |
-|--------------------------------------------------------------------------|
-|   Project Leaders: AntiMidas               |
-|--------------------------------------------------------------------------|
-_   _   _   _   ___Based on____     _   _   _   _
-/ \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
+ |--------------------------------------------------------------------------|
+ |   https://github.com/Bigjoos/                                            |
+ |--------------------------------------------------------------------------|
+ |   Licence Info: WTFPL                                                    |
+ |--------------------------------------------------------------------------|
+ |   Copyright (C) 2010 U-232 V5                                            |
+ |--------------------------------------------------------------------------|
+ |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |--------------------------------------------------------------------------|
+ |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |--------------------------------------------------------------------------|
+  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
+ / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
 ( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
-\_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
+ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
  */
 //==Start activeusers - pdq & shoutbox 09
-$keys['activeusers'] = 'activeusers';
+/*$keys['activeusers'] = 'activeusers';
 if (($active_users_cache = $mc1->get_value($keys['activeusers'])) === false) {
     $dt = $_SERVER['REQUEST_TIME'] -  180;
     $activeusers = '';
@@ -127,8 +126,9 @@ $HTMLOUT .= "<div class='card'>
 if (!($CURUSER['opt1'] & user_options::SHOW_SHOUT)) {
    $HTMLOUT.= "<div class='row'><ul class='accordion' data-accordion data-multi-expand='true'>
   <li class='accordion-item is-active' data-accordion-item><b><a href='#' class='accordion-title'>{$lang['index_shoutbox']}</b></a><a class='button' type='button' href='{$INSTALLER09['baseurl']}/shoutbox.php?show_shout=1&amp;show=yes'><div class='accordion-content' data-tab-content>{$lang['index_shoutbox_open']}&nbsp;</a></div></li></ul></div>";
-}
+}*/
 
+$htmlout .="<iframe src='./arrowchat/public/chat.php'></frame>";
 
 //==end 09 shoutbox
 //==End

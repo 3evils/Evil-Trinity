@@ -1,21 +1,20 @@
 <?php
 /**
- /**
-|--------------------------------------------------------------------------|
-|   https://github.com/3evils/                                            |
-|--------------------------------------------------------------------------|
-|   Licence Info: WTFPL                                                    |
-|--------------------------------------------------------------------------|
-|   Copyright (C) 2019 Evil-Trinity                             |
-|--------------------------------------------------------------------------|
-|   A bittorrent tracker source based on an unreleased U-232.   |
-|--------------------------------------------------------------------------|
-|   Project Leaders: AntiMidas               |
-|--------------------------------------------------------------------------|
-_   _   _   _   ___Based on____     _   _   _   _
-/ \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
+ |--------------------------------------------------------------------------|
+ |   https://github.com/Bigjoos/                                            |
+ |--------------------------------------------------------------------------|
+ |   Licence Info: WTFPL                                                    |
+ |--------------------------------------------------------------------------|
+ |   Copyright (C) 2010 U-232 V5                                            |
+ |--------------------------------------------------------------------------|
+ |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |--------------------------------------------------------------------------|
+ |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |--------------------------------------------------------------------------|
+  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
+ / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
 ( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
-\_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
+ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
  */
  //==Template system by Terranova
 function stdhead($title = "", $msgalert = true, $stdhead = false)
@@ -52,10 +51,10 @@ $htmlout .='
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
         <!-- ####################################################### -->
-        <!-- #   This website is powered by Evil-Trinity           # -->
+        <!-- #   This website is powered by U-232 V5	           # -->
         <!-- #   Download and support at:                          # -->
-        <!-- #     https://evil-trinity.com                        # -->
-        <!-- #   Template Modded by Evil-Trinity Dev Team          # -->
+        <!-- #     https://forum-u-232.servebeer.com               # -->
+        <!-- #   Template Modded by U-232 Dev Team                 # -->
         <!-- ####################################################### -->
   <head>
     <!--<meta charset="'.charset().'" />-->
@@ -321,7 +320,7 @@ if ($CURUSER) {
 						<tbody>
 							<tr><td>{$lang['gl_stdfoot_powered']}" . TBVERSION . "<br /></td></tr>
 							<tr><td>{$lang['gl_stdfoot_using']}{$lang['gl_stdfoot_using1']}<br /></td></tr>
-							<tr><td>{$lang['gl_stdfoot_support']}<a href='http://forum-u-232.servebeer.com/index.php'>{$lang['gl_stdfoot_here']}</a><br /></td></tr>
+							<tr><td>{$lang['gl_stdfoot_support']}<a href='https://evil-trinity.com'>Support Here</a><br /></td></tr>
 							<tr><td>" . ($debug ? "<a title='{$lang['gl_stdfoot_sview']}' rel='external' href='/staffpanel.php?tool=system_view'>{$lang['gl_stdfoot_sview']}</a> | " . "<a rel='external' title='OPCache' href='/staffpanel.php?tool=op'>{$lang['gl_stdfoot_opc']}</a> | " . "<a rel='external' title='Memcache' href='/staffpanel.php?tool=memcache'>{$lang['gl_stdfoot_memcache']}</a>" : "") . "";$htmlfoot.= "</td></tr>";
 						$htmlfoot.= "</tbody>
 					</table>

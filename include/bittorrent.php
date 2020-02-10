@@ -1,21 +1,20 @@
 <?php
 /**
- /**
-|--------------------------------------------------------------------------|
-|   https://github.com/3evils/                                            |
-|--------------------------------------------------------------------------|
-|   Licence Info: WTFPL                                                    |
-|--------------------------------------------------------------------------|
-|   Copyright (C) 2019 Evil-Trinity                             |
-|--------------------------------------------------------------------------|
-|   A bittorrent tracker source based on an unreleased U-232.   |
-|--------------------------------------------------------------------------|
-|   Project Leaders: AntiMidas               |
-|--------------------------------------------------------------------------|
-_   _   _   _   ___Based on____     _   _   _   _
-/ \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
+ |--------------------------------------------------------------------------|
+ |   https://github.com/Bigjoos/                                            |
+ |--------------------------------------------------------------------------|
+ |   Licence Info: WTFPL                                                    |
+ |--------------------------------------------------------------------------|
+ |   Copyright (C) 2010 U-232 V5                                            |
+ |--------------------------------------------------------------------------|
+ |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |--------------------------------------------------------------------------|
+ |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |--------------------------------------------------------------------------|
+  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
+ / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
 ( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
-\_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
+ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
  */
 //==Start execution time
 $start = microtime(true);
@@ -1246,9 +1245,9 @@ function get_imdb($imdburl) {
             $director = $movie->director();
             if (!empty($director)) {
                 for ($i = 0; $i < count($director); $i++) {
-                    $imdb_info['director'] .= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "" . $director[$i]["imdb"] . "" . "\">" . "" . $director[$i]["name"] . "" . "</a>, ";
+                    $imdb_info['director'] .= "<a target=\"_blank\" href=\"https://www.imdb.com/name/nm" . "" . $director[$i]["imdb"] . "" . "\">" . "" . $director[$i]["name"] . "" . "</a>, ";
                 }
-                $imdb_info['director'] .= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "" . $director[$i]["imdb"] . "" . "\">" . "" . $director[$i]["name"] . "" . "</a> ";
+                $imdb_info['director'] .= "<a target=\"_blank\" href=\"https://www.imdb.com/name/nm" . "" . $director[$i]["imdb"] . "" . "\">" . "" . $director[$i]["name"] . "" . "</a> ";
             } else {
                 $imdb_info['director'] = "None Available";
             }
@@ -1256,9 +1255,9 @@ function get_imdb($imdburl) {
             $produce = $movie->producer();
             if (!empty($produce)) {
                 for ($i = 0; $i < count($produce); $i++) {
-                    $imdb_info['produce'] .= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "" . $produce[$i]["imdb"] . "" . " \">" . "" . $produce[$i]["name"] . "" . "</a>,";
+                    $imdb_info['produce'] .= "<a target=\"_blank\" href=\"https://www.imdb.com/name/nm" . "" . $produce[$i]["imdb"] . "" . " \">" . "" . $produce[$i]["name"] . "" . "</a>,";
                 }
-                $imdb_info['produce'] .= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "" . $produce[$i]["imdb"] . "" . " \">" . "" . $produce[$i]["name"] . "" . "</a>";
+                $imdb_info['produce'] .= "<a target=\"_blank\" href=\"https://www.imdb.com/name/nm" . "" . $produce[$i]["imdb"] . "" . " \">" . "" . $produce[$i]["name"] . "" . "</a>";
             } else {
                 $imdb_info['produce'] = "None Available";
             }
@@ -1266,16 +1265,16 @@ function get_imdb($imdburl) {
             $write = $movie->writing();
             if (!empty($write)) {
                 for ($i = 0; $i < count($write); $i++) {
-                    $imdb_info['write'] .= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "" . $write[$i]["imdb"] . "" . "\">" . "" . $write[$i]["name"] . "" . "</a>, ";
+                    $imdb_info['write'] .= "<a target=\"_blank\" href=\"https://www.imdb.com/name/nm" . "" . $write[$i]["imdb"] . "" . "\">" . "" . $write[$i]["name"] . "" . "</a>, ";
                 }
-                $imdb_info['write'] .= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "" . $write[$i]["imdb"] . "" . "\">" . "" . $write[$i]["name"] . "" . "</a> ";
+                $imdb_info['write'] .= "<a target=\"_blank\" href=\"https://www.imdb.com/name/nm" . "" . $write[$i]["imdb"] . "" . "\">" . "" . $write[$i]["name"] . "" . "</a> ";
             } else {
             	$imdb_info['write'] .= "N/A";
             }
             $compose = $movie->composer();
             if (!empty($compose)) {
                 for ($i = 0; $i < count($compose); $i++) {
-                    $imdb_info['compose'] .= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "" . $compose[$i]["imdb"] . "" . " \">" . "" . $compose[$i]["name"] . "" . "</a>, ";
+                    $imdb_info['compose'] .= "<a target=\"_blank\" href=\"https://www.imdb.com/name/nm" . "" . $compose[$i]["imdb"] . "" . " \">" . "" . $compose[$i]["name"] . "" . "</a>, ";
                 }
             } else {
                 $imdb_info['compose'] .= "N/A";
@@ -1332,16 +1331,16 @@ function load_design($file = '')
 {
     global $INSTALLER09, $CURUSER;
     if (!isset($GLOBALS['CURUSER']) OR empty($GLOBALS['CURUSER']['design'])) {
-        if (!file_exists(DESIGN_DIR . "{$INSTALLER09['design']}/html_content.php")) {
+        if (!file_exists("./design/1/html_content.php")) {
             stderr('System Error', 'Can\'t find design files');
         }
-        require_once (DESIGN_DIR . "{$INSTALLER09['design']}/html_content.php");
+        require_once ("./design/1/html_content.php");
         return $design;
     }
-    if (!file_exists(DESIGN_DIR . "{$CURUSER['design']}/html_content.php")) {
+    if (!file_exists("./design/1/html_content.php")) {
         stderr('System Error', 'Can\'t find design files');
     } else {
-        require_once DESIGN_DIR . "{$CURUSER['design']}/html_content.php";
+        require_once "./design/1/html_content.php";
     }
     return $design;
 }

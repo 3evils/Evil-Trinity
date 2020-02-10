@@ -1,21 +1,20 @@
 <?php
 /**
- /**
-|--------------------------------------------------------------------------|
-|   https://github.com/3evils/                                            |
-|--------------------------------------------------------------------------|
-|   Licence Info: WTFPL                                                    |
-|--------------------------------------------------------------------------|
-|   Copyright (C) 2019 Evil-Trinity                             |
-|--------------------------------------------------------------------------|
-|   A bittorrent tracker source based on an unreleased U-232.   |
-|--------------------------------------------------------------------------|
-|   Project Leaders: AntiMidas               |
-|--------------------------------------------------------------------------|
-_   _   _   _   ___Based on____     _   _   _   _
-/ \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
+ |--------------------------------------------------------------------------|
+ |   https://github.com/Bigjoos/                                            |
+ |--------------------------------------------------------------------------|
+ |   Licence Info: WTFPL                                                    |
+ |--------------------------------------------------------------------------|
+ |   Copyright (C) 2010 U-232 V5                                            |
+ |--------------------------------------------------------------------------|
+ |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |--------------------------------------------------------------------------|
+ |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |--------------------------------------------------------------------------|
+  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
+ / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
 ( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
-\_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
+ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
  */
 require_once ('emoticons.php');
 function source_highlighter($source, $lang2geshi)
@@ -357,14 +356,14 @@ function textbbcode($form, $text, $content = "")
 	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-underline" onclick="tag('u')" title="Underline" alt="U"></i></span>&nbsp;&nbsp;
 	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-strikethrough" onclick="tag('s')" title="Strike" alt="S"></i></span>&nbsp;&nbsp;
 	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-link" onclick="clink()" title="Link" alt="Link"></i></span>&nbsp;&nbsp;
-	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-picture-o" onclick="cimage()" title="Image" alt="Image"></i></span>&nbsp;&nbsp;
-	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-pencil" onclick="colorpicker();" title="Select Color" alt="Colors"></i></span>&nbsp;&nbsp;
-	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-envelope-o" onclick="mail()" title="Add email" alt="Email"></i></span>&nbsp;&nbsp;
+	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-camera" onclick="cimage()" title="Image" alt="Image"></i></span>&nbsp;&nbsp;
+	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-cogs" onclick="colorpicker();" title="Select Color" alt="Colors"></i></span>&nbsp;&nbsp;
+	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-envelope" onclick="mail()" title="Add email" alt="Email"></i></span>&nbsp;&nbsp;
 	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-code" onclick="tag('php')" title="Add code" alt="Code"></i></span>&nbsp;&nbsp;
 	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-quote-right" onclick="tag('quote')" title="Quote" alt="Quote"></i></span>&nbsp;&nbsp;
 HTML;
     if ($CURUSER['class'] >= UC_MODERATOR) $bbcodebody.= <<<HTML
-	<span id="clickableAwesomeFont"><i class="fa fa-shield"  onclick="tag('mcom')" title="Mod comment" alt="Mod comment"></i></span>
+	<span id="clickableAwesomeFont"><i class="far fa-shield"  onclick="tag('mcom')" title="Mod comment" alt="Mod comment"></i></span>
 HTML;
     $bbcodebody.= <<<HTML
 </div>
@@ -408,10 +407,10 @@ HTML;
         </select>
       </div>
       <div style="float:right;padding:4px 2px 0px 0px;"> 
-	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-level-up" onclick="text('up')" title="To Uppercase" alt="Up"></i></span>&nbsp;&nbsp;
-	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-level-down" onclick="text('low')" title="To Lowercase" alt="Low"></i></span>&nbsp;&nbsp;
-<!--	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-search-plus" onclick="fonts('up')" title="Font size up" alt="S up"></i></span>&nbsp;&nbsp;
-	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fa fa-search-minus" onclick="fonts('down')" title="Font size up" alt="S down"></i></span>&nbsp;&nbsp;-->
+	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fas fa-level-up" onclick="text('up')" title="To Uppercase" alt="Up"></i></span>&nbsp;&nbsp;
+	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fas fa-level-down" onclick="text('low')" title="To Lowercase" alt="Low"></i></span>&nbsp;&nbsp;
+<!--	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fas fa-search-plus" onclick="fonts('up')" title="Font size up" alt="S up"></i></span>&nbsp;&nbsp;
+	<span id="clickableAwesomeFont"><i style="font-size: 16px;" class="fas fa-search-minus" onclick="fonts('down')" title="Font size up" alt="S down"></i></span>&nbsp;&nbsp;-->
 </div></td>
   </tr>
   <tr>

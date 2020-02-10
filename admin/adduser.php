@@ -1,21 +1,20 @@
 <?php
 /**
- /**
-|--------------------------------------------------------------------------|
-|   https://github.com/3evils/                                            |
-|--------------------------------------------------------------------------|
-|   Licence Info: WTFPL                                                    |
-|--------------------------------------------------------------------------|
-|   Copyright (C) 2019 Evil-Trinity                             |
-|--------------------------------------------------------------------------|
-|   A bittorrent tracker source based on an unreleased U-232.   |
-|--------------------------------------------------------------------------|
-|   Project Leaders: AntiMidas               |
-|--------------------------------------------------------------------------|
-_   _   _   _   ___Based on____     _   _   _   _
-/ \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
+ |--------------------------------------------------------------------------|
+ |   https://github.com/Bigjoos/                                            |
+ |--------------------------------------------------------------------------|
+ |   Licence Info: WTFPL                                                    |
+ |--------------------------------------------------------------------------|
+ |   Copyright (C) 2010 U-232 V5                                            |
+ |--------------------------------------------------------------------------|
+ |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |--------------------------------------------------------------------------|
+ |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |--------------------------------------------------------------------------|
+  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
+ / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
 ( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
-\_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
+ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
  */
 if (!defined('IN_INSTALLER09_ADMIN')) {
     $HTMLOUT = '';
@@ -47,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'added' => TIME_NOW,
         'last_access' => TIME_NOW
     );
-    if (isset($_POST['username']) && strlen($_POST['username']) >= 5) $insert['username'] = $_POST['username'];
+    if (isset($_POST['username']) && strlen($_POST['username']) >= 4) $insert['username'] = $_POST['username'];
     else stderr($lang['std_err'], $lang['err_username']);
     if (isset($_POST['password']) && isset($_POST['password2']) && strlen($_POST['password']) > 6 && $_POST['password'] == $_POST['password2']) {
         $insert['secret'] = mksecret();

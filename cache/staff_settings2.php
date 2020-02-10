@@ -1,7 +1,7 @@
 <?php
 /**
-This file created on Dec 30 2019 01:08:51.
+This file created on Jan 07 2020 11:53:46.
 Site Config staff mod.
 **/
-$INSTALLER09['staff']['allowed'] = array();
+$INSTALLER09['staff']['allowed'] = array('AntiMidas' => 1);
 ?>

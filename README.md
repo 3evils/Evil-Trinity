@@ -1,26 +1,25 @@
-# U-232 Evil Trinity Edition #
+# Evil Trinity  #
 
 
-U-232 V6 Evil Trinity Edition -> High performance Bittorrent tracker
-
+ Evil Trinity Community Tracker -> High performance Bittorrent tracker
+---
 ## Credits
 
-All Credit goes to the original code creators, and especially to any author for the modifications I selected for U-232.
+All Credit goes to the original code creators, and especially to any author for the modifications I selected for Evil-Trinity.
 
-The original coders of torrentbits and especially to CoLdFuSiOn for carrying on the legacy with Tbdev.
-
+Thank you to BigJoos and U-232 devs for all their hard work.
 PimpMyLog - <http://pimpmylog.com/> - <https://github.com/potsky/PimpMyLog>
 
 The coders of gazelle for the `class.cache`, *sctbdev* for various replacement code.
 
 All other snippets, mods and contributions for this version from *CoLdFuSiOn*, *putyn, *pdq*, *djGrrr*, *Retro*, *elephant*, *ezero*, *Alex2005*, *system*, *sir_Snugglebunny*, *laffin*, *Wilba*, *Traffic*, *dokty*, *djlee*, *neptune*, *scars*, *Raw*, *soft*, *jaits*, *Melvinmeow*, *RogueSurfer*, *stoner*, *Stillapunk*, *swizzles*, *autotron*, *stonebreath*, *whocares*, *Tundracanine*, *AntiMidas*.. 
 
-
+---
 ###Requirements###
 
 Evil Trinity requires the following :
 
-Visit https://u-232.dev/forum/index.php/topic,3789.0.html for more detailed help on installing U-232.
+Visit https://evil-trinity.com for more detailed help on installing this source.
 
 
 - Memcached
@@ -47,8 +46,9 @@ Visit https://u-232.dev/forum/index.php/topic,3789.0.html for more detailed help
 
 
 
-This release comes without an installer. You MUST edit /include/ann_config.php /include/config.php
-Blank database file found in /include/backup/
+##Mariadb 10.1 or MySQL 5.6 are required for this source.
+
+---
 This is still beta. 
 
 
@@ -78,5 +78,5 @@ Finally, run npm start to run the Sass compiler. It will re-run every time you s
 
 - Passwords hashed via BCRYPT.
 - Bootstrap engine removed for Foundation.
-- Modified Arrowchat installed
 - Added OMDB & TMDB api mods. Imdb only used for initial searching
+- Installer added and tested

@@ -53,18 +53,15 @@ $htmlout .='
 <!DOCTYPE html>
   <html class="no-js" lang="en">
         <!-- ####################################################### -->
-        <!-- #   This website is powered by U-232 V5	           # -->
+        <!-- #   This website is powered by Evil-Trinity           # -->
         <!-- #   Download and support at:                          # -->
-        <!-- #     https://forum-u-232.servebeer.com               # -->
-        <!-- #   Template Modded by U-232 Dev Team                 # -->
+        <!-- #     https://evil-trinity.com                        # -->
+        <!-- #   Template Modded by Evil-Trinity Dev Team          # -->
         <!-- ####################################################### -->
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
-<link href="radio/css/shiPlayer.css" rel="stylesheet"/>
-  <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
-<script type="text/javascript" src="scripts/jquery-3.4.1.js"></script>
-<script type="text/javascript" src="/arrowchat/includes/js/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js">
+
     <!--<meta charset="'.charset().'" />-->
     <meta charset="utf-8" />
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->

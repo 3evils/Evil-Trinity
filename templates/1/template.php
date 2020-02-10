@@ -52,10 +52,10 @@ $htmlout .='
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
         <!-- ####################################################### -->
-        <!-- #   This website is powered by U-232 V5	           # -->
+        <!-- #   This website is powered by Evil-Trinity           # -->
         <!-- #   Download and support at:                          # -->
-        <!-- #     https://forum-u-232.servebeer.com               # -->
-        <!-- #   Template Modded by U-232 Dev Team                 # -->
+        <!-- #     https://evil-trinity.com                        # -->
+        <!-- #   Template Modded by Evil-Trinity Dev Team          # -->
         <!-- ####################################################### -->
   <head>
     <!--<meta charset="'.charset().'" />-->

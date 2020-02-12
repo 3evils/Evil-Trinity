@@ -1,21 +1,22 @@
 <?php
 /**
  |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
+ |   https://github.com/3evils/                                             |
  |--------------------------------------------------------------------------|
  |   Licence Info: WTFPL                                                    |
  |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
+ |   Copyright (C) 2020 Evil-Trinity                                        |
  |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |   A bittorrent tracker source based on an unreleased U-232               |
  |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |   Project Leaders: AntiMidas,  Seeder                                    |
  |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
+     _   _   _   _     _   _   _   _   _   _   _ 
+ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \
+| E | v | i | l )-| T | r | i | n | i | t | y )
+ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
+
+*/
 $lang = array(
     'coins_you_cant_give_that_amount_of_points' => "You can't give that amount of points!!!",
     'coins_you_already_gave_points_to_this_torrent' => "You already gave points to this torrent.",

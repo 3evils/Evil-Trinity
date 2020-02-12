@@ -1,25 +1,26 @@
 <?php
 /**
  |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
+ |   https://github.com/3evils/                                             |
  |--------------------------------------------------------------------------|
  |   Licence Info: WTFPL                                                    |
  |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
+ |   Copyright (C) 2020 Evil-Trinity                                        |
  |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |   A bittorrent tracker source based on an unreleased U-232               |
  |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |   Project Leaders: AntiMidas,  Seeder                                    |
  |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
+     _   _   _   _     _   _   _   _   _   _   _ 
+ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \
+| E | v | i | l )-| T | r | i | n | i | t | y )
+ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
+
+*/
 $lang = array(
     //
-    'mailcheck_notval' => "Ce n'est pas un email valide, SVP essayez à nouveau.",
-    'mailcheck_sorry' => "Désolé... mais cette addresse email",
+    'mailcheck_notval' => "Ce n'est pas un email valide, SVP essayez ï¿½ nouveau.",
+    'mailcheck_sorry' => "Dï¿½solï¿½... mais cette addresse email",
     'mailcheck_banned' => "est bannie -",
     'mailcheck_valid' => "L'adresse email est valide"
 );

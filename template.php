@@ -1,21 +1,21 @@
 <?php
 /**
  |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
+ |   https://github.com/3evils/                                             |
  |--------------------------------------------------------------------------|
  |   Licence Info: WTFPL                                                    |
  |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
+ |   Copyright (C) 2020 Evil-Trinity                                        |
  |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |   A bittorrent tracker source based on an unreleased U-232               |
  |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |   Project Leaders: AntiMidas,  Seeder                                    |
  |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
+                 _   _   _   _     _   _   _   _   _   _   _
+                / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \
+               | E | v | i | l )-| T | r | i | n | i | t | y )
+                \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
+*/
  //==Template system by Terranova
 function stdhead($title = "", $msgalert = true, $stdhead = false)
 {
@@ -52,10 +52,10 @@ $htmlout .='
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
         <!-- ####################################################### -->
-        <!-- #   This website is powered by U-232 V5	           # -->
+        <!-- #   This website is powered by Evil-Trinity	           # -->
         <!-- #   Download and support at:                          # -->
-        <!-- #     https://forum-u-232.servebeer.com               # -->
-        <!-- #   Template Modded by U-232 Dev Team                 # -->
+        <!-- #     https://evil-trinity.com               # -->
+        <!-- #   Template Modded by Evil-Trinity Dev Team                 # -->
         <!-- ####################################################### -->
   <head>
     <!--<meta charset="'.charset().'" />-->

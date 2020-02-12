@@ -11,11 +11,12 @@
  |--------------------------------------------------------------------------|
  |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
  |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
+      _   _   _   _     _   _   _   _   _   _   _ 
+ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \
+| E | v | i | l )-| T | r | i | n | i | t | y )
+ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
+
+*/
 $nick = ($CURUSER ? $CURUSER["username"] : ("Guest" . rand(1000, 9999)));
 $form_template = <<<PAYPAL
 <form action='https://www.{$INSTALLER09['paypal_config']['sandbox']}paypal.com/cgi-bin/webscr' method='post'>

@@ -11,11 +11,12 @@
  |--------------------------------------------------------------------------|
  |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
  |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
+      _   _   _   _     _   _   _   _   _   _   _ 
+ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \
+| E | v | i | l )-| T | r | i | n | i | t | y )
+ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
+
+*/
           $HTMLOUT .= "<div class='navigation'><a href='".$INSTALLER09['baseurl']."/index.php'>" . $INSTALLER09["site_name"] . "</a>
           <br /><span class='active'></span></div><br />";
 	  $ovf_res = sql_query("SELECT id, name, min_class_view FROM over_forums ORDER BY sort ASC") or sqlerr(__FILE__, __LINE__);

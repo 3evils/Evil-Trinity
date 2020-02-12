@@ -1,21 +1,21 @@
 <?php
 /**
  |--------------------------------------------------------------------------|
- |   https://github.com/Bigjoos/                                            |
+ |   https://github.com/3evils/                                             |
  |--------------------------------------------------------------------------|
  |   Licence Info: WTFPL                                                    |
  |--------------------------------------------------------------------------|
- |   Copyright (C) 2010 U-232 V5                                            |
+ |   Copyright (C) 2020 Evil-Trinity                                        |
  |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.   |
+ |   A bittorrent tracker source based on an unreleased U-232               |
  |--------------------------------------------------------------------------|
- |   Project Leaders: Mindless, Autotron, whocares, Swizzles.               |
+ |   Project Leaders: AntiMidas,  Seeder                                    |
  |--------------------------------------------------------------------------|
-  _   _   _   _   _     _   _   _   _   _   _     _   _   _   _
- / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \   / \ / \ / \ / \
-( U | - | 2 | 3 | 2 )-( S | o | u | r | c | e )-( C | o | d | e )
- \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/
- */
+                 _   _   _   _     _   _   _   _   _   _   _
+                / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \
+               | E | v | i | l )-| T | r | i | n | i | t | y )
+                \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
+*/
 require_once (__DIR__ . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'bittorrent.php');
 dbconn();
 $torrent_pass = (isset($_GET["torrent_pass"]) ? htmlsafechars($_GET["torrent_pass"]) : '');
@@ -42,7 +42,7 @@ $counts = array(15, 30, 50, 100);
 if (!empty($_GET["count"]) && in_array((int)$_GET["count"], $counts)) $limit = 'LIMIT ' . (int)$_GET['count'];
 else $limit = 'LIMIT 15';
 header("Content-Type: application/xml");
-$HTMLOUT = "<?xml version=\"1.0\" encoding=\"windows-1251\" ?>\n<rss version=\"0.91\">\n<channel>\n" . "<title>" . $INSTALLER09['site_name'] . "</title>\n<link>" . $INSTALLER09['baseurl'] . "</link>\n<description>" . $INSTALLER09['rssdescr'] . "</description>\n" . "<language>en-usde</language>\n<copyright>Copyright © " . date('Y') . " " . $INSTALLER09['site_name'] . "</copyright>\n<webMaster>" . $INSTALLER09['site_email'] . "</webMaster>\n" . "<image><title>" . $INSTALLER09['site_name'] . "</title>\n<url>" . $INSTALLER09['baseurl'] . "/favicon.ico</url>\n<link>" . $INSTALLER09['baseurl'] . "</link>\n" . "<width>16</width>\n<height>16</height>\n<description>" . $INSTALLER09['rssdescr'] . "</description>\n</image>\n";
+$HTMLOUT = "<?xml version=\"1.0\" encoding=\"windows-1251\" ?>\n<rss version=\"0.91\">\n<channel>\n" . "<title>" . $INSTALLER09['site_name'] . "</title>\n<link>" . $INSTALLER09['baseurl'] . "</link>\n<description>" . $INSTALLER09['rssdescr'] . "</description>\n" . "<language>en-usde</language>\n<copyright>Copyright ï¿½ " . date('Y') . " " . $INSTALLER09['site_name'] . "</copyright>\n<webMaster>" . $INSTALLER09['site_email'] . "</webMaster>\n" . "<image><title>" . $INSTALLER09['site_name'] . "</title>\n<url>" . $INSTALLER09['baseurl'] . "/favicon.ico</url>\n<link>" . $INSTALLER09['baseurl'] . "</link>\n" . "<width>16</width>\n<height>16</height>\n<description>" . $INSTALLER09['rssdescr'] . "</description>\n</image>\n";
 $res = sql_query('SELECT t.id,t.name,t.descr,t.size,t.category,t.seeders,t.leechers,t.added, c.name as catname FROM torrents as t LEFT JOIN categories as c ON t.category = c.id WHERE ' . $where . ' t.visible="yes" ORDER BY t.added DESC ' . $limit) or sqlerr(__FILE__, __LINE__);
 while ($a = mysqli_fetch_assoc($res)) {
     $link = $INSTALLER09['baseurl'] . ($feed == "dl" ? "/download.php?torrent=" . (int)$a['id'] . '&amp;torrent_pass=' . $torrent_pass : "/details.php?id=" . (int)$a["id"] . "&amp;hit=1");

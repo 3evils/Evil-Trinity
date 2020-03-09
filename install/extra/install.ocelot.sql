@@ -3765,7 +3765,7 @@ CREATE TABLE `users` (
   `snow` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `design` int(25) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT = 1 COLLATE=utf8_unicode_ci;
- 
+
 --
 -- Dumping data for table `users`
 --

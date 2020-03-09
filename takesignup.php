@@ -117,7 +117,7 @@ $ret = sql_query("INSERT INTO users (username, passhash, secret, editsecret, bir
     $wanthintanswer,
     $email,
     (!$arr[0] || !EMAIL_CONFIRM ? 'confirmed' : 'pending')
-))) . ", " . (!$arr[0] ? UC_SYSOP . ", " : "") . "" . TIME_NOW . "," . TIME_NOW . " , $time_offset, {$dst_in_use['tm_isdst']}, $user_frees)") or sqlerr(__FILE__, __LINE__);
+))) . ", " . (!$arr[0] ? UC_CEO . ", " : "") . "" . TIME_NOW . "," . TIME_NOW . " , $time_offset, {$dst_in_use['tm_isdst']}, $user_frees)") or sqlerr(__FILE__, __LINE__);
 
 $mc1->delete_value('birthdayusers');
 

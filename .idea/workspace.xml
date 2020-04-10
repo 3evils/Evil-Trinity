@@ -52,7 +52,7 @@
       <workItem from="1585174676947" duration="313000" />
       <workItem from="1585654599294" duration="611000" />
       <workItem from="1585853824901" duration="227000" />
-      <workItem from="1586479195773" duration="893000" />
+      <workItem from="1586479195773" duration="1446000" />
     </task>
     <servers />
   </component>
@@ -60,6 +60,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#SQL_Dialects" timestamp="1586480512556">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1586480512556" />
     <state x="690" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581971192200">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -77,10 +81,10 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="399" y="254" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1581270580051" />
-    <state x="582" y="75" width="858" height="825" key="find.popup" timestamp="1586480082865">
+    <state x="242" y="63" width="858" height="825" key="find.popup" timestamp="1586481023149">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="582" y="75" width="858" height="825" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1586480082865" />
+    <state x="242" y="63" width="858" height="825" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1586481023149" />
     <state x="226" y="51" width="1116" height="963" key="find.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1581971121991" />
     <state x="320" y="116" key="scopes" timestamp="1581377195500">
       <screen x="0" y="0" width="1440" height="900" />

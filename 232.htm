@@ -256,11 +256,11 @@ Stillapunk is an unknown quantity at this point" title="Reputation Power 10 Stil
       var month=d.getMonth();
       var year=d.getFullYear();
       var am_pm;
-      if (s<10) {s="0" + s}
-      if (m<10) {m="0" + m}
+      if (s&lt;10) {s="0" + s}
+      if (m&lt;10) {m="0" + m}
       if (h>12) {h-=12;am_pm = "Pm"}
       else {am_pm="Am"}
-      if (h<10) {h="0" + h}
+      if (h&lt;10) {h="0" + h}
       document.getElementById("clock").innerHTML=h + ":" + m + ":" + s + " " + am_pm;
       setTimeout("refrClock()",1000);
       }

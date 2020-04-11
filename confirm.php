@@ -33,7 +33,7 @@ $lang = array_merge(load_language('global') , load_language('confirm'));
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 $md5 = isset($_GET['secret']) ? $_GET['secret'] : '';
 if (!is_valid_id($id)) stderr("{$lang['confirm_user_error']}", "{$lang['confirm_invalid_id']}");
-if (!preg_match("/^(?:[\d\w]){32}$/", $md5)) {
+if (!preg_match("/^(?:[\w]){32}$/", $md5)) {
     stderr("{$lang['confirm_user_error']}", "{$lang['confirm_invalid_key']}");
 }
 dbconn();

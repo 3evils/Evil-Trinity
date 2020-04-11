@@ -134,7 +134,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
   if (!empty($languages)) {
     ++$rows;
     echo '<TR><TD><B>Languages:</B></TD><TD>';
-    for ($i = 0; $i + 1 < count($languages); $i++) {
+    for ($i = 0, $loopsMax = count($languages); $i + 1 < $loopsMax; $i++) {
       echo $languages[$i].', ';
     }
     echo $languages[$i]."</TD></TR>\n";
@@ -146,7 +146,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
   if (!empty($country)) {
     ++$rows;
     echo '<TR><TD><B>Country:</B></TD><TD>';
-    for ($i = 0; $i + 1 < count($country); $i++) {
+    for ($i = 0, $loopsMax = count($country); $i + 1 < $loopsMax; $i++) {
       echo $country[$i].', ';
     }
     echo $country[$i]."</TD></TR>\n";
@@ -160,7 +160,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
   if (!empty($gen)) {
     ++$rows;
     echo '<TR><TD><B>All Genres:</B></TD><TD>';
-    for ($i = 0; $i + 1 < count($gen); $i++) {
+    for ($i = 0, $loopsMax = count($gen); $i + 1 < $loopsMax; $i++) {
       echo $gen[$i].', ';
     }
     echo $gen[$i]."</TD></TR>\n";
@@ -171,7 +171,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
   if (!empty($col)) {
     ++$rows;
     echo '<TR><TD><B>Colors:</B></TD><TD>';
-    for ($i = 0; $i + 1 < count($col); $i++) {
+    for ($i = 0, $loopsMax = count($col); $i + 1 < $loopsMax; $i++) {
       echo $col[$i].', ';
     }
     echo $col[$i]."</TD></TR>\n";
@@ -183,7 +183,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
   if (!empty($sound)) {
     ++$rows;
     echo '<TR><TD><B>Sound:</B></TD><TD>';
-    for ($i = 0; $i + 1 < count($sound); $i++) {
+    for ($i = 0, $loopsMax = count($sound); $i + 1 < $loopsMax; $i++) {
       echo $sound[$i].', ';
     }
     echo $sound[$i]."</TD></TR>\n";
@@ -202,7 +202,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
     ++$rows;
     echo '<TR><TD valign=top><B>Director:</B></TD><TD>';
     echo "<table align='left' border='1' style='border-collapse:collapse;background-color:#ddd;'><tr><th style='background-color:#07f;'>Name</th><th style='background-color:#07f;'>Role</th></tr>";
-    for ($i = 0; $i < count($director); $i++) {
+    for ($i = 0, $iMax = count($director); $i < $iMax; $i++) {
       echo '<tr><td width=200>';
       echo "<a href='person.php?engine=$engine&mid=".$director[$i]["imdb"]."'>";
       echo $director[$i]["name"].'</a></td><td>';
@@ -217,7 +217,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
     ++$rows;
     echo '<TR><TD valign=top><B>Writing By:</B></TD><TD>';
     echo "<table align='left' border='1' style='border-collapse:collapse;background-color:#ddd;'><tr><th style='background-color:#07f;'>Name</th><th style='background-color:#07f;'>Role</th></tr>";
-    for ($i = 0; $i < count($write); $i++) {
+    for ($i = 0, $iMax = count($write); $i < $iMax; $i++) {
       echo '<tr><td width=200>';
       echo "<a href='person.php?engine=$engine&mid=".$write[$i]["imdb"]."'>";
       echo $write[$i]["name"].'</a></td><td>';
@@ -233,7 +233,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
     ++$rows;
     echo '<TR><TD valign=top><B>Produced By:</B></TD><TD>';
     echo "<table align='left' border='1' style='border-collapse:collapse;background-color:#ddd;'><tr><th style='background-color:#07f;'>Name</th><th style='background-color:#07f;'>Role</th></tr>";
-    for ($i = 0; $i < count($produce); $i++) {
+    for ($i = 0, $iMax = count($produce); $i < $iMax; $i++) {
       echo '<tr><td width=200>';
       echo "<a href='person.php?engine=$engine&mid=".$produce[$i]["imdb"]."'>";
       echo $produce[$i]["name"].'</a></td><td>';
@@ -248,7 +248,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
     ++$rows;
     echo '<TR><TD valign=top><B>Music:</B></TD><TD>';
     echo "<table align='left' border='1' style='border-collapse:collapse;background-color:#ddd;'><tr><th style='background-color:#07f;'>Name</th><th style='background-color:#07f;'>Role</th></tr>";
-    for ($i = 0; $i < count($compose); $i++) {
+    for ($i = 0, $iMax = count($compose); $i < $iMax; $i++) {
       echo '<tr><td width=200>';
       echo "<a href='person.php?engine=$engine&mid=".$compose[$i]["imdb"]."'>";
       echo $compose[$i]["name"]."</a></td></tr>";
@@ -263,7 +263,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
     ++$rows;
     echo '<TR><TD valign=top><B>Cast:</B></TD><TD>';
     echo "<table align='left' border='1' style='border-collapse:collapse;background-color:#ddd;'><tr><th style='background-color:#07f;'>Actor</th><th style='background-color:#07f;'>Role</th></tr>";
-    for ($i = 0; $i < count($cast); $i++) {
+    for ($i = 0, $iMax = count($cast); $i < $iMax; $i++) {
       echo '<tr><td width=200>';
       echo "<a href='person.php?engine=$engine&mid=".$cast[$i]["imdb"]."'>";
       echo $cast[$i]["name"].'</a></td><td>';
@@ -284,7 +284,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
   if (!empty($plot)) {
     ++$rows;
     echo '<tr><td valign=top><b>Plot:</b></td><td><ul>';
-    for ($i = 0; $i < count($plot); $i++) {
+    for ($i = 0, $iMax = count($plot); $i < $iMax; $i++) {
       echo "<li>".$plot[$i]."</li>\n";
     }
     echo "</ul></td></tr>\n";
@@ -296,7 +296,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
   if (!empty($taglines)) {
     ++$rows;
     echo '<tr><td valign=top><b>Taglines:</b></td><td><ul>';
-    for ($i = 0; $i < count($taglines); $i++) {
+    for ($i = 0, $iMax = count($taglines); $i < $iMax; $i++) {
       echo "<li>".$taglines[$i]."</li>\n";
     }
     echo "</ul></td></tr>\n";
@@ -347,7 +347,7 @@ if (isset ($_GET["mid"]) && preg_match('/^[0-9]+$/',$_GET["mid"])) {
   if (!empty($trailers)) {
     ++$rows;
     echo '<tr><td valign=top><b>Trailers:</b></td><td>';
-    for ($i=0;$i<count($trailers);++$i) {
+    for ($i=0, $iMax = count($trailers); $i< $iMax; ++$i) {
       if (!empty($trailers[$i]['url'])) echo "<a href='".$trailers[$i]['url']."'>".$trailers[$i]['title']."</a><br>\n";
     }
     echo "</td></tr>\n";

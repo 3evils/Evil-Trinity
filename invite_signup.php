@@ -205,7 +205,7 @@ $HTMLOUT.= "
 <div class='checkbox'><label><input type='checkbox' name='ageverify' value='yes'> {$lang['signup_age']}</label></div>
 </div></div>" . ($INSTALLER09['captcha_on'] ? "<div class='form-group'><div class='col-sm-10 col-sm-offset-1' id='captchasignup'></div></div>" : "") . "
 <div class='form-group'><div class='col-sm-10 col-sm-offset-4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$lang['signup_click']}<strong>{$lang['signup_x']}</strong>{$lang['signup_click1']}<br>";
-for ($i = 0; $i < count($value); $i++) {
+for ($i = 0, $iMax = count($value); $i < $iMax; $i++) {
     $HTMLOUT.= "<div style='display:inline-block;width:15px;'></div><span><input name=\"submitme\" type=\"submit\" value=\"" . $value[$i] . "\" class=\"btn\"></span>";
 }
 $HTMLOUT.= "</div></div></form></div>";

@@ -83,7 +83,7 @@ $options = array(
     $lang['usersearch_below'],
     $lang['usersearch_between']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['rt']) ? $_POST['rt'] : "3") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>
@@ -103,7 +103,7 @@ $options = array(
     $lang['usersearch_confirmed'],
     $lang['usersearch_pending']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['st']) ? $_POST['st'] : "0") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>
@@ -129,7 +129,7 @@ $options = array(
     $lang['usersearch_enabled'],
     $lang['usersearch_disabled']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['as']) ? $_POST['as'] : "0") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>
@@ -172,7 +172,7 @@ $options = array(
     $lang['usersearch_after'],
     $lang['usersearch_between']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['dt']) ? $_POST['dt'] : "0") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>
@@ -197,7 +197,7 @@ $options = array(
     $lang['usersearch_below'],
     $lang['usersearch_between']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['ult']) ? $_POST['ult'] : "0") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>
@@ -219,7 +219,7 @@ $options = array(
     $lang['usersearch_yes'],
     $lang['usersearch_no']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['do']) ? $_POST['do'] : "0") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>
@@ -238,7 +238,7 @@ $options = array(
     $lang['usersearch_after'],
     $lang['usersearch_between']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['lst']) ? $_POST['lst'] : "0") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>
@@ -261,7 +261,7 @@ $options = array(
     $lang['usersearch_below'],
     $lang['usersearch_between']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['dlt']) ? $_POST['dlt'] : "0") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>
@@ -284,7 +284,7 @@ $options = array(
     $lang['usersearch_yes'],
     $lang['usersearch_no']
 );
-for ($i = 0; $i < count($options); $i++) {
+for ($i = 0, $iMax = count($options); $i < $iMax; $i++) {
     echo "<option value='$i' " . (((isset($_POST['w']) ? $_POST['w'] : "0") == "$i") ? "selected='selected'" : "") . ">" . $options[$i] . "</option>\n";
 }
 ?>

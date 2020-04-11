@@ -229,7 +229,7 @@ class imdb extends movie_base {
       if ($this->page["Title"] == "") $this->openpage ("Title");
       if (@preg_match("/\<title\>(.*)\<\/title\>/",$this->page["Title"],$match)) {
         if (preg_match_all('|\(([^\)]*)\)|',$match[1],$matches)) {
-          for ($i=0;$i<count($matches[0]);++$i) if (!preg_match('|^\d{4}$|',$matches[1][$i])) $this->main_movietypes[] = $matches[1][$i];
+          for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i) if (!preg_match('|^\d{4}$|',$matches[1][$i])) $this->main_movietypes[] = $matches[1][$i];
         }
       }
     }
@@ -532,7 +532,7 @@ class imdb extends movie_base {
       if ($this->page["Title"] == "") $this->openpage("Title");
       if (@preg_match("#Creators?:\</h4\>[\s\n]*(.*?)(</div|<a class=\"tn15more)#ms", $this->page["Title"], $match)) {
         if (preg_match_all('#/name/nm(\d{7}).*?><span.+?>(.*?)</span#s', $match[1], $matches)) {
-          for ($i = 0; $i < count($matches[0]); ++$i)
+          for ($i = 0, $iMax = count($matches[0]); $i < $iMax; ++$i)
             $this->main_creator[] = array('name' => $matches[2][$i], 'imdb' => $matches[1][$i]);
         }
       }
@@ -773,7 +773,7 @@ class imdb extends movie_base {
     if (empty($this->main_pictures)) {
       preg_match('!<div class="mediastrip">\s*(.*?)\s*</div>!ims',$this->page["Title"],$match);
       if (@preg_match_all('!<a .*?href="(?<href>.*?)".*?<img.*?src="(.*?)".*?loadlate="(?<imgsrc>.*?)"!ims',$match[1],$matches)) {
-        for ($i=0;$i<count($matches[0]);++$i) {
+        for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i) {
           $this->main_pictures[$i]["imgsrc"] = $matches['imgsrc'][$i];
           if (substr($matches['href'][$i],0,4)!="http") $matches['href'][$i] = "https://".$this->imdbsite.$matches[1][$i];
           $this->main_pictures[$i]["imglink"] = $matches['href'][$i];
@@ -802,7 +802,7 @@ class imdb extends movie_base {
     if ($this->page["Title"] == "") $this->openpage ("Title");
     $this->countries = array();
     if (preg_match_all('!/country/.+?\s.+?>(.*?)<\/a!m',$this->page["Title"],$matches))
-      for ($i=0;$i<count($matches[0]);++$i) $this->countries[$i] = $matches[1][$i];
+      for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i) $this->countries[$i] = $matches[1][$i];
    }
    return $this->countries;
   }
@@ -826,7 +826,7 @@ class imdb extends movie_base {
       $alsoknow_end = strpos($this->page["ReleaseInfo"], "</table>", $ak_s);
       $alsoknow_all = substr($this->page["ReleaseInfo"], $ak_s, $alsoknow_end - $ak_s);
       preg_match_all("@<td>(.*?)</td>@i", $alsoknow_all, $matches);
-      for ($i = 0; $i < count($matches[1]); $i+=2) {
+      for ($i = 0, $iMax = count($matches[1]); $i < $iMax; $i+=2) {
         $description = trim($matches[1][$i]);
         $titles = explode('/', $matches[1][$i + 1]); // This might not happen anymore
         if (empty($titles[0])) {
@@ -983,7 +983,7 @@ class imdb extends movie_base {
     if ( $this->page["Plot"] == "cannot open page" ) return array(); // no such page
     if (preg_match('!<div class="desc"[^>]*>(.+?)<h4!ims',$this->page["Plot"],$block)) {
       if (preg_match_all('!<li\s+class="(odd|even)[^"]*"\s*>(.+?)</li>!ims',$block[0],$matches)) {
-        for ($i=0;$i<count($matches[0]);++$i) {
+        for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i) {
           $this->plot_plot[$i] = preg_replace('!<a href="/search/title!i','<a href="https://'.$this->imdbsite.'/search/title',$matches[2][$i]);
         }
       }
@@ -1001,7 +1001,7 @@ class imdb extends movie_base {
   public function plot_split() {
     if (empty($this->split_plot)) {
       if (empty($this->plot_plot)) $plots = $this->plot();
-      for ($i=0;$i<count($this->plot_plot);++$i) {
+      for ($i=0, $iMax = count($this->plot_plot); $i< $iMax; ++$i) {
         if (preg_match('!<p[^>]*>\s*(?<plot>.*?)\s*</p>\s*<span[^>]+>\s*-\s*<em>Written by\s+<a href="(?<author_url>.*?)"\s*>(?<author_name>.*?)</a>\s*</span>\s*</em>!ims',$this->plot_plot[$i],$match)) {
           $this->split_plot[] = array("plot"=>$match['plot'],"author"=>array("name"=>$match['author_name'],"url"=>$match['author_url']));
         }
@@ -1129,7 +1129,7 @@ class imdb extends movie_base {
    }
    $director_rows = $this->get_table_rows($this->page["Credits"], "Directed by");
    if($director_rows==null) $director_rows = $this->get_table_rows($this->page["Credits"], "Series Directed by");
-   for ( $i = 0; $i < count ($director_rows); $i++){
+   for ($i = 0, $iMax = count($director_rows); $i < $iMax; $i++){
     $cels = $this->get_row_cels ($director_rows[$i]);
     if (!isset ($cels[0])) return array();
     $dir = array();
@@ -1164,7 +1164,7 @@ class imdb extends movie_base {
     if ( $this->page["Credits"] == "cannot open page" ) return array(); // no such page
    }
    $cast_rows = $this->get_table_rows_cast($this->page["Credits"], "Cast", "itemprop");
-   for ( $i = 0; $i < count ($cast_rows); $i++){
+   for ($i = 0, $iMax = count($cast_rows); $i < $iMax; $i++){
     $cels = $this->get_row_cels ($cast_rows[$i]);
     if (!isset ($cels[1])) continue;
     $dir = array();
@@ -1205,7 +1205,7 @@ class imdb extends movie_base {
    }
    $this->credits_writing = array();
    $writing_rows = $this->get_table_rows($this->page["Credits"], "Writing Credits");
-   for ( $i = 0; $i < count ($writing_rows); $i++){
+   for ($i = 0, $iMax = count($writing_rows); $i < $iMax; $i++){
      $wrt = array();
      if ( preg_match('!<a\s+href="/name/nm(\d{7})/[^>]*>\s*(.+)\s*</a>!ims',$writing_rows[$i],$match) ) {
        $wrt['imdb'] = $match[1];
@@ -1235,7 +1235,7 @@ class imdb extends movie_base {
    }
    $this->credits_producer = array();
    $producer_rows = $this->get_table_rows($this->page["Credits"], "Produced by");
-   for ( $i = 0; $i < count ($producer_rows); $i++){
+   for ($i = 0, $iMax = count($producer_rows); $i < $iMax; $i++){
     $cels = $this->get_row_cels ($producer_rows[$i]);
     if ( count ( $cels) > 2){
      $wrt = array();
@@ -1264,7 +1264,7 @@ class imdb extends movie_base {
    }
    $this->credits_composer = array();
    $composer_rows = $this->get_table_rows($this->page["Credits"], "Music by");
-   for ( $i = 0; $i < count ($composer_rows); $i++){
+   for ($i = 0, $iMax = count($composer_rows); $i < $iMax; $i++){
      if ( preg_match('!<a\s+href="/name/nm(\d{7})/[^>]*>\s*(.+)\s*</a>!ims',$composer_rows[$i],$match) ) {
        $wrt['imdb'] = $match[1];
        $wrt['name'] = trim($match[2]);
@@ -1322,7 +1322,7 @@ class imdb extends movie_base {
       if ( $this->page["Episodes"] == "cannot open page" ) return $this->season_episodes; // no such page
       if ( preg_match('!<select id="bySeason"(.*?)</select!ims',$this->page["Episodes"],$match) ) {
         preg_match_all('!<option\s+(selected="selected" |)value="(\d+)">!i',$match[1],$matches);
-        for ($i=0;$i<count($matches[0]);++$i) {
+        for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i) {
           $s = $matches[2][$i];
           if ( empty($this->page["Episodes-$s"]) ) $this->openpage("Episodes-$s");
           if ( $this->page["Episodes-$s"] == "cannot open page" ) continue; // no such page
@@ -1425,7 +1425,7 @@ class imdb extends movie_base {
             else $regex = '@<a\s*onclick=".*?"\s*href="(/video/(?!imdblink).*?/vi\d+/)".*?><img.*?title="(.*?)"\s*src="(.*?)"@s';
             if (preg_match_all($regex, $html_trailer, $matches)) {
                 //print_r($matches);
-                for ($i=0;$i<count($matches[0]);++$i) {
+                for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i) {
                     $trailer = "https://".$this->imdbsite.$matches[1][$i];
                     $res = (strpos($matches[3][$i], 'HDIcon') !== FALSE )? 'HD' : 'SD';
                     if ( $full ) $this->trailers[] = array("lang"=>'',"title"=>html_entity_decode($matches[2][$i],ENT_QUOTES, 'UTF-8'),"url"=>$trailer,"restful_url"=>'',"resolution"=>$res);
@@ -1584,7 +1584,7 @@ class imdb extends movie_base {
           $s['soundtrack'] = $matches['title'][$i];
           $s['credits'] = array();
           if ( preg_match_all('|^\s*(.*?)\s+by\s+(<a href[^>]+>.+?</a>)|i',$matches['desc'][$i],$match1) ) {
-            for ($k=0;$k<count($match1[0]);++$k) {
+            for ($k=0, $kMax = count($match1[0]); $k< $kMax; ++$k) {
               switch ($match1[1][$k]) {
                 case "Arranged" : $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'arrangement'); break;
                 case "Composed" : $s['credits'][] = array('credit_to'=>str_replace('href="/','href="https://'.$this->imdbsite.'/',$match1[2][$k]), 'desc'=>'composer'); break;
@@ -1602,7 +1602,7 @@ class imdb extends movie_base {
               }
             }
           } elseif ( preg_match_all('|\s*([^>]*)\s+by\s+([^<]+)|i',$matches['desc'][$i],$match1) ) { // creditors without link
-            for ($k=0;$k<count($match1[0]);++$k) {
+            for ($k=0, $kMax = count($match1[0]); $k< $kMax; ++$k) {
               if ( preg_match('!(.+)\s+and\s+(.+)!',$match1[2][$k],$cr) ) $creds = array($cr[1],$cr[2]);
               else $creds = array($match1[2][$k]);
               switch ($match1[1][$k]) {
@@ -1765,7 +1765,7 @@ class imdb extends movie_base {
       $block = substr($this->page['Locations'],$tag_s,$tag_e-$tag_s);
       $block = substr($block,strpos($block,'<dl>'));
       if ( preg_match_all('!<dt>(<a href="(.*?)">|)(.*?)(</a>|</dt>)!ims',$block,$matches) ) {
-        for ($i=0;$i<count($matches[0]);++$i)
+        for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i)
           $this->locations[] = array('name'=>$matches[3][$i], 'url'=>$matches[2][$i]);
       }
     }

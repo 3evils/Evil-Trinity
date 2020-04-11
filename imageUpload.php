@@ -35,11 +35,15 @@ loggedinorreturn();
     // *************************************************************************
     $id = intval($_GET["id"]);
 	if (!file_exists('pictures/'.$id.'')) {
-    mkdir('pictures/'.$id.'', 0777, true);
+        if (!mkdir($concurrentDirectory = 'pictures/' . $id . '', 0777, true) && !is_dir($concurrentDirectory)) {
+            throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
+        }
 	//chown('/var/www/html/slike/'.$id.'', 'www-data');
 }
 	if (!file_exists('pictures/'.$id.'/thumbs')) {
-    mkdir('pictures/'.$id.'/thumbs', 0777, true);
+        if (!mkdir($concurrentDirectory = 'pictures/' . $id . '/thumbs', 0777, true) && !is_dir($concurrentDirectory)) {
+            throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
+        }
 	//chown('/var/www/html/slike/'.$id.'/thumbs', 'www-data');
 }
 
@@ -63,14 +67,14 @@ loggedinorreturn();
 	
 	//Make sure all of the images are JPG, and of the right size
 	
-	for($i=0; $i<count($_FILES['upload']['name']); $i++) {
+	for($i=0, $iMax = count($_FILES['upload']['name']); $i< $iMax; $i++) {
         
 		//Get the temporanry file path
 		$tmpFilePath = $_FILES['upload']['tmp_name'][$i];
 
 		//Make sure we have a filepath
 		if ($tmpFilePath != ""){
-			for($z=0; $z<count($_FILES['upload']['name']); $z++){
+			for($z=0, $zMax = count($_FILES['upload']['name']); $z< $zMax; $z++){
                 
                 //Check if the image is a JPEG, and if not, do something
 				if(!($_FILES['upload']['type'][$z] == "image/jpeg")){
@@ -109,7 +113,7 @@ loggedinorreturn();
     }
 }
 	//Upload the photos
-	for($i=0; $i<count($_FILES['upload']['name']); $i++) {
+	for($i=0, $iMax = count($_FILES['upload']['name']); $i< $iMax; $i++) {
 		//Get the temp file path
 		$tmpFilePath = $_FILES['upload']['tmp_name'][$i];
 

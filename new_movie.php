@@ -33,7 +33,9 @@
     $htmlout = '';
     define('IMDB_IMG_DIR', BITBUCKET_DIR . DIRECTORY_SEPARATOR . 'imdb');
     if (!is_dir(IMDB_IMG_DIR)) {
-        mkdir(IMDB_IMG_DIR);
+        if (!mkdir($concurrentDirectory = IMDB_IMG_DIR) && !is_dir($concurrentDirectory)) {
+            throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
+        }
     }
     $INSTALLER09['expires']['imdb_upcoming'] = 1440; // 1440 = 1 day
     if (($imdb_upcoming = $mc1->get_value('imdb_upcoming_')) === false) {

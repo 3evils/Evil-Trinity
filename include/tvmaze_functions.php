@@ -20,7 +20,9 @@
 //tvmaze functions converted from former tvrage functions
 define('TBUCKET_DIR', BITBUCKET_DIR . DIRECTORY_SEPARATOR . 'tvmaze');
 if (!is_dir(TBUCKET_DIR)) {
-    mkdir(TBUCKET_DIR);
+    if (!mkdir($concurrentDirectory = TBUCKET_DIR) && !is_dir($concurrentDirectory)) {
+        throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
+    }
 }
 
 function tvmaze_format($tvmaze_data, $tvmaze_type) {

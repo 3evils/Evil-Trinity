@@ -98,7 +98,7 @@ function searchfield($entry)
     //
     // Filter out strange characters like ^, $, &, change "it's" to "its"
     //
-    for ($i = 0; $i < sizeof($drop_char_match); $i++) {
+    for ($i = 0, $iMax = sizeof($drop_char_match); $i < $iMax; $i++) {
         $entry = str_replace($drop_char_match[$i], $drop_char_replace[$i], $entry);
     }
     return $entry;
@@ -142,7 +142,7 @@ function search_text_in_db($searchstr, $base_sql, $where_search, $add_where = ar
     $current_match_type = 'and';
     $word_match = array();
     $result_list = array();
-    for ($i = 0; $i < sizeof($split_search); $i++) {
+    for ($i = 0, $iMax = sizeof($split_search); $i < $iMax; $i++) {
         if (utf_strlen(str_replace(array(
             '*',
             '%'

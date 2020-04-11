@@ -39,7 +39,9 @@ $HTMLOUT = "";
 /* Avatar folder located inside BITBUCKET_DIR */
 define('AVATAR_DIR', BITBUCKET_DIR.DIRECTORY_SEPARATOR.'avatar');
 if (!is_dir(AVATAR_DIR)) {
-    mkdir(AVATAR_DIR);
+    if (!mkdir($concurrentDirectory = AVATAR_DIR) && !is_dir($concurrentDirectory)) {
+        throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
+    }
 }
 $SaLt = 'mE0wI924dsfsfs!@B'; // change this!
 $SaLty = '8368364562'; // NEW!
@@ -101,12 +103,16 @@ function valid_path($root, $input)
 function make_year($path)
 {
     $dir = $path.'/'.date('Y');
-    if (!is_dir($dir)) mkdir($dir);
+    if (!is_dir($dir)) if (!mkdir($dir) && !is_dir($dir)) {
+        throw new \RuntimeException(sprintf('Directory "%s" was not created', $dir));
+    }
 }
 function make_month($path)
 {
     $dir = $path.'/'.date('Y/m');
-    if (!is_dir($dir)) mkdir($dir);
+    if (!is_dir($dir)) if (!mkdir($dir) && !is_dir($dir)) {
+        throw new \RuntimeException(sprintf('Directory "%s" was not created', $dir));
+    }
 }
 // EndFile
 

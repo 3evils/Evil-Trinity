@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="" />
+    <list default="true" id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/232.htm" beforeDir="false" afterPath="$PROJECT_DIR$/232.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/load.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/load.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/usersearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/avatar/drp.php" beforeDir="false" afterPath="$PROJECT_DIR$/avatar/drp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitbucket.php" beforeDir="false" afterPath="$PROJECT_DIR$/bitbucket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bittorrent.php" beforeDir="false" afterPath="$PROJECT_DIR$/bittorrent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/details.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/details1.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/details1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/details2.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/details2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/poll_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/poll_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/1/forums/view_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/view_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/2/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/2/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forums/poll_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/forums/poll_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forums/view_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/forums/view_topic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageUpload.php" beforeDir="false" afterPath="$PROJECT_DIR$/imageUpload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imdb/imdb.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/imdb/imdb.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imdb/imdb_person.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/imdb/imdb_person.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imdb/movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/imdb/movie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/bbcode_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bbcode_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/bittorrent.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bittorrent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/bt_client_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bt_client_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/class/class.chmod.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class/class.chmod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/functions_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/functions_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/geshi/geshi.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/geshi/geshi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/tvmaze_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/tvmaze_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invite_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/invite_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/new_movie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocelot/newest/bittorrent.php" beforeDir="false" afterPath="$PROJECT_DIR$/ocelot/newest/bittorrent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocelot/newest/takeedit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ocelot/newest/takeedit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocelot/newest/takeupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/ocelot/newest/takeupload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleCaptcha.php" beforeDir="false" afterPath="$PROJECT_DIR$/simpleCaptcha.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/take_invite_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/take_invite_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/takeedit.php" beforeDir="false" afterPath="$PROJECT_DIR$/takeedit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/takeupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/takeupload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/tracker.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +73,8 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -54,6 +97,8 @@
       <workItem from="1585853824901" duration="227000" />
       <workItem from="1586479195773" duration="1575000" />
       <workItem from="1586581268504" duration="56000" />
+      <workItem from="1586646101972" duration="279000" />
+      <workItem from="1586646391244" duration="1881000" />
     </task>
     <servers />
   </component>
@@ -61,6 +106,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="732" y="319" key="#JSHint" timestamp="1586647873677">
+      <screen x="0" y="40" width="2276" height="1240" />
+    </state>
+    <state x="732" y="319" key="#JSHint/0.40.2276.1240@0.40.2276.1240" timestamp="1586647873677" />
     <state x="320" y="115" key="#SQL_Dialects" timestamp="1586480512556">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -69,19 +118,29 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="690" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1581971192200" />
+    <state x="888" y="508" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586646447600">
+      <screen x="0" y="40" width="2276" height="1240" />
+    </state>
+    <state x="888" y="508" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.2276.1240@0.40.2276.1240" timestamp="1586646447600" />
     <state x="307" y="52" key="CommitChangelistDialog2" timestamp="1581281048211">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="307" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1581281048211" />
-    <state x="229" y="42" key="SettingsEditor" timestamp="1581271005821">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="633" y="210" key="FileChooserDialogImpl" timestamp="1586646255086">
+      <screen x="0" y="40" width="2276" height="1240" />
+    </state>
+    <state x="633" y="210" key="FileChooserDialogImpl/0.40.2276.1240@0.40.2276.1240" timestamp="1586646255086" />
+    <state x="362" y="98" key="SettingsEditor" timestamp="1586646380923">
+      <screen x="0" y="40" width="2276" height="1240" />
     </state>
     <state x="229" y="42" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1581271005821" />
     <state x="229" y="60" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1581270863656" />
-    <state x="399" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1581270580051">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state x="362" y="98" key="SettingsEditor/0.40.2276.1240@0.40.2276.1240" timestamp="1586646380923" />
+    <state x="631" y="399" key="com.intellij.ide.util.TipDialog" timestamp="1586646105581">
+      <screen x="0" y="40" width="2276" height="1240" />
     </state>
     <state x="399" y="254" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1581270580051" />
+    <state x="631" y="399" key="com.intellij.ide.util.TipDialog/0.40.2276.1240@0.40.2276.1240" timestamp="1586646105581" />
     <state x="242" y="63" width="858" height="825" key="find.popup" timestamp="1586481023149">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

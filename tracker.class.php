@@ -136,7 +136,7 @@ class Tracker {
 			$File = fsockopen(TRACKER_HOST, TRACKER_PORT, $ErrorNum, $ErrorString);
 			if ($File) {
 				if (fwrite($File, $Header) === false) {
-					$Err = "Failed to fwrite()";
+					$Err = 'Failed to fwrite()';
 					$Sleep = 3;
 					continue;
 				}
@@ -158,7 +158,7 @@ class Tracker {
 				$Data = "";
 			}
 			$Status = substr($Response, $DataEnd + 1);
-			if ($Status == "success") {
+			if ($Status === "success") {
 				$Success = true;
 			}
 		}

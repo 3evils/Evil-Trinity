@@ -218,7 +218,7 @@ $HTMLOUT.= "
 </fieldset>" . ($INSTALLER09['captcha_on'] ? "<div class='input-group float-center'><div id='captchasignup'></div></div>" : "") . "
 <p class='text-center'>{$lang['signup_click']}&nbsp;<strong>{$lang['signup_x']}</strong>&nbsp;{$lang['signup_click1']}</p>
 	<div class='expanded button-group'>";
-for ($i = 0; $i < count($value); $i++) {
+for ($i = 0, $iMax = count($value); $i < $iMax; $i++) {
     $HTMLOUT.= "<input name=\"submitme\" type=\"submit\" value=\"" . $value[$i] . "\" class=\"button\">";
 }
 $HTMLOUT.= "</div></div></form></div>";

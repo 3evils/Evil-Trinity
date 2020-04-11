@@ -160,7 +160,7 @@ if ($Multi_forum['configs']['use_poll_mod'] && is_valid_id($pollid)) {
             while ($arr_v = mysqli_fetch_row($res_v))
                 $vs[$arr_v[0]] += 1;
             reset($o);
-            for ($i = 0; $i < count($o); ++$i)
+            for ($i = 0, $iMax = count($o); $i < $iMax; ++$i)
                 if ($o[$i])
                     $os[$i] = array(
                         $vs[$i],

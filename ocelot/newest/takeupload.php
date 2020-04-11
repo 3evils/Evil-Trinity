@@ -245,7 +245,7 @@ $url = strip_tags(isset($_POST['url']) ? trim($_POST['url']) : '');
 if (empty($url)) {
     $text = $descr;
     preg_match_all('/((http|https|ftp):\/\/|www)([a-z0-9\-\._]+)\/?[a-z0-9_\.\-\?\+\/~=&;,]*/si', $text, $match);
-    for ($i = 0; $i < sizeof($match[0]); $i++) {
+    for ($i = 0, $iMax = sizeof($match[0]); $i < $iMax; $i++) {
         $requestnftest = $match[0][$i];
         $testurl       = "http://www.imdb.com/title/tt";
         $testurl1      = "http://uk.imdb.com/title/tt";

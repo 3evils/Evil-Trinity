@@ -1308,7 +1308,7 @@ function get_imdb($imdburl) {
     $gen = $movie->genres();
     if (!empty($gen)) {
     //Changed count($gen) for 4 to limit to only two genres to help keep it tidy on site
-    for ($i = 0; $i + 1 < count($gen); $i++) {
+    for ($i = 0, $loopsMax = count($gen); $i + 1 < $loopsMax; $i++) {
     $imdb_info['gen'] .= "$gen[$i], ";
     }
     $imdb_info['gen'] .="$gen[$i]";
@@ -1323,7 +1323,7 @@ function get_imdb($imdburl) {
 
     $country = $movie->country ();
     if (!empty($country)) {
-    for ($i = 0; $i + 1 < count ($country); $i++) {
+    for ($i = 0, $loopsMax = count($country); $i + 1 < $loopsMax; $i++) {
     $imdb_info['country'] .="$country[$i], ";
     }
     $imdb_info['country'] .= "$country[$i]";
@@ -1338,7 +1338,7 @@ function get_imdb($imdburl) {
     $imdb_info['lanuage'] = "None Available";
     $director = $movie->director();
     if (!empty($director)) {
-    for ($i = 0; $i < count ($director); $i++) {
+    for ($i = 0, $iMax = count($director); $i < $iMax; $i++) {
     $imdb_info['director'].= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "".$director[$i]["imdb"]."" ."\">" . "".$director[$i]["name"]."" . "</a>, ";
     }
     $imdb_info['director'].= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "".$director[$i]["imdb"]."" ."\">" . "".   $director[$i]["name"]."" . "</a> ";
@@ -1347,7 +1347,7 @@ function get_imdb($imdburl) {
     $imdb_info['director'] = "None Available";
     $produce = $movie->producer();
     if (!empty($produce)) {
-    for ($i = 0; $i < count ($produce); $i++) {
+    for ($i = 0, $iMax = count($produce); $i < $iMax; $i++) {
     $imdb_info['produce'].= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "".$produce[$i]["imdb"]."" ." \">" . "".$produce[$i]["name"]."" . "</a>,";
     }       
     $imdb_info['produce'].= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "".$produce[$i]["imdb"]."" ." \">" . "".$produce[$i]["name"]."" . "</a>";
@@ -1356,14 +1356,14 @@ function get_imdb($imdburl) {
     $imdb_info['produce'] = "None Available";
     $write = $movie->writing();
     if (!empty($write)) {
-    for ($i = 0; $i < count ($write); $i++) {
+    for ($i = 0, $iMax = count($write); $i < $iMax; $i++) {
     $imdb_info['write'].= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "".$write[$i]["imdb"]."" ."\">" . "".$write[$i]["name"]."" . "</a>, ";
     }
     $imdb_info['write'].= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "".$write[$i]["imdb"]."" ."\">" . "".$write[$i]["name"]."" . "</a> ";
     }
     $compose = $movie->composer();
     if (!empty($compose)) {
-    for ($i = 0; $i < count($compose); $i++) {
+    for ($i = 0, $iMax = count($compose); $i < $iMax; $i++) {
     $imdb_info['compose'].= "<a target=\"_blank\" href=\"http://www.imdb.com/name/nm" . "".$compose[$i]["imdb"]."" ." \">" . "".$compose[$i]["name"]."" . "</a>, "; 
     }
     }else{
@@ -1377,7 +1377,7 @@ function get_imdb($imdburl) {
     $imdb_info['plotoutline'].= "No Summary Available";
     $plot = $movie->plot ();
     if (!empty($plot)) {
-    for ($i = 0; $i < count ($plot); $i++) {
+    for ($i = 0, $iMax = count($plot); $i < $iMax; $i++) {
     $imdb_info['plot'].=str_replace(array("&", "<p>", "</p>"), array("&amp;","",""), "$plot[$i]<br /><br />");
     }
     }
@@ -1385,7 +1385,7 @@ function get_imdb($imdburl) {
     $imdb_info['plot'].= "No Plot Available";
     $trailers = $movie->trailers();
     if (!empty($trailers)) {
-    for ($i = 0; $i < count ($trailers); $i++) {
+    for ($i = 0, $iMax = count($trailers); $i < $iMax; $i++) {
     $imdb_info['trailers'].= "<a href='".$trailers[$i]."' title='Trailer' target='_blank'>IMDB Trailer</a><br />";
     }
     $imdb_info['trailers'].= "<a href='".$trailers[$i]."' title='Trailer' target='_blank'>IMDB Trailer</a>";

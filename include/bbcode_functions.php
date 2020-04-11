@@ -104,7 +104,7 @@ function validate_imgs($s){
     $end = "+\.(?:jpe?g|png|gif)";
     preg_match_all("!" . $start . "(.*)" . $end . "!Ui", $s, $result);
     $array = $result[0];
-    for ($i = 0; $i < count($array); $i++) {
+    for ($i = 0, $iMax = count($array); $i < $iMax; $i++) {
         $headers = @get_headers($array[$i]);
         if (strpos($headers[0], "200") === false) {
             $s = str_replace("[img]" . $array[$i] . "[/img]", "", $s);
@@ -150,7 +150,7 @@ function format_quotes($s)
     $closeval = array();
     $pos = - 1;
     foreach ($closequote as $val) $closeval[] = $pos = strpos($s, $val, $pos + 1);
-    for ($i = 0; $i < count($openval); $i++) if ($openval[$i] > $closeval[$i]) return $s; // Cannot close before opening. Return raw string...
+    for ($i = 0, $iMax = count($openval); $i < $iMax; $i++) if ($openval[$i] > $closeval[$i]) return $s; // Cannot close before opening. Return raw string...
             $s = str_replace("[quote]", "<blockquote><cite>Quote:</cite>", $s);
 			$s = preg_replace("/\\[quote=(.+?)\\]/", "<blockquote><cite>\\1 wrote:</cite>", $s);
             $s = str_replace("[/quote]", "<br /></blockquote>", $s);

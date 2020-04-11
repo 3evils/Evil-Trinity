@@ -53,7 +53,7 @@ function validusername($username)
     if ($username == "") return false;
     // The following characters are allowed in user names
     $allowedchars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    for ($i = 0; $i < strlen($username); ++$i) if (strpos($allowedchars, $username[$i]) === false) return false;
+    for ($i = 0, $iMax = strlen($username); $i < $iMax; ++$i) if (strpos($allowedchars, $username[$i]) === false) return false;
     return true;
 }
 if (empty($wantusername) || empty($wantpassword) || empty($email) || empty($invite) || empty($passhint) || empty($hintanswer)) stderr("Error", "Don't leave any fields blank.");

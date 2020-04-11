@@ -29,7 +29,7 @@ class Chmod
         'group' => 0,
         'public' => 0
     );
-    public function Chmod($dir, $OwnerModes = array() , $GroupModes = array() , $PublicModes = array())
+    public function __construct($dir, $OwnerModes = array() , $GroupModes = array() , $PublicModes = array())
     {
         $this->_dir = $dir;
         $this->setOwnerModes($OwnerModes[0], $OwnerModes[1], $OwnerModes[2]);

@@ -1284,7 +1284,7 @@ $HTMLOUT .= '<div class="screenup_bg">
 $HTMLOUT.="<table class='table table-bordered'><tr style='background:rgba(0,0,0,.5);'>";
 $files = glob("pictures/".$id."/*.*");
 
-for ($i=0; $i<count($files); $i++) {
+for ($i=0, $iMax = count($files); $i< $iMax; $i++) {
 $HTMLOUT.="<td class='screenup_col text-center'>";
     $image = $files[$i];
 	$end = end((explode('/', rtrim($image, '/'))));

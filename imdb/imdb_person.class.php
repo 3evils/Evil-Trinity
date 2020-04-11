@@ -460,7 +460,7 @@
          preg_match_all('!(\(.+?\))!ms',$html,$matches);
          $comment = '';
          $children = '';
-         for ($i=0;$i<count($matches[0]);++$i) {
+         for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i) {
            if ($i==0) { // usually the "lifespan" of the relation
              if ( preg_match('!(\(<a href="/date/(?<month>\d+)-(?<day>\d+).*>\s*\d+\s*(?<monthname>.*)<.*)?\s*(&nbsp;)?\s*(?<year>\d{4})\s+-!ms',$matches[0][0],$match) ) { // from date
                $from = array("day"=>$match['day'],"month"=>$match['month'],"mon"=>$match['monthname'],"year"=>$match['year']);
@@ -492,7 +492,7 @@
      if ( $this->page["Bio"] == "cannot open page" ) return array(); // no such page
      if ( preg_match('!<h4 class="li_group">Mini Bio[^>]+?>(.+?)<(h4 class="li_group"|div class="article")!ims',$this->page["Bio"],$block) ) {
        preg_match_all('!<div class="soda.*?\s*<p>\s*(?<bio>.+?)\s</p>\s*<p><em>- IMDb Mini Biography By:\s*(?<author>.+?)\s*</em>!ims',$block[1],$matches);
-       for ($i=0;$i<count($matches[0]);++$i) {
+       for ($i=0, $iMax = count($matches[0]); $i< $iMax; ++$i) {
          $bio_bio["desc"] = str_replace("href=\"/name/nm","href=\"http://".$this->imdbsite."/name/nm",
                               str_replace("href=\"/title/tt","href=\"http://".$this->imdbsite."/title/tt",
                                 str_replace('/search/name','http://'.$this->imdbsite.'/search/name',$matches['bio'][$i])));

@@ -219,7 +219,7 @@ $movie = array(
     $lang['movie_mv6'],
     $lang['movie_mv7']
 );
-for ($x = 0; $x < count($movie); $x++) {
+for ($x = 0, $xMax = count($movie); $x < $xMax; $x++) {
     $HTMLOUT.= "<label><input type=\"checkbox\" value=\"$movie[$x]\"  name=\"movie[]\" class=\"DEPENDS ON genre BEING movie\" />$movie[$x]</label>";
 }
 $music = array(
@@ -230,7 +230,7 @@ $music = array(
     $lang['music_m5'],
     $lang['music_m6']
 );
-for ($x = 0; $x < count($music); $x++) {
+for ($x = 0, $xMax = count($music); $x < $xMax; $x++) {
     $HTMLOUT.= "<label><input type=\"checkbox\" value=\"$music[$x]\" name=\"music[]\" class=\"DEPENDS ON genre BEING music\" />$music[$x]</label>";
 }
 $game = array(
@@ -240,7 +240,7 @@ $game = array(
     $lang['game_g4'],
     $lang['game_g5']
 );
-for ($x = 0; $x < count($game); $x++) {
+for ($x = 0, $xMax = count($game); $x < $xMax; $x++) {
     $HTMLOUT.= "<label><input type=\"checkbox\" value=\"$game[$x]\" name=\"game[]\" class=\"DEPENDS ON genre BEING game\" />$game[$x]</label>";
 }
 $apps = array(
@@ -252,7 +252,7 @@ $apps = array(
     $lang['app_mv6'],
     $lang['app_mv7']
 );
-for ($x = 0; $x < count($apps); $x++) {
+for ($x = 0, $xMax = count($apps); $x < $xMax; $x++) {
     $HTMLOUT.= "<label><input type=\"checkbox\" value=\"$apps[$x]\" name=\"apps[]\" class=\"DEPENDS ON genre BEING apps\" />$apps[$x]</label>";
 }
 $HTMLOUT.= "</table></div></div>";

@@ -104,7 +104,7 @@ $HTMLOUT.="<div class='card-section'>{$lang['login_cookies']}<br />{$lang['login
       </div>
 			".($INSTALLER09['captcha_on'] ? "<div class='input-group float-center'><div id='captchalogin'></div></div>" : "") . "<p class='text-center'>{$lang['login_click']}<strong>{$lang['login_x']}</strong></p>
 				<div class='row'><div class='columns large-6 large-centered medium-6 medium-centered'><div class='button-group'>";
-for ($i = 0; $i < count($value); $i++) {
+for ($i = 0, $iMax = count($value); $i < $iMax; $i++) {
     $HTMLOUT.= "
 	
 	<input name=\"submitme\" type=\"submit\" value=\"{$value[$i]}\" class=\"button\">";

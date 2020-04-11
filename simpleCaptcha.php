@@ -70,18 +70,18 @@ for ($i = 0; $i < $num; ++$i) {
     while (array_search($keys[$r], $used) !== false) {
         $r = rand(0, $size - 1);
     }
-    array_push($used, $keys[$r]);
+    $used[] = $keys[$r];
 }
 $selectText = $used[rand(0, $num - 1) ];
 $_SESSION['simpleCaptchaAnswer'] = sha1($selectText . $SALT);
 $resp['text'] = '' . $selectText;
 $resp['images'] = array();
 shuffle($used);
-for ($i = 0; $i < sizeof($used); ++$i) {
-    array_push($resp['images'], array(
-        'hash' => sha1($used[$i] . $SALT) ,
+for ($i = 0, $iMax = sizeof($used); $i < $iMax; ++$i) {
+    $resp['images'][] = array(
+        'hash' => sha1($used[$i] . $SALT),
         'file' => $images[$used[$i]]
-    ));
+    );
 }
 echo json_encode($resp);
 exit;

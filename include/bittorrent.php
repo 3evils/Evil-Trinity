@@ -63,18 +63,7 @@ if (preg_match('/(?:\< *(?:java|script)|script\:|\+document\.)/i', serialize($_P
 if (preg_match('/(?:\< *(?:java|script)|script\:|\+document\.)/i', serialize($_COOKIE)))
   die('Forbidden');
 //==
-////////Strip slashes by system//////////
-function cleanquotes(&$in)
-{
-    if (is_array($in)) return array_walk($in, 'cleanquotes');
-    return $in = stripslashes($in);
-}
-if (get_magic_quotes_gpc()) {
-    array_walk($_GET, 'cleanquotes');
-    array_walk($_POST, 'cleanquotes');
-    array_walk($_COOKIE, 'cleanquotes');
-    array_walk($_REQUEST, 'cleanquotes');
-}
+
 //== Updated 02/215
 function htmlsafechars($txt = '')
 {
@@ -743,7 +732,7 @@ function delete_id_keys($keys, $keyname = false)
 }
 function unesc($x)
 {
-    if (get_magic_quotes_gpc()) return stripslashes($x);
+    $x = is_array($x) ? array_map('unesc', $x) : stripslashes($x);
     return $x;
 }
 function mksize($bytes) {

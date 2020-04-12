@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/extra/install.ocelot.sql" beforeDir="false" afterPath="$PROJECT_DIR$/install/extra/install.ocelot.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/bittorrent.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bittorrent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/extra/config.ocelotsample.php" beforeDir="false" afterPath="$PROJECT_DIR$/install/extra/config.ocelotsample.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/extra/config.phpsample.php" beforeDir="false" afterPath="$PROJECT_DIR$/install/extra/config.phpsample.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

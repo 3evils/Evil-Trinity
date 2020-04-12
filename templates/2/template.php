@@ -181,6 +181,7 @@ if ($CURUSER) {
 <div class='row'>
 <div class='large-6 columns'>
 	<h1 class='subheader'>3 Evils</h1>
+	<h4 class='subheader'>Based on an unreleased U232</h4>
 </div>
 <div class='large-4 columns'>".StatusBar()."</div>
 </div>";

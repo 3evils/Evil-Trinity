@@ -165,7 +165,7 @@ if ($CURUSER) {
 <div class='expanded row'>
 <div class='large-6 columns'>
 	<h1 class='subheader'>".TBVERSION."</h1>
-	<h4 class='subheader'>Another look, same source</h4>
+	<h4 class='subheader'>Based on an unreleased U232</h4>
 </div>
 <div class='large-4 columns'>".StatusBar()."</div>
 </div>";

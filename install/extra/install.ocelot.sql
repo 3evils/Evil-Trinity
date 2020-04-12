@@ -826,7 +826,7 @@ CREATE TABLE `class_config` (
   `classname` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `classcolor` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `classpic` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `class_config`

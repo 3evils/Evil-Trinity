@@ -45,7 +45,7 @@ Visit https://evil-trinity.com for more detailed help on installing U-232.
 - Nodejs
 - Npm
 ### Set Up Instructions:
-Setup with apache2,mariadb10.1 and php7.3 
+Setup with apache2,mariadb10.1 and php7.2 
 
 **Ubuntu 16**
 *Update Ubuntu on first boot*

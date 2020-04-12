@@ -33,7 +33,7 @@ CREATE TABLE `achievementist` (
   `achievname` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
   `notes` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
   `clienticon` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `achievementist`
@@ -132,7 +132,7 @@ CREATE TABLE `achievements` (
   `icon` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `description` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `achievementid` int(5) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `achievements`
@@ -208,7 +208,7 @@ CREATE TABLE `ach_bonus` (
   `bonus_desc` text CHARACTER SET utf8,
   `bonus_type` tinyint(4) NOT NULL DEFAULT '0',
   `bonus_do` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `ach_bonus`
@@ -262,7 +262,7 @@ CREATE TABLE `announcement_main` (
   `sql_query` text CHARACTER SET utf8,
   `subject` text CHARACTER SET utf8,
   `body` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -275,7 +275,7 @@ CREATE TABLE `announcement_process` (
   `main_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `status` tinyint(3) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -286,7 +286,7 @@ CREATE TABLE `announcement_process` (
 CREATE TABLE `api_keys` (
   `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `api_keys`
@@ -311,7 +311,7 @@ CREATE TABLE `attachmentdownloads` (
   `user_id` int(10) NOT NULL DEFAULT '0',
   `date` int(11) NOT NULL DEFAULT '0',
   `times_downloaded` int(10) UNSIGNED NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `attachmentdownloads`
@@ -339,7 +339,7 @@ CREATE TABLE `attachments` (
   `times_downloaded` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `added` int(11) NOT NULL DEFAULT '0',
   `extension` varchar(100) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `attachments`
@@ -368,7 +368,7 @@ CREATE TABLE `attachments_bunny` (
   `times_downloaded` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `extension` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `topic_id` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -381,7 +381,7 @@ CREATE TABLE `avps` (
   `value_s` text CHARACTER SET utf8,
   `value_i` int(11) NOT NULL DEFAULT '0',
   `value_u` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `avps`
@@ -406,7 +406,7 @@ CREATE TABLE `bannedemails` (
   `addedby` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `comment` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `bannedemails`
@@ -480,7 +480,7 @@ CREATE TABLE `bans` (
   `comment` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `first` int(11) DEFAULT NULL,
   `last` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `bans`
@@ -503,7 +503,7 @@ CREATE TABLE `blackjack` (
   `cards` text CHARACTER SET utf8,
   `date` int(11) DEFAULT '0',
   `gameover` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `blackjack`
@@ -522,7 +522,7 @@ CREATE TABLE `blocks` (
   `id` int(10) UNSIGNED NOT NULL,
   `userid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `blockid` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `blocks`
@@ -557,7 +557,7 @@ CREATE TABLE `bonus` (
   `pointspool` decimal(10,1) NOT NULL DEFAULT '1.0',
   `enabled` enum('yes','no') CHARACTER SET latin1 NOT NULL DEFAULT 'yes' COMMENT 'This will determined a switch if the bonus is enabled or not! enabled by default',
   `minpoints` decimal(10,1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `bonus`
@@ -612,7 +612,7 @@ CREATE TABLE `bonuslog` (
   `donation` decimal(10,1) NOT NULL,
   `type` varchar(44) CHARACTER SET utf8 DEFAULT NULL,
   `added_at` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='log of contributors towards freeleech etc...';
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='log of contributors towards freeleech etc...';
 
 -- --------------------------------------------------------
 
@@ -625,7 +625,7 @@ CREATE TABLE `bookmarks` (
   `userid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `torrentid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `private` enum('yes','no') CHARACTER SET utf8 NOT NULL DEFAULT 'yes'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -642,7 +642,7 @@ CREATE TABLE `bugs` (
   `status` enum('fixed','ignored','na') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'na',
   `staff` int(10) NOT NULL DEFAULT '0',
   `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -654,7 +654,7 @@ CREATE TABLE `cards` (
   `id` int(11) NOT NULL,
   `points` int(11) NOT NULL DEFAULT '0',
   `pic` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `cards`
@@ -728,7 +728,7 @@ CREATE TABLE `casino` (
   `date` int(11) NOT NULL DEFAULT '0',
   `enableplay` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
   `deposit` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -744,7 +744,7 @@ CREATE TABLE `casino_bets` (
   `amount` bigint(20) NOT NULL DEFAULT '0',
   `time` int(11) NOT NULL DEFAULT '0',
   `winner` varchar(25) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -760,7 +760,7 @@ CREATE TABLE `categories` (
   `parent_id` mediumint(5) NOT NULL DEFAULT '-1',
   `tabletype` tinyint(2) UNSIGNED NOT NULL DEFAULT '1',
   `min_class` int(2) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `categories`
@@ -811,7 +811,7 @@ CREATE TABLE `cheaters` (
   `upthis` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `timediff` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `userip` varchar(15) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -826,7 +826,7 @@ CREATE TABLE `class_config` (
   `classname` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `classcolor` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `classpic` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `class_config`
@@ -859,7 +859,7 @@ CREATE TABLE `class_promo` (
   `uploaded` bigint(20) NOT NULL,
   `time` int(11) NOT NULL,
   `low_ratio` decimal(10,2) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `class_promo`
@@ -884,7 +884,7 @@ CREATE TABLE `cleanup` (
   `clean_log` tinyint(1) NOT NULL DEFAULT '0',
   `clean_desc` text CHARACTER SET utf8,
   `clean_on` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `cleanup`
@@ -980,7 +980,7 @@ CREATE TABLE `cleanup_log` (
   `clog_time` int(11) NOT NULL DEFAULT '0',
   `clog_ip` char(16) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
   `clog_desc` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -994,7 +994,7 @@ CREATE TABLE `coins` (
   `torrentid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `points` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `tf_points` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `coins`
@@ -1027,7 +1027,7 @@ CREATE TABLE `comments` (
   `checked_by` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
   `checked_when` int(11) NOT NULL,
   `checked` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `comments`
@@ -1046,7 +1046,7 @@ CREATE TABLE `countries` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `flagpic` varchar(50) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `countries`
@@ -1169,7 +1169,7 @@ CREATE TABLE `c_config` (
   `classname` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `classcolor` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `classpic` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `c_config`
@@ -1198,7 +1198,7 @@ CREATE TABLE `dbbackup` (
   `userid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `added` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `dbbackup`
@@ -1221,7 +1221,7 @@ CREATE TABLE `deathrow` (
   `torrent_name` char(140) CHARACTER SET utf8 NOT NULL,
   `reason` tinyint(1) NOT NULL,
   `notify` tinyint(1) UNSIGNED NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `deathrow`
@@ -1247,7 +1247,7 @@ INSERT INTO `deathrow` (`uid`, `username`, `tid`, `torrent_name`, `reason`, `not
 CREATE TABLE `design` (
   `designid` int(10) UNSIGNED NOT NULL,
   `name` varchar(64) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `design`
@@ -1274,7 +1274,7 @@ CREATE TABLE `events` (
   `duploadEnabled` tinyint(1) NOT NULL,
   `hdownEnabled` tinyint(1) NOT NULL,
   `oupdated` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1288,7 +1288,7 @@ CREATE TABLE `failedlogins` (
   `added` int(11) NOT NULL,
   `banned` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `attempts` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1406,7 +1406,7 @@ CREATE TABLE `files` (
   `torrent` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `filename` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `size` bigint(20) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1427,7 +1427,7 @@ CREATE TABLE `forums` (
   `place` int(10) NOT NULL DEFAULT '-1',
   `parent_forum` tinyint(4) NOT NULL DEFAULT '0',
   `forum_id` tinyint(4) DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1448,7 +1448,7 @@ CREATE TABLE `forums_bunny` (
   `parent_forum` tinyint(4) NOT NULL DEFAULT '0',
   `forum_id` tinyint(4) DEFAULT '0',
   `place` int(10) NOT NULL DEFAULT '-1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `forums_bunny`
@@ -1476,7 +1476,7 @@ CREATE TABLE `forum_config` (
   `accepted_file_types` varchar(280) CHARACTER SET utf8 DEFAULT NULL,
   `max_file_size` int(10) UNSIGNED NOT NULL DEFAULT '2097152',
   `upload_folder` varchar(80) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `forum_config`
@@ -1502,7 +1502,7 @@ CREATE TABLE `forum_poll` (
   `change_vote` enum('yes','no') CHARACTER SET utf8 NOT NULL DEFAULT 'no',
   `multi_options` smallint(2) UNSIGNED NOT NULL DEFAULT '1',
   `poll_closed` enum('yes','no') CHARACTER SET utf8 DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1517,7 +1517,7 @@ CREATE TABLE `forum_poll_votes` (
   `option` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `ip` varchar(15) CHARACTER SET utf8 DEFAULT NULL,
   `added` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1564,7 +1564,7 @@ CREATE TABLE `freepoll` (
   `torrentid` int(11) NOT NULL DEFAULT '0',
   `userid` int(11) NOT NULL DEFAULT '0',
   `id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `freepoll`
@@ -1605,7 +1605,7 @@ CREATE TABLE `friends` (
   `userid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `friendid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `confirmed` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1618,7 +1618,7 @@ CREATE TABLE `funds` (
   `cash` decimal(8,2) NOT NULL DEFAULT '0.00',
   `user` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `added` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1631,7 +1631,7 @@ CREATE TABLE `happyhour` (
   `userid` int(10) NOT NULL DEFAULT '0',
   `torrentid` int(10) NOT NULL DEFAULT '0',
   `multiplier` float NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `happyhour`
@@ -1666,7 +1666,7 @@ CREATE TABLE `happylog` (
   `torrentid` int(10) NOT NULL DEFAULT '0',
   `multi` float NOT NULL DEFAULT '0',
   `date` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1677,7 +1677,7 @@ CREATE TABLE `happylog` (
 CREATE TABLE `hit_and_run_settings` (
   `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `hit_and_run_settings`
@@ -1713,7 +1713,7 @@ CREATE TABLE `infolog` (
   `id` int(10) UNSIGNED NOT NULL,
   `added` int(11) DEFAULT '0',
   `txt` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `infolog`
@@ -1750,7 +1750,7 @@ CREATE TABLE `invite_codes` (
   `invite_added` int(10) NOT NULL,
   `status` enum('Pending','Confirmed') CHARACTER SET latin1 NOT NULL DEFAULT 'Pending',
   `email` varchar(80) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1791,7 +1791,7 @@ CREATE TABLE `likes` (
   `user_comment_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `userip` varchar(100) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1802,7 +1802,7 @@ CREATE TABLE `likes` (
 CREATE TABLE `lottery_config` (
   `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `lottery_config`
@@ -1833,7 +1833,7 @@ CREATE TABLE `manage_likes` (
   `id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
   `disabled_time` int(10) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1854,7 +1854,7 @@ CREATE TABLE `messages` (
   `saved` enum('no','yes') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `urgent` enum('no','yes') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `draft` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1870,7 +1870,7 @@ CREATE TABLE `modscredits` (
   `u232lnk` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `credit` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(120) COLLATE utf8_unicode_ci NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `modscredits`
@@ -1890,7 +1890,7 @@ CREATE TABLE `mods_control` (
   `index_page_mods` int(10) UNSIGNED NOT NULL DEFAULT '585727',
   `global_stdhead_mods` int(10) UNSIGNED NOT NULL DEFAULT '2047',
   `userdetails_page_mods` bigint(20) UNSIGNED NOT NULL DEFAULT '4294967295'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `mods_control`
@@ -1915,7 +1915,7 @@ CREATE TABLE `moods` (
   `name` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
   `image` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
   `bonus` int(3) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `moods`
@@ -2021,7 +2021,7 @@ CREATE TABLE `news` (
   `title` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `sticky` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'no',
   `anonymous` enum('yes','no') CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `news`
@@ -2062,7 +2062,7 @@ CREATE TABLE `notconnectablepmlog` (
   `id` int(10) UNSIGNED NOT NULL,
   `user` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `date` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2075,7 +2075,7 @@ CREATE TABLE `now_viewing` (
   `forum_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `topic_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `added` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2097,7 +2097,7 @@ CREATE TABLE `offers` (
   `comments` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `link` varchar(240) CHARACTER SET utf8 DEFAULT NULL,
   `status` enum('approved','pending','denied') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'pending'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2110,7 +2110,7 @@ CREATE TABLE `offer_votes` (
   `offer_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `vote` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2125,7 +2125,7 @@ CREATE TABLE `over_forums` (
   `min_class_view` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `forum_id` tinyint(3) UNSIGNED NOT NULL DEFAULT '1',
   `sort` tinyint(3) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `over_forums`
@@ -2151,7 +2151,7 @@ CREATE TABLE `over_forums_bunny` (
   `min_class_view` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `sort` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `forum_id` tinyint(3) UNSIGNED NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `over_forums_bunny`
@@ -2182,7 +2182,7 @@ CREATE TABLE `pastebin` (
   `token` varchar(32) CHARACTER SET utf8 DEFAULT NULL,
   `expires` datetime DEFAULT NULL,
   `expiry_flag` enum('d','m','f') CHARACTER SET latin1 NOT NULL DEFAULT 'm'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `pastebin`
@@ -2209,7 +2209,7 @@ INSERT INTO `pastebin` (`pid`, `poster`, `posted`, `code`, `parent_pid`, `format
 CREATE TABLE `paypal_config` (
   `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `paypal_config`
@@ -2313,7 +2313,7 @@ CREATE TABLE `peers` (
   `uploadoffset` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `corrupt` int(10) NOT NULL DEFAULT '0',
   `compact` varchar(6) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2326,7 +2326,7 @@ CREATE TABLE `pmboxes` (
   `userid` int(11) NOT NULL,
   `boxnumber` tinyint(4) NOT NULL DEFAULT '2',
   `name` varchar(15) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `pmboxes`
@@ -2353,7 +2353,7 @@ CREATE TABLE `poll` (
   `answers` text CHARACTER SET utf8,
   `votes` int(5) NOT NULL DEFAULT '0',
   `multi` int(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `poll`
@@ -2376,7 +2376,7 @@ CREATE TABLE `polls` (
   `starter_name` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
   `votes` smallint(5) NOT NULL DEFAULT '0',
   `poll_question` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2390,7 +2390,7 @@ CREATE TABLE `poll_voters` (
   `vote_date` int(10) NOT NULL DEFAULT '0',
   `poll_id` int(10) NOT NULL DEFAULT '0',
   `user_id` varchar(32) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2403,7 +2403,7 @@ CREATE TABLE `postpollanswers` (
   `pollid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `userid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `selection` tinyint(3) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2436,7 +2436,7 @@ CREATE TABLE `postpolls` (
   `option18` varchar(40) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `option19` varchar(40) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `sort` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2456,7 +2456,7 @@ CREATE TABLE `posts` (
   `icon` int(2) NOT NULL DEFAULT '0',
   `anonymous` enum('yes','no') COLLATE utf8_bin NOT NULL DEFAULT 'no',
   `user_likes` text CHARACTER SET utf8 NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -2482,7 +2482,7 @@ CREATE TABLE `posts_bunny` (
   `staff_lock` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
   `anonymous` enum('yes','no') CHARACTER SET utf8 NOT NULL DEFAULT 'no',
   `user_likes` text CHARACTER SET utf8 NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2503,7 +2503,7 @@ CREATE TABLE `promo` (
   `bonus_upload` bigint(10) NOT NULL DEFAULT '0',
   `bonus_invites` int(2) NOT NULL DEFAULT '0',
   `bonus_karma` int(3) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `promo`
@@ -2531,7 +2531,7 @@ CREATE TABLE `rating` (
   `torrent` int(10) NOT NULL DEFAULT '0',
   `rating` int(1) NOT NULL DEFAULT '0',
   `user` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2544,7 +2544,7 @@ CREATE TABLE `readposts` (
   `userid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `topicid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `lastpostread` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2557,7 +2557,7 @@ CREATE TABLE `read_posts` (
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `topic_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `last_post_read` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `read_posts`
@@ -2578,7 +2578,7 @@ CREATE TABLE `recent` (
   `domain` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
   `pid` int(11) NOT NULL,
   `seq_no` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `recent`
@@ -2606,7 +2606,7 @@ CREATE TABLE `referrers` (
   `referer` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
   `page` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
   `date` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2622,7 +2622,7 @@ CREATE TABLE `releases` (
   `nukereason` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
   `nuketime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `releasetime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `releases`
@@ -2650,7 +2650,7 @@ CREATE TABLE `reports` (
   `how_delt_with` text CHARACTER SET utf8,
   `2nd_value` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `when_delt_with` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `reports`
@@ -2679,7 +2679,7 @@ CREATE TABLE `reputation` (
   `locale` enum('posts','comments','torrents','users') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'posts',
   `postid` int(10) NOT NULL DEFAULT '0',
   `userid` mediumint(8) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2691,7 +2691,7 @@ CREATE TABLE `reputationlevel` (
   `reputationlevelid` int(11) UNSIGNED NOT NULL,
   `minimumreputation` int(10) NOT NULL DEFAULT '0',
   `level` varchar(250) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `reputationlevel`
@@ -2734,7 +2734,7 @@ CREATE TABLE `requests` (
   `vote_no_count` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `comments` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `link` varchar(240) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `requests`
@@ -2755,7 +2755,7 @@ CREATE TABLE `request_votes` (
   `request_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `vote` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `request_votes`
@@ -2838,7 +2838,7 @@ CREATE TABLE `searchcloud` (
   `searchedfor` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `howmuch` int(10) NOT NULL,
   `ip` varchar(15) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2852,7 +2852,7 @@ CREATE TABLE `shit_list` (
   `shittyness` int(2) UNSIGNED NOT NULL DEFAULT '0',
   `added` int(11) NOT NULL DEFAULT '0',
   `text` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `shit_list`
@@ -2880,7 +2880,7 @@ CREATE TABLE `shoutbox` (
   `text_parsed` text CHARACTER SET utf8,
   `staff_shout` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `autoshout` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2892,7 +2892,7 @@ CREATE TABLE `sitelog` (
   `id` int(10) UNSIGNED NOT NULL,
   `added` int(11) NOT NULL,
   `txt` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2903,7 +2903,7 @@ CREATE TABLE `sitelog` (
 CREATE TABLE `site_config` (
   `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `site_config`
@@ -2964,7 +2964,7 @@ CREATE TABLE `snatched` (
   `hit_and_run` int(11) NOT NULL,
   `mark_of_cain` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `finished` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2981,7 +2981,7 @@ CREATE TABLE `staffmessages` (
   `answeredby` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `answered` int(1) NOT NULL DEFAULT '0',
   `answer` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `staffmessages`
@@ -3015,7 +3015,7 @@ CREATE TABLE `staffpanel` (
   `av_class` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `added_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `added` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `staffpanel`
@@ -3134,7 +3134,7 @@ CREATE TABLE `stats` (
   `administrators` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `sysops` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `vip` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `stats`
@@ -3154,7 +3154,7 @@ CREATE TABLE `stylesheets` (
   `uri` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `name` varchar(64) CHARACTER SET utf8 DEFAULT NULL,
   `design_id` int(5) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `stylesheets`
@@ -3175,7 +3175,7 @@ CREATE TABLE `subscriptions` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `topic_id` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `subscriptions`
@@ -3201,7 +3201,7 @@ CREATE TABLE `subscriptions_orig` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `topic_id` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `subscriptions_orig`
@@ -3235,7 +3235,7 @@ CREATE TABLE `subtitles` (
   `hits` int(10) NOT NULL DEFAULT '0',
   `added` int(11) NOT NULL DEFAULT '0',
   `owner` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `subtitles`
@@ -3254,7 +3254,7 @@ CREATE TABLE `thanks` (
   `id` int(11) NOT NULL,
   `torrentid` int(11) NOT NULL DEFAULT '0',
   `userid` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -3267,7 +3267,7 @@ CREATE TABLE `thankyou` (
   `uid` bigint(10) NOT NULL DEFAULT '0',
   `torid` bigint(10) NOT NULL DEFAULT '0',
   `thank_date` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `thankyou`
@@ -3294,7 +3294,7 @@ CREATE TABLE `thumbsup` (
   `torrentid` int(10) NOT NULL DEFAULT '0',
   `userid` int(11) NOT NULL DEFAULT '0',
   `commentid` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `thumbsup`
@@ -3324,7 +3324,7 @@ INSERT INTO `thumbsup` (`id`, `type`, `torrentid`, `userid`, `commentid`) VALUES
 CREATE TABLE `tickets` (
   `id` int(4) NOT NULL,
   `user` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -3338,7 +3338,7 @@ CREATE TABLE `tmdb` (
   `tv_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `tv_likes` text CHARACTER SET utf8 NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tmdb`
@@ -3403,7 +3403,7 @@ CREATE TABLE `topics` (
   `num_ratings` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `rating_sum` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `user_likes` text CHARACTER SET utf8 NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `topics`
@@ -3438,7 +3438,7 @@ CREATE TABLE `topics_bunny` (
   `status` enum('deleted','recycled','ok') CHARACTER SET utf8 NOT NULL DEFAULT 'ok',
   `main_forum_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `anonymous` enum('yes','no') CHARACTER SET utf8 NOT NULL DEFAULT 'no'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -3509,7 +3509,7 @@ CREATE TABLE `torrents` (
   `Snatched` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `balance` bigint(20) NOT NULL DEFAULT '0',
   `f_points` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -3533,7 +3533,7 @@ CREATE TABLE `uploadapp` (
   `status` enum('accepted','rejected','pending') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'pending',
   `moderator` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
   `comment` varchar(200) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `uploadapp`
@@ -3565,7 +3565,7 @@ CREATE TABLE `usercomments` (
   `editedat` int(11) NOT NULL DEFAULT '0',
   `edit_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `user_likes` text CHARACTER SET utf8 NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -3579,7 +3579,7 @@ CREATE TABLE `userhits` (
   `hitid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `number` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `added` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `userhits`
@@ -3764,7 +3764,7 @@ CREATE TABLE `users` (
   `pin_code` int(4) NOT NULL,
   `snow` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no',
   `design` int(25) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT = 1 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 AUTO_INCREMENT = 1 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -3815,7 +3815,7 @@ CREATE TABLE `usersachiev` (
   `monthlyshouts` int(5) NOT NULL DEFAULT '0',
   `monthlyshoutlvl` tinyint(2) NOT NULL DEFAULT '0',
   `totalshouts` int(10) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -3855,7 +3855,7 @@ CREATE TABLE `user_blocks` (
   `index_page` int(10) UNSIGNED NOT NULL DEFAULT '585727',
   `global_stdhead` int(10) UNSIGNED NOT NULL DEFAULT '2047',
   `userdetails_page` bigint(20) UNSIGNED NOT NULL DEFAULT '4294967295'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user_blocks`
@@ -5267,7 +5267,7 @@ CREATE TABLE `ustatus` (
   `last_status` varchar(140) CHARACTER SET utf8 DEFAULT NULL,
   `last_update` int(11) NOT NULL DEFAULT '0',
   `archive` text CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `ustatus`
@@ -5360,7 +5360,7 @@ CREATE TABLE `wiki` (
   `time` int(11) NOT NULL,
   `lastedit` int(10) UNSIGNED DEFAULT NULL,
   `lastedituser` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=Aria DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `wiki`
@@ -7045,7 +7045,7 @@ ALTER TABLE `userhits`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1 ;
 
 --
 -- AUTO_INCREMENT for table `usersachiev`

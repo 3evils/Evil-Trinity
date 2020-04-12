@@ -3,46 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/232.htm" beforeDir="false" afterPath="$PROJECT_DIR$/232.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/load.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/load.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/usersearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/usersearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avatar/drp.php" beforeDir="false" afterPath="$PROJECT_DIR$/avatar/drp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitbucket.php" beforeDir="false" afterPath="$PROJECT_DIR$/bitbucket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bittorrent.php" beforeDir="false" afterPath="$PROJECT_DIR$/bittorrent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/1/details.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/details.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/1/details1.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/details1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/1/details2.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/details2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/1/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/1/forums/poll_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/poll_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/1/forums/view_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/1/forums/view_topic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/2/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/design/2/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forums/poll_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/forums/poll_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forums/view_topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/forums/view_topic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageUpload.php" beforeDir="false" afterPath="$PROJECT_DIR$/imageUpload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imdb/imdb.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/imdb/imdb.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imdb/imdb_person.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/imdb/imdb_person.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imdb/movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/imdb/movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/bbcode_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bbcode_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/bittorrent.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bittorrent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/bt_client_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/bt_client_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/class/class.chmod.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/class/class.chmod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/functions_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/functions_search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/geshi/geshi.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/geshi/geshi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/tvmaze_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/tvmaze_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invite_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/invite_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/new_movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocelot/newest/bittorrent.php" beforeDir="false" afterPath="$PROJECT_DIR$/ocelot/newest/bittorrent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocelot/newest/takeedit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ocelot/newest/takeedit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocelot/newest/takeupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/ocelot/newest/takeupload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleCaptcha.php" beforeDir="false" afterPath="$PROJECT_DIR$/simpleCaptcha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/take_invite_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/take_invite_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/takeedit.php" beforeDir="false" afterPath="$PROJECT_DIR$/takeedit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/takeupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/takeupload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/tracker.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -271,7 +271,7 @@ $action = (in_array($posted_action, $valid_actions) ? $posted_action : 'view_def
           if ($INSTALLER09['forums_online'] == 0)
           $HTMLOUT .= stdmsg($lang['forum_pg_warn1'], $lang['forum_pg_warn2']);
 		if ($CURUSER['design'] == $CURUSER['design']) {
-			require_once DESIGN_DIR . "{$CURUSER['design']}/forums.php";
+			require_once "./design/{$CURUSER['design']}/forums.php";
 		}
           echo stdhead($lang['forums_forum_heading'], true, $stdhead) . $HTMLOUT . stdfoot($stdfoot);
           exit();

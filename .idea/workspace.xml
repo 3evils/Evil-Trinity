@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efdac0ab-2ded-4257-8942-11396e6dde88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/forums.php" beforeDir="false" afterPath="$PROJECT_DIR$/forums.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/takeupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/takeupload.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -76,6 +78,8 @@
       <workItem from="1586581268504" duration="56000" />
       <workItem from="1586646101972" duration="279000" />
       <workItem from="1586646391244" duration="1881000" />
+      <workItem from="1587673708002" duration="1495000" />
+      <workItem from="1587953603680" duration="253000" />
     </task>
     <servers />
   </component>
@@ -99,10 +103,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="690" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1581971192200" />
-    <state x="562" y="340" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586716828600">
+    <state x="562" y="340" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1586755823003">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="562" y="340" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1586716828600" />
+    <state x="562" y="340" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1586755823003" />
     <state x="888" y="508" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.2276.1240@0.40.2276.1240" timestamp="1586646447600" />
     <state x="307" y="52" key="CommitChangelistDialog2" timestamp="1581281048211">
       <screen x="0" y="0" width="1440" height="900" />

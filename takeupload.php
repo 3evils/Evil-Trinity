@@ -299,28 +299,28 @@ if (empty($url)) {
     }
 }
 //Last attempt at trying to find the IMDB link for this torrent.  Lets see if we can find it with a search on IMDB using the torrent name
-if (empty($url)) {
-    class IMDBSearch2
-    {
-        public static function _movieRedirect($movie, $year)
-        {
-            $movieName = str_replace(' ', '+', $movie);
-            $page = @file_get_contents('https://www.imdb.com/find?s=all&q=' . $movieName . ' (' . $year . ')');
-            if (@preg_match('~<p style="margin:0 0 0.5em 0;"><b>Media from .*?href="/title\/(.*?)".*?</p>~s', $page, $matches)) {
-                header('Location: https://www.imdb.com/title/' . $matches[1] . '');
-                exit();
-            } else if (@preg_match('~<td class="result_text">.*?href="/title\/(.*?)".*?</td>~s', $page, $matches)) {
-                $plorp = substr(strrchr($matches[1], '/'), 1);
-                
-                $matches[1] = substr($matches[1], 0, -strlen($plorp));
-                return "https://www.imdb.com/title/$matches[1]";
-                exit();
-            } else {
-                return false;
-                exit();
-            }
+if (empty($url)) static function _movieRedirect($movie, $year)
+{
+    $movieName = str_replace(' ', '+', $movie);
+    $page = @file_get_contents('https://www.imdb.com/find?s=all&q=' . $movieName . ' (' . $year . ')');
+    $url = file_get_contents("https://www.omdbapi.com/?t=" . $movie . "&y=. $year .&plot=full&tomatoes=True&r=json&apikey=" . $INSTALLER09['omdb_key']."");
+    $omdb = json_decode($url, true);
+    foreach ($omdb['Ratings'] as $rat => $rate);
+
+
+
+    $poster = $omdb['Poster'];
+    if ($poster != "N/A") {
+        $omdb['Poster'] = "/imdb/images/" . $imdb_id . ".jpg";
+        if (!file_exists('./imdb/images/' . $imdb_id . '.jpg')) {
+            @copy("$poster", "./imdb/images/" . $imdb_id . ".jpg");
+        }
+    } else {
+        if ($poster == "N/A") {
+            $omdb['Poster'] = "./pic/nopostermov.jpg";
         }
     }
+}
     //Try and the get name, find the name upto the year (2014) and split it into an array Name and Year.  Lets avoid some stuff extra more 1080 and above values
     preg_match("/(.*).((!720p|!1080p|!480p|!580p)|[1-2][0-9][0-9][0-9])/", "$fname", $movie_info, null, 0);
     $url = IMDBSearch1::_movieRedirect("$movie_info[1]", "$movie_info[2]");

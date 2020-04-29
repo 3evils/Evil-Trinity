@@ -99,7 +99,7 @@ $HTMLOUT.= "<div class='input-group'>
 <div class='large-6 columns'>
 <fieldset class='fieldset'>
 <legend>{$lang['upload_torrent']}</legend>
-<input class='tiny button' type='file' name='file' id='torrent' onchange='getname()'>
+<input class='tiny button' type='file' name='file' id='torrent'><!-- onchange='getname()'-->
 </fieldset>
 </div>
 <div class='large-6 columns'>

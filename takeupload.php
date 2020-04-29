@@ -1,28 +1,28 @@
 <?php
 /**
- |--------------------------------------------------------------------------|
- |   https://github.com/3evils/                                             |
- |--------------------------------------------------------------------------|
- |   Licence Info: WTFPL                                                    |
- |--------------------------------------------------------------------------|
- |   Copyright (C) 2020 Evil-Trinity                                        |
- |--------------------------------------------------------------------------|
- |   A bittorrent tracker source based on an unreleased U-232               |
- |--------------------------------------------------------------------------|
- |   Project Leaders: AntiMidas,  Seeder                                    |
- |--------------------------------------------------------------------------|
- |   All other snippets, mods and contributions for this version from:      |
- | CoLdFuSiOn, *putyn, pdq, djGrrr, Retro, elephant, ezero, Alex2005,       |
- | system, sir_Snugglebunny, laffin, Wilba, Traffic, dokty, djlee, neptune, |
- | scars, Raw, soft, jaits, Melvinmeow, RogueSurfer, stoner, Stillapunk,    |
- | swizzles, autotron, stonebreath, whocares, Tundracanine , son            |
- |                                                                                                                            |
- |--------------------------------------------------------------------------|
-                 _   _   _   _     _   _   _   _   _   _   _
-                / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \
-               | E | v | i | l )-| T | r | i | n | i | t | y )
-                \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
-*/
+|--------------------------------------------------------------------------|
+|   https://github.com/3evils/                                             |
+|--------------------------------------------------------------------------|
+|   Licence Info: WTFPL                                                    |
+|--------------------------------------------------------------------------|
+|   Copyright (C) 2020 Evil-Trinity                                        |
+|--------------------------------------------------------------------------|
+|   A bittorrent tracker source based on an unreleased U-232               |
+|--------------------------------------------------------------------------|
+|   Project Leaders: AntiMidas,  Seeder                                    |
+|--------------------------------------------------------------------------|
+|   All other snippets, mods and contributions for this version from:      |
+| CoLdFuSiOn, *putyn, pdq, djGrrr, Retro, elephant, ezero, Alex2005,       |
+| system, sir_Snugglebunny, laffin, Wilba, Traffic, dokty, djlee, neptune, |
+| scars, Raw, soft, jaits, Melvinmeow, RogueSurfer, stoner, Stillapunk,    |
+| swizzles, autotron, stonebreath, whocares, Tundracanine , son            |
+|                                                                                                                            |
+|--------------------------------------------------------------------------|
+_   _   _   _     _   _   _   _   _   _   _
+/ \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \
+| E | v | i | l )-| T | r | i | n | i | t | y )
+\_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
+ */
 require_once(__DIR__ . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'bittorrent.php');
 require_once(INCL_DIR . 'user_functions.php');
 require_once(CLASS_DIR . 'page_verify.php');
@@ -136,7 +136,7 @@ if (isset($_POST['strip']) && $_POST['strip']) {
     $descr = preg_replace("/[^\\x20-\\x7e\\x0a\\x0d]/", " ", $descr);
     strip($descr);
     //$descr = preg_replace("/\n+/","\n",$descr);
-    
+
 }
 $catid = (0 + $_POST["type"]);
 if (!is_valid_id($catid))
@@ -264,9 +264,9 @@ if (empty($url)) {
                 exit();
             }
         }                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                 //Try and the get name, find the name upto the year (2014) and split it into an array Name and Year.  Lets avoid some stuff extra more 1080 and above values                                                                                 if (@preg_match("/(.*).((!720p|!1080p|!480p|!580p)|[1-2][0-9][0-9][0-9])/", $fname, $movie_info, null, 0))                                                                                                                                       $url = IMDBSearch1::_movieRedirect("$movie_info[1]", "$movie_info[2]");
+    //Try and the get name, find the name upto the year (2014) and split it into an array Name and Year.  Lets avoid some stuff extra more 1080 and above values                                                                                 if (@preg_match("/(.*).((!720p|!1080p|!480p|!580p)|[1-2][0-9][0-9][0-9])/", $fname, $movie_info, null, 0))                                                                                                                                       $url = IMDBSearch1::_movieRedirect("$movie_info[1]", "$movie_info[2]");
 }
-                                                                                                                                                                                                                                             if (substr($url, -1) == '/') {                                                                                                                                                                                                                   $url = substr($url, 0, -1);                                                                                                                                                                                                              }  
+if (substr($url, -1) == '/') {                                                                                                                                                                                                                   $url = substr($url, 0, -1);                                                                                                                                                                                                              }
 
 
 //If no IMDB entered lets look in the description for one
@@ -299,28 +299,28 @@ if (empty($url)) {
     }
 }
 //Last attempt at trying to find the IMDB link for this torrent.  Lets see if we can find it with a search on IMDB using the torrent name
-if (empty($url)) static function _movieRedirect($movie, $year)
-{
-    $movieName = str_replace(' ', '+', $movie);
-    $page = @file_get_contents('https://www.imdb.com/find?s=all&q=' . $movieName . ' (' . $year . ')');
-    $url = file_get_contents("https://www.omdbapi.com/?t=" . $movie . "&y=. $year .&plot=full&tomatoes=True&r=json&apikey=" . $INSTALLER09['omdb_key']."");
-    $omdb = json_decode($url, true);
-    foreach ($omdb['Ratings'] as $rat => $rate);
+if (empty($url)) {
+    class IMDBSearch2
+    {
+        public static function _movieRedirect($movie, $year)
+        {
+            $movieName = str_replace(' ', '+', $movie);
+            $page = @file_get_contents('https://www.imdb.com/find?s=all&q=' . $movieName . ' (' . $year . ')');
+            if (@preg_match('~<p style="margin:0 0 0.5em 0;"><b>Media from .*?href="/title\/(.*?)".*?</p>~s', $page, $matches)) {
+                header('Location: https://www.imdb.com/title/' . $matches[1] . '');
+                exit();
+            } else if (@preg_match('~<td class="result_text">.*?href="/title\/(.*?)".*?</td>~s', $page, $matches)) {
+                $plorp = substr(strrchr($matches[1], '/'), 1);
 
-
-
-    $poster = $omdb['Poster'];
-    if ($poster != "N/A") {
-        $omdb['Poster'] = "/imdb/images/" . $imdb_id . ".jpg";
-        if (!file_exists('./imdb/images/' . $imdb_id . '.jpg')) {
-            @copy("$poster", "./imdb/images/" . $imdb_id . ".jpg");
-        }
-    } else {
-        if ($poster == "N/A") {
-            $omdb['Poster'] = "./pic/nopostermov.jpg";
+                $matches[1] = substr($matches[1], 0, -strlen($plorp));
+                return "https://www.imdb.com/title/$matches[1]";
+                exit();
+            } else {
+                return false;
+                exit();
+            }
         }
     }
-}
     //Try and the get name, find the name upto the year (2014) and split it into an array Name and Year.  Lets avoid some stuff extra more 1080 and above values
     preg_match("/(.*).((!720p|!1080p|!480p|!580p)|[1-2][0-9][0-9][0-9])/", "$fname", $movie_info, null, 0);
     $url = IMDBSearch1::_movieRedirect("$movie_info[1]", "$movie_info[2]");
@@ -331,7 +331,7 @@ if (substr($url, -1) == '/') {
 }
 
 //if (!$url)
-    //stderr($lang['takeupload_failed'], 'No IMDB Found');
+//stderr($lang['takeupload_failed'], 'No IMDB Found');
 
 $imdb_id_new = 0;
 if (preg_match('(.com/title/tt\d+)', $url, $im_match_imdb) && $url != '') {
@@ -373,36 +373,36 @@ if ($imdb_id_new != 0) {
 
 
 $ret = sql_query("INSERT INTO torrents (search_text, filename, owner, username, visible, vip, release_group, newgenre, poster, anonymous, allow_comments, info_hash, name, size, numfiles, type, offer, request, url, subs, descr, ori_descr, description, category, free, silver, save_as, youtube, tags, added, last_action, mtime, ctime, freetorrent, nfo, client_created_by) VALUES (" . implode(",", array_map("sqlesc", array(
-    searchfield("$shortfname $dname $torrent"),
-    $fname,
-    $CURUSER["id"],
-    $CURUSER["username"],
-    $visible,
-    $vip,
-    $release_group,
-    $genre,
-    $poster,
-    $anonymous,
-    $allow_comments,
-    $infohash,
-    $torrent,
-    $totallen,
-    count($filelist),
-    $type,
-    $offer,
-    $request,
-    $url,
-    $subs,
-    $descr,
-    $descr,
-    $description,
-    0 + $_POST["type"],
-    $free2,
-    $silver,
-    $dname,
-    $youtube,
-    $tags
-))) . ", " . TIME_NOW . ", " . TIME_NOW . ", " . TIME_NOW . ", " . TIME_NOW . ", $freetorrent, $nfo, $tmaker)");
+        searchfield("$shortfname $dname $torrent"),
+        $fname,
+        $CURUSER["id"],
+        $CURUSER["username"],
+        $visible,
+        $vip,
+        $release_group,
+        $genre,
+        $poster,
+        $anonymous,
+        $allow_comments,
+        $infohash,
+        $torrent,
+        $totallen,
+        count($filelist),
+        $type,
+        $offer,
+        $request,
+        $url,
+        $subs,
+        $descr,
+        $descr,
+        $description,
+        0 + $_POST["type"],
+        $free2,
+        $silver,
+        $dname,
+        $youtube,
+        $tags
+    ))) . ", " . TIME_NOW . ", " . TIME_NOW . ", " . TIME_NOW . ", " . TIME_NOW . ", $freetorrent, $nfo, $tmaker)");
 if (!$ret) {
     if (((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_errno($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_errno()) ? $___mysqli_res : false)) == 1062)
         stderr($lang['takeupload_failed'], $lang['takeupload_already']);
@@ -501,9 +501,9 @@ $Cat_Name['cat_name'] = htmlsafechars($change[$_POST['type']]['name']);
 if ($INSTALLER09['seedbonus_on'] == 1) {
     if (isset($_POST['uplver']) && $_POST['uplver'] == 'yes')
         $message = "New Torrent : Category = ".htmlsafechars($Cat_Name['cat_name']).", [url={$INSTALLER09['baseurl']}/details.php?id=$id] " . htmlsafechars($torrent) . "[/url] Uploaded - Anonymous User";
-else
+    else
         $message = "New Torrent : Category = ".htmlsafechars($Cat_Name['cat_name']).", [url={$INSTALLER09['baseurl']}/details.php?id=$id] " . htmlsafechars($torrent) . "[/url] Uploaded by " . htmlsafechars($CURUSER["username"]) . "";
-        $messages = "{$INSTALLER09['site_name']} New Torrent : Category = ".htmlsafechars($Cat_Name['cat_name']).", $torrent Uploaded By: $anon " . mksize($totallen) . " {$INSTALLER09['baseurl']}/details.php?id=$id";
+    $messages = "{$INSTALLER09['site_name']} New Torrent : Category = ".htmlsafechars($Cat_Name['cat_name']).", $torrent Uploaded By: $anon " . mksize($totallen) . " {$INSTALLER09['baseurl']}/details.php?id=$id";
     //===add karma
     sql_query("UPDATE users SET seedbonus=seedbonus+" . sqlesc($INSTALLER09['bonus_per_upload']) . ", numuploads=numuploads+1 WHERE id = " . sqlesc($CURUSER["id"])) or sqlerr(__FILE__, __LINE__);
     //===end
@@ -526,37 +526,28 @@ if ($INSTALLER09['autoshout_on'] == 1) {
 }
 /* Email notifs */
 /*******************
-
 $res = sql_query("SELECT name FROM categories WHERE id=".sqlesc($catid)) or sqlerr(__FILE__, __LINE__);
 $arr = mysqli_fetch_assoc($res);
 $cat = htmlsafechars($arr["name"]);
 $res = sql_query("SELECT email FROM users WHERE enabled='yes' AND notifs LIKE '%[cat$catid]%'") or sqlerr(__FILE__, __LINE__);
 $uploader = $CURUSER['username'];
-
 $size = mksize($totallen);
 $description = ($html ? strip_tags($descr) : $descr);
-
 $body = <<<EOD
 A new torrent has been uploaded.
-
 Name: $torrent
 Size: $size
 Category: $cat
 Uploaded by: $uploader
-
 Description
 -------------------------------------------------------------------------------
 $description
 -------------------------------------------------------------------------------
-
 You can use the URL below to download the torrent (you may have to login).
-
 {$INSTALLER09['baseurl']}/details.php?id=$id&hit=1
-
--- 
+--
 {$INSTALLER09['site_name']}
 EOD;
-
 $to = "";
 $nmax = 100; // Max recipients per message
 $nthis = 0;
@@ -580,9 +571,9 @@ stderr("Error", "Your torrent has been been uploaded. DO NOT RELOAD THE PAGE!\n"
 $nthis = 0;
 }
 }
-*******************/
+ *******************/
 if (OCELOT_TRACKER) {
-Tracker::update_tracker('add_torrent', array('id' => $id, 'info_hash' => rawurlencode($infohash), 'freetorrent' => $freetorrent));
+    Tracker::update_tracker('add_torrent', array('id' => $id, 'info_hash' => rawurlencode($infohash), 'freetorrent' => $freetorrent));
 }
 header("Location: {$INSTALLER09['baseurl']}/details.php?id=$id&uploaded=1");
-?> 
+?>

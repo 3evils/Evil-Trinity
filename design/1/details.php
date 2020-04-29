@@ -17,6 +17,9 @@
  \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/
 
 */
+
+include_once('./cache/api_keys.php');
+
 $stdhead = array(
     /** include css **/
     'css' => array(
@@ -511,7 +514,7 @@ $i_gave_points = 0;
 		<br /><br />By clicking on the amounts you can give Karma Points making this torrent free for one day.<br /><br /></td></tr>';
 // end
 //==Vote for freeleech
-/*
+
         $elapsed = $wait1 = 0;
         $freepollby = $freepollby1 = '';
         if ($CURUSER["class"] < UC_VIP) {
@@ -591,7 +594,7 @@ $mc1->update_row(false, array(
         }
         //if ($freepollcount < $INSTALLER09['votes_required'] AND $torrents["free"] == 0)
         //$HTMLOUT .="<tr><td class='rowhead'><div align='right'>{$lang['details_freepoll_poll']}</div></td><td align='left'>{$lang['details_freepoll_mess6']}</td></tr>";
-*/
+
         //==End
       /** pdq's ratio afer d/load **/
     $downl = ($CURUSER["downloaded"] + $torrents["size"]);
@@ -626,7 +629,7 @@ $mc1->update_row(false, array(
     break;
 }
 $sr = floor($sr * 1000) / 1000;
-$sr = "<font color='" . get_ratio_color($sr) . "'>" . number_format($sr, 3) . "</font>&nbsp;&nbsp;<img src=\"pic/smilies/{$s}.gif\" alt=\"\" />";
+$sr = "<color='" . get_ratio_color($sr) . "'>" . number_format($sr, 3) . "</font>&nbsp;&nbsp;<img src=\"pic/smilies/{$s}.gif\" alt=\"\" />";
 if ($torrents['free'] >= 1 || $torrents['freetorrent'] >= 1 || $isfree['yep'] || $free_slot OR $double_slot != 0 || $CURUSER['free_switch'] != 0) {
     $HTMLOUT.= "<tr>
 		<td align='right' class='heading'>Ratio After Download</td>
@@ -1056,130 +1059,51 @@ if ((in_array($torrents['category'], $INSTALLER09['movie_cats'])) && $torrents['
     $INSTALLER09['tmdb_key'] = '6e7090479fbbec08eea8d9571e253b38';
     $INSTALLER09['lastfm_key'] = '63692beaaf8ba794a541bca291234cd3';
     $INSTALLER09['omdb_on'] = '1';
-    $INSTALLER09['tmdb_on'] = '1';
+    $INSTALLER09['tmdb_on'] = '1';*/
 
-  if (empty($url)) {
-        class IMDBSearches                                                                                                                                                                                                                            {
-            public static function _movieRedirect($movie, $year)                                                                                                                                                                                         {
-                $movieName = str_replace(' ', '+', $movie);
-                $page = @file_get_contents('https://www.imdb.com/find?s=all&q=' . $movieName . ' (' . $year . ')');
-                if (@preg_match('~<p style="margin:0 0 0.5em 0;"><b>Media from .*?href="/title\/(.*?)".*?</p>~s', $page, $matches)) {
-                    header('Location: https://www.imdb.com/title/' . $matches[1] . '');                                                                                                                                                                          exit();                                                                                                                                                                                                                                  } else if (@preg_match('~<td class="result_text">.*?href="/title\/(.*?)".*?</td>~s', $page, $matches)) {
-                    $plorp = substr(strrchr($matches[1], '/'), 1);
 
-                    $matches[1] = substr($matches[1], 0, -strlen($plorp));
-                    return "https://www.imdb.com/title/$matches[1]";                                                                                                                                                                                             exit();                                                                                                                                                                                                                                  } else {
-                    return false;
-                    exit();
-                }
-            }                                                                                                                                                                                                                                        }
-        //Try and the get name, find the name upto the year (2014) and split it into an array Name and Year.  Lets avoid some stuff extra more 1080 and above values                                                                                 if (@preg_match("/(.*).((!720p|!1080p|!480p|!580p)|[1-2][0-9][0-9][0-9])/", $fname, $movie_info, null, 0))                                                                                                                                       $url = IMDBSearch1::_movieRedirect("$movie_info[1]", "$movie_info[2]");
+
+if (empty($url)) {
+
+    $NewMovie = explode(".", $torrents['name']);
+    $numericFound = 0;
+    foreach($NewMovie as $sections){
+	    if(($numericFound == 0 && is_numeric($sections)) || ($numericFound != 0 && is_numeric($sections))) {
+		    if(($sections > '1900') && ($sections < '2500'))
+		    /* this will output year*/
+		    $year = $sections;
+        }   
+	    $numericFound ++;
+    }
+    $searchname = str_replace('.', ' ', $torrents['name']);
+    /* this will output name of the movie */
+    $name = strstr($searchname, $year, true);
+
+
+    $url = file_get_contents("https://www.omdbapi.com/?t=" . $name ."&plot=full&tomatoes=True&r=json&apikey=" . $INSTALLER09['omdb_key']."");
+    $omdb = json_decode($url, true);
+    foreach ($omdb['Ratings'] as $rat => $rate);
+        $poster = $omdb['Poster'];
+   
+	if ($poster != "N/A") {
+        $omdb['Poster'] = "/imdb/images/" . $imdb_id . ".jpg";
+        if (!file_exists('./imdb/images/' . $imdb_id . '.jpg')) {
+            @copy("$poster", "./imdb/images/" . $imdb_id . ".jpg");
+        }
+    }
+	else {
+        if ($poster == "N/A") {
+            $omdb['Poster'] = "./pic/nopostermov.jpg";
+        }
     } 
-    if (substr($url, -1) == '/') {                                                                                                                                                                                                                   $url = substr($url, 0, -1);                                                                                                                                                                                                              }
-
-
-
-
-if (empty($url)) {
-    class IMDBSearch1
-    {
-        public static function _movieRedirect($movie, $year)
-        {
-            $movieName = str_replace(' ', '+', $torrents['name']);
-            $page = @file_get_contents('https://www.imdb.com/find?s=all&q=' . $movieName . ' (' . $year . ')');
-            if (@preg_match('~<p style="margin:0 0 0.5em 0;"><b>Media from .*?href="/title\/(.*?)".*?</p>~s', $page, $matches)) {
-                header('Location: https://www.imdb.com/title/' . $matches[1] . '');
-                exit();
-            } else if (@preg_match('~<td class="result_text">.*?href="/title\/(.*?)".*?</td>~s', $page, $matches)) {
-                $plorp = substr(strrchr($matches[1], '/'), 1);
-                
-                $matches[1] = substr($matches[1], 0, -strlen($plorp));
-                return "https://www.imdb.com/title/$matches[1]";
-                exit();
-            } else {
-                return false;
-                exit();
-            }
-        }
-    }
-    //Try and the get name, find the name upto the year (2014) and split it into an array Name and Year.  Lets avoid some stuff extra more 1080 and above values
-    preg_match("/(.*).((!720p|!1080p|!480p|!580p)|[1-2][0-9][0-9][0-9])/", "$fname", $movie_info, null, 0);
-    $url = IMDBSearch1::_movieRedirect("$movie_info[1]", "$movie_info[2]");
 }
 
-if (substr($url, -1) == '/') {
-    $url = substr($url, 0, -1);
-}
-
-//if (!$url)
-    //stderr($lang['takeupload_failed'], 'No IMDB Found');
-*/
 
 
-if (empty($url)) {
-    class IMDBSearch1
-    {   
-        public static function _movieRedirect($movie, $year)
-        {   
-            $movieName = str_replace(' ', '+', $movie);
-            $page = @file_get_contents('https://www.imdb.com/find?s=all&q=' . $movieName . ' (' . $year . ')');
-            if (@preg_match('~<p style="margin:0 0 0.5em 0;"><b>Media from .*?href="/title\/(.*?)".*?</p>~s', $page, $matches)) {
-                header('Location: https://www.imdb.com/title/' . $matches[1] . '');
-                exit();
-            } else if (@preg_match('~<td class="result_text">.*?href="/title\/(.*?)".*?</td>~s', $page, $matches)) {
-                $plorp = substr(strrchr($matches[1], '/'), 1);
-
-                $matches[1] = substr($matches[1], 0, -strlen($plorp));
-                return "https://www.imdb.com/title/$matches[1]";
-                exit();
-            } else {
-                return false;
-                exit();
-            }
-        }
-    }
-
-    //Try and the get name, find the name upto the year (2014) and split it into an array Name and Year.  Lets avoid some stuff extra more 1080 and above values
-    if (@preg_match("/(.*).((!720p|!1080p|!480p|!580p)|[1-2][0-9][0-9][0-9])/", $fname, $movie_info, null, 0))
-        $url = IMDBSearch1::_movieRedirect("$movie_info[1]", "$movie_info[2]");
-}
-
-if (substr($url, -1) == '/') {
-    $url = substr($url, 0, -1);
-}
 //If no IMDB entered lets look in the description for one
-if (empty($url)) {
-    $text = $descr;
-    preg_match_all('/((http|https|ftp):\/\/|www)([a-z0-9\-\._]+)\/?[a-z0-9_\.\-\?\+\/~=&;,]*/si', $text, $match);
-    for ($i = 0, $iMax = sizeof($match[0]); $i < $iMax; $i++) {
-        $requestnftest = $match[0][$i];
-        $testurl = "https://www.imdb.com/title/tt";
-        $testurl1 = "https://uk.imdb.com/title/tt";
-        $testurl2 = "https://imdb.com/title/tt";
-        $testurl3 = "https://us.imdb.com/title/tt";
-        $testurl4 = "https://us.imdb.com/Title?";
-        $test1 = (substr($testurl, 0, 28));
-        $test2 = (substr($testurl1, 0, 27));
-        $test3 = (substr($testurl2, 0, 24));
-        $test4 = (substr($testurl3, 0, 27));
-        $test5 = (substr($testurl4, 0, 25));
-        If (substr($requestnftest, 0, 25) == $test5) {
-            $requestnftest = str_replace("https://us.imdb.com/Title?", 'https://us.imdb.com/title/tt', $requestnftest);
-        }
-        if (substr($requestnftest, 0, 28) == $test1 or substr($requestnftest, 0, 27) == $test2 or substr($requestnftest, 0, 24) == $test3 or substr($requestnftest, 0, 27) == $test4) {
-            $url = trim($requestnftest);
-            $url = sqlesc($requestnftest);
-            $url = strip_tags($requestnftest);
-        }
-    }
-}
-$imdb_id_new = 0;
-if (preg_match('(.com/title/tt\d+)', $url, $im_match_imdb) && $url != '') {
-    $imdb_id_new = str_replace(".com/title/tt", "", $im_match_imdb[0]);
-}
+
 
 ////////////OMDB & TMDB by Antimidas and Tundracanine 2018-2019
-include_once('./cache/api_keys.php');
 
     if (in_array($torrents['category'], $INSTALLER09['movie_cats']) && $INSTALLER09['omdb_on']==1) {
 
